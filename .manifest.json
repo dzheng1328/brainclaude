@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "note": "sha256 of each raw/ file -> wiki pages derived from it. Makes /ingest incremental: unchanged files are skipped, which is what keeps a daily /lint cheap. Maintained by /ingest; do not hand-edit.",
+  "sources": {}
+}

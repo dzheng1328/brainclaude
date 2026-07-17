@@ -1,0 +1,16 @@
+.DS_Store
+
+# raw/ is the inbox, not the project. wiki/ (our synthesis) and .manifest.json
+# (sha256 pointer into raw/) are what git tracks; raw/'s own content-hash state
+# is what the manifest is for, so duplicating it into git history is redundant.
+# No backup implication is free here — raw/ has no copy outside this filesystem
+# unless one is set up separately.
+raw/
+
+# Obsidian: keep shared config (appearance, plugins, graph settings),
+# ignore per-machine UI state that churns on every pane you open.
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# machine-local permission grants, not shared project config
+.claude/settings.local.json
