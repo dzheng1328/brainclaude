@@ -70,3 +70,12 @@ report are **not copied into the vault** (same privacy rule as the study-abroad 
   relocation handled by **Cartus**, package dated Jan 2026 (plausibly summer 2026). Recorded as a
   fact; the relocation/comp documents are excluded. A **Sterling** background check was run
   (report excluded).
+- **Search breadth (aggregate only):** a personal application tracker (`j*b`, active roughly
+  Oct 2024–Nov 2025, targeting Summer 2026 internships) shows a wide, deliberately broad search —
+  roughly 200 target companies spanning **hardware/silicon design** (chip and RF companies —
+  consistent with the [[230-semiconductors]]/[[350]] coursework), **aerospace & defense**
+  (consistent with the confirmed Lockheed and RTX applications above), **quantitative trading**, and
+  general **software engineering**. Mostly unresolved "applied" status entries with the RTX and WD
+  outcomes above being the standouts. **The company-by-company list itself is not copied into the
+  vault** — this is aggregate signal only, matching the sensitive-docs-excluded rule applied to the
+  rest of this section. ^[[sources/drive-jb-tracker]]

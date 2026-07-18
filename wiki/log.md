@@ -905,3 +905,36 @@ the `j*b` job tracker + old resume drafts (→ career). Coursework tree: reconci
 re-pulled. Personal Drive material continues into `wiki/personal/`, off the record here.
 
 Counts: 41 concepts, 119 source cards, 34 entities, 4 synthesis. Personal domain: 0 → 2 pages.
+
+---
+
+## 2026-07-18 — Google Drive ingest, batch 2: gkweb spec + job-search aggregate
+
+Continuing the Drive ingest (the two items queued after the personal-domain seed).
+
+**Ingested — [[gkweb]] (projects domain):** a 6-phase "2026 Accounting Firm Platform" technical spec
+found at Drive root matches Green-Keen Consulting (an accounting firm) — snapshotted to
+`raw/drive/gkweb/2026-accounting-firm-platform-spec.md`, source card added
+([[sources/drive-gkweb-2026-accounting-firm-platform-spec]]), and the project card enriched with the
+planned stack (Next.js 15/React 19, Shadcn+Aceternity+Magic UI, Zod server actions, WCAG 2.2/schema.org
+checklist) — explicitly flagged as **roadmap/research, not confirmed as-built** (the live repo, Next.js
+16, is the as-built source of truth). A near-identical duplicate Doc (1 min older, same size) was
+skipped per the noise policy. Not promoted to a concept — project-scoped planning, not a generalizable
+idea.
+
+**Ingested — job search (career domain, aggregate only):** found `j*b`, a ~200-row internship
+application tracker (Oct 2024–Nov 2025, targeting Summer 2026). Consistent with the "sensitive docs
+excluded" precedent already in [[professional-profile]] (which excludes offer letters, relocation
+docs, background-check reports), **the company-by-company list was not copied into the vault** —
+only aggregate signal (rough scope ~200 companies, target industries: hardware/silicon, aerospace &
+defense, quant trading, software; timeframe) was added to the existing "Recruiting trajectory"
+section. Source card [[sources/drive-jb-tracker]] added with `snapshotted: false`.
+
+**Checked and correctly skipped:** the six root-level "Dave Zheng" Google Docs (2017–2019), originally
+queued as a guess ("old resume drafts") based on filename. **Read one before promoting anything** —
+per [[CLAUDE]]'s own lesson ("do not infer a page's contents from its title") — and it turned out to be
+a 9th-grade English essay ("How is Technology Good or Bad"), not resume material. Same noise category
+Dave already flagged (5th/6th-grade essays); all six skipped, no card created.
+
+Counts: 41 concepts (unchanged), 120 source cards (+3 vs. last commit — 2 new + duplicate check),
+33 entities. Coursework tree remains reconciled, not re-pulled. Drive ingest continues on request.

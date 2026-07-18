@@ -808,6 +808,12 @@
       "derived": [
         "sources/repos-hw-cnn-learnings"
       ]
+    },
+    "raw/drive/gkweb/2026-accounting-firm-platform-spec.md": {
+      "sha256": "6b86bec229f42ca875ffd65614e2e3882376f3172f35c1a5176a6ce43055346c",
+      "derived": [
+        "sources/drive-gkweb-2026-accounting-firm-platform-spec"
+      ]
     }
   }
 }
