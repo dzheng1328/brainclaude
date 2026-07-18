@@ -23,6 +23,7 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 
 - [[hw-cnn-accelerator]] — solo systolic-array GEMM accelerator (Verilog), runs an MLP on MNIST
 - [[imgsic]] — image → ambient music web app (Vite + Tone.js + Claude vision)
+- [[gohelpme]] — real-time volunteer dispatch, 1st place CUHackIt (résumé; no local repo)
 - [[itm]] — "Image to Music" React/Tone.js prototype, dead; superseded by imgsic
 - [[synth]] — pure-C real-time software synthesizer (miniaudio + Soundpipe, CoreMIDI)
 - [[gkweb]] — Next.js 16 bilingual marketing site for Green-Keen Consulting (client work)
@@ -41,6 +42,9 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 ### Other entities
 
 - [[data-plus]] — Duke Data+ summer research program (flood modeling, summer 2025)
+- [[jones-seel-lab]] — Duke research lab, embedded/IoT flood-mapping firmware (career)
+- [[catalyst-tech-society]] — Duke student tech org, Dave = Professional Chair (career)
+- [[rtx-internship]] — RTX (Raytheon) internship w/ housing, ~summer 2026 (career)
 
 ## Sources
 
@@ -50,6 +54,7 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 ## Synthesis
 
 - [[academic-timeline]] — Dave's full course/research history by semester (the education backbone)
+- [[professional-profile]] — Dave's professional profile & recruiting trajectory (career backbone)
 
 ## Open items
 
@@ -57,8 +62,8 @@ run yet. The one populated area is project pointer cards (below), indexed by han
   `230` labels two unrelated courses (probability vs. semiconductor devices).
 - **[[dave-zheng-pcb]]** — probably a [[230-semiconductors]] lab PCB (Dave, tentative); the
   `331` prefix is still unexplained.
-- **Not yet pulled:** career docs (resume/cover/job).
-- **[[216]]** — writing-intensive course, subject/department unidentified from the archive.
+- **[[230-probability]]** — the only course still lacking a confirmed department code.
+- **Not yet pulled:** personal domain (nothing identified/requested yet).
 
 *Resolved 2026-07-17:* [[itm]] confirmed a dead prototype superseded by [[imgsic]] (Dave).
 `uni/` academic spine built (timeline + 18 course cards + flood-research & 350-cheatsheet sources).

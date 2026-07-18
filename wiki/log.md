@@ -509,3 +509,32 @@ as a timeline fact only; **no sensitive/PII/financial document copied into the v
 CS 201 = data structures (Java); Math 218 = linear algebra; ECE 250 has C programming (comp
 systems/arch, inferred); EGR 102 = embedded design (Arduino LoRa GPS/IMU). Dave's high school
 appears as Diamond Bar HS (from a certificate); the "chuzel hs" folder meaning is unresolved.
+
+## 2026-07-17 (cont.) — course-code fixes + career domain pulled
+
+**Course codes confirmed by Dave:** 216 = **CINE 216 (Cinematic Authorship)**; 270 = **ECE 270
+(Fields and Waves)**. Updated both course cards, the [[academic-timeline]], and [[CLAUDE]]. Only
+`230-probability` now lacks a confirmed department code. Also **faded the high-school folder** per
+Dave — removed the `chuzel hs` / Diamond Bar HS note from the timeline (not tracked).
+
+**Career domain (`domain: career`) built** from `resume drafting/` + `cover letters/`, with the
+same privacy rule as the uni study-abroad docs — sensitive material excluded, facts recorded:
+- [[professional-profile]] (`wiki/synthesis/`) — synthesized from the current résumé (2026-01-20)
+  and the Lockheed cover letter (2025-10-02). Phone + home address deliberately omitted (PII).
+- New entities: [[jones-seel-lab]] (embedded/IoT flood-mapping firmware, Aug 2024–present),
+  [[catalyst-tech-society]] (Professional Chair), [[rtx-internship]] (RTX/Raytheon intern w/ housing,
+  ~summer 2026), and the [[gohelpme]] project (1st place CUHackIt, Mar 2025 — distinct from
+  [[hacknc]]/Moneta).
+
+**The résumé is a keystone — it wired the graph together:** "Data Engineer Intern (Pratt)" = the
+[[data-plus]] flood work; "Mini-Amazon" = the [[316]] course project; "Duke Electric Vehicles" =
+[[ev-firmware]]; Jones Seel Lab GPS/IMU firmware overlaps [[egr-102]]. One benign framing
+difference noted, not filed as a contradiction: résumé says Latin Hypercube sampling, the research
+poster says Beta-distribution fitting (same project, different emphasis).
+
+**Excluded per privacy policy (NOT copied into the git repo):** Western Digital offer letter
+(`job/WD Offers`), the RTX/Cartus relocation + lump-sum financials, the signed apartment lease +
+leasing application + insurance (`job/apt/`), and the **Sterling background-check report**
+(`job/sterling/`). The recruiting *facts* (Lockheed application, WD offer, RTX internship) are
+recorded in [[professional-profile]]; the documents are not. `job/` was never read except by
+filename for these facts — the sensitive PDFs were not opened.

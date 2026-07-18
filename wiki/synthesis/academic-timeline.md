@@ -17,10 +17,6 @@ year begins fall 2024, so nominally **class of 2028**.
 
 ## By semester
 
-**Before Duke.** High school — a `Diamond_Bar_High_School` certificate appears in Dave's records
-(Diamond Bar HS, California). ^[[uni/]] The `chuzel hs/` folder holds high-school photos; the
-meaning of "chuzel" is unresolved — not asserted.
-
 **Fall 2024 (freshman fall).** [[cs-201]] (data structures/algorithms, Java), [[egr-101]]
 (intro engineering — circuits + CAD toolbits), [[ethics-189]], [[math-218]] (linear algebra —
 QR, bases, column spaces, determinants, definiteness), [[writing-101]] (incl. a "Jinan Project").
@@ -38,10 +34,10 @@ first-year seminar), [[230-probability]] (probability), [[280]] (ECE 280 — sig
 [[316]] (CompSci 316 — databases), [[353]] (Math 353 — differential equations/linear algebra).
 This is the semester most of the Notion/Drive vault material comes from.
 
-**Spring 2026 (sophomore spring).** [[216]] (writing-intensive — papers + annotated bibliography;
-subject not yet identified), [[230-semiconductors]] (ECE 230L — semiconductor devices/CMOS logic),
-[[270]] (transmission lines & electromagnetics), [[350]] (ECE/CS 350 — digital systems; the
-processor + [[ece-350-connect4]] final project live here, 1,500+ files).
+**Spring 2026 (sophomore spring).** [[216]] (CINE 216 — Cinematic Authorship), [[230-semiconductors]]
+(ECE 230L — semiconductor devices/CMOS logic), [[270]] (ECE 270 — Fields and Waves), [[350]]
+(ECE/CS 350 — digital systems; the processor + [[ece-350-connect4]] final project live here,
+1,500+ files).
 
 **Fall 2026 (junior fall) — study abroad.** Yonsei University, Seoul, via the SAY (Study Abroad
 at Yonsei) program. ^[[uni/]] Recorded as a timeline fact only — the folder's financial/PII

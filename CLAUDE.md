@@ -236,22 +236,23 @@ disambiguates by content: `230-probability`, `230-semiconductors`. Real departme
 are unknown; **do not invent them**. Derive course identity from page content, never from
 the tracker's bare `Topic` field. See [[contradictions]].
 
-Known courses, from a workspace survey: `230-probability`, `230-semiconductors`, `270`
-(waves/transmission lines), `280` (signals & systems), `316` (databases — **not** an ECE
-course), `350` (digital logic/architecture), `353` (differential equations/linear algebra).
-Also `216` and `104` — real courses, but the workspace holds no content for them, only empty
-tracker stubs. Nothing to ingest.
+Known courses, from a workspace survey plus the `uni/` archive: `230-probability`,
+`230-semiconductors`, `270` (fields and waves), `280` (signals & systems), `316` (databases —
+**not** an ECE course), `350` (digital logic/architecture), `353` (differential equations/linear
+algebra), plus the full academic history in [[academic-timeline]].
 
-**Department codes — several now confirmed** (2026-07-17, via Dave's own file names in Google
-Drive — not inference): `316` = **CompSci 316, Duke**. `280` = **ECE 280**, Duke (a lab report
-explicitly invokes the Duke Community Standard). `353` = **Math 353** — not ECE, despite
-living alongside ECE courses in this vault. `350` = **ECE/CS 350**, cross-listed, stated
-directly in the course's own project assignment doc.
+**Department codes — most now confirmed** (2026-07-17, via Dave's own Drive file names + the
+`uni/` folder structure + Dave's direct confirmation — not inference): `316` = **CompSci 316,
+Duke**. `280` = **ECE 280**, Duke (a lab report invokes the Duke Community Standard). `353` =
+**Math 353** — not ECE, despite living alongside ECE courses here. `350` = **ECE/CS 350**,
+cross-listed. `270` = **ECE 270, Fields and Waves** (Dave, 2026-07-17). `216` = **CINE 216,
+Cinematic Authorship** (Dave, 2026-07-17). `104` = **UNIV 104**, Art-Science Survey seminar.
+`230-semiconductors` = **ECE 230L** — confirmed: `uni/spring 2026/230/` contains
+`FinalExam-Template-ECE230L.pdf` (see [[contradictions]]).
 
-**Still unconfirmed, still do not invent:** `230-probability` and `270` have no code from any
-source. `230-semiconductors` has one *tentative* link (a single Drive slide fragment titled
-"ECE230L") — not confirmed, see [[contradictions]]. When in doubt, the vault's own
-content-derived slug stands.
+**Still unconfirmed, still do not invent:** `230-probability` has no department code from any
+source (the fall-2025 folder is just `230`). When in doubt, the vault's own content-derived slug
+stands.
 
 Adjacent project: `~/Documents/hw-cnn-accelerator` — deliberately **not** part of this vault
 yet. It is a **systolic-array GEMM (matmul) accelerator currently running an MLP digit
