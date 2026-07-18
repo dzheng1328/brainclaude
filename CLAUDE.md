@@ -31,6 +31,7 @@ The other exception to "never write to raw/": syncing a new snapshot from an ext
 ```
 raw/              immutable sources. Dave owns this.
   notion/         snapshots mirrored from Notion (see Snapshots)
+  drive/          snapshots mirrored from Google Drive
   assets/         PDFs, images, binaries
 wiki/             you own this entirely
   _index.md       catalog of every page, grouped by kind
@@ -39,10 +40,49 @@ wiki/             you own this entirely
   sources/        one card per raw file. The provenance anchor.
   concepts/       ideas. THIS IS THE GRAPH.
   entities/       people, orgs, tools, courses
+    projects/     one pointer card per external repo/project (see Projects)
   synthesis/      cross-cutting notes. Earned, not auto-generated.
 output/           only artifacts that LEAVE the vault (decks, reports to send)
 .manifest.json    sha256 per raw file -> derived wiki pages. Makes ingest incremental.
 ```
+
+## Domains
+
+Every wiki page carries a `domain:` frontmatter field so the graph can be sliced by area
+of life. Four domains, fixed for now:
+
+- **education** — coursework, exam notes, academic history (`uni/`, Notion/Drive course pulls)
+- **projects** — code and hardware projects (see Projects below)
+- **career** — resume drafts, cover letters, job/offer/relocation docs
+- **personal** — everything else that's genuinely Dave's private context
+
+A page may legitimately touch two domains (an ECE course project is both `education` and
+`projects`); pick the *primary* one for the field and link across with `[[wikilinks]]`. Don't
+fork the `concepts/`/`entities/` folders per domain — the kind-based folders stay the
+backbone; `domain:` is a tag on top, and `_index.md` groups by it as a view.
+
+## Projects — indexed, not ingested
+
+Dave's code and hardware projects are **living repositories**, most with their own git remote
+and several with their own `CLAUDE.md`. **The vault never copies a repo's source into `raw/`.**
+The code is already the source of truth in its own repo; snapshotting `node_modules` and build
+output as markdown is pure noise and massive token waste (the named repos are ~3.5 GB, 100k+
+files, mostly dependencies).
+
+Instead each project gets **exactly one pointer card** in `wiki/entities/projects/`:
+
+- what it is, in one honest sentence (not the repo's aspirational README tagline)
+- where it lives: absolute path on disk + git remote URL
+- stack, current status, last-touched date
+- key decisions/learnings worth remembering across projects
+- `[[wikilinks]]` to the concepts it exercises (e.g. a systolic-array project links
+  [[fsm-state-minimization]])
+
+The pointer card **is** the source card for a project — its citations point at the repo's own
+docs (`README.md`, `CLAUDE.md`, `docs/`) by path, e.g. `^[[gkweb/CLAUDE.md]]`. If a repo's own
+knowledge is worth preserving against the repo moving or dying, snapshot *only its docs* into
+`raw/` — never its code. Concepts still get promoted normally: a genuinely reusable idea learned
+while building a project earns a concept page like any other.
 
 ## Artifacts vs. knowledge — the promotion rule
 

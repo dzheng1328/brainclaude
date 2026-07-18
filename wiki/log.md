@@ -398,3 +398,73 @@ tool limitations rather than mirrored as if they were the source's true, complet
 
 `wiki/` still holds no concept pages. `/ingest` remains the next real step whenever Dave wants
 it.
+
+## 2026-07-18 — daily `/lint` run
+
+`wiki/` still holds no concept, entity, source, or synthesis pages — `/ingest` hasn't run
+yet. All content-dependent checks (contradictions between wiki pages, orphans, uncited
+claims, broken source-card provenance) have nothing to check. Not a failure; expected until
+`/ingest`.
+
+**Stale-snapshot check ran anyway** (applies to `raw/` regardless of wiki state): all 95
+`raw/notion/` snapshots carry `fetched: 2026-07-16`; all 16 `raw/drive/` files carry fetched
+dates from the same pull. Newest is 2 days old, oldest well under the 90-day threshold.
+Nothing stale.
+
+**Clean run. No findings.**
+
+---
+
+## 2026-07-17 — scope-up: domains + project-pointer model
+
+Dave decided to bring his other `~/Documents` work into the brain. Established the architecture
+before pulling content.
+
+**Two kinds of things, opposite treatment (schema change in CLAUDE.md):**
+- **Code/hardware projects are indexed, not ingested.** The named repos total ~3.5 GB / 100k+
+  files (mostly node_modules, build output, venvs). The vault never copies repo source into
+  `raw/`. Each project gets one pointer card in `wiki/entities/projects/` citing the repo's own
+  docs by path. New schema sections: "Domains" and "Projects — indexed, not ingested."
+- **Documents** (uni coursework, career PDFs) still flow through `raw/ → wiki/` normally. Not
+  yet pulled.
+
+**Domains introduced:** education / projects / career / personal, as a `domain:` frontmatter
+field + `_index.md` view — NOT parallel folder trees (avoids recreating the course-code bucket
+ambiguity). Global `~/.claude/CLAUDE.md` pointer also created so any Claude Code session
+consults the vault when Dave's coursework/projects are relevant.
+
+**9 project pointer cards written** (`wiki/entities/projects/`): hw-cnn-accelerator, imgsic,
+itm, synth, gkweb, hacknc, daily-tickers, ev-firmware, dave-zheng-pcb. Each cites the repo's
+README/CLAUDE.md by path. Facts gathered by reading each repo's primary doc + git remote — not
+inferred.
+
+**Discoveries worth flagging:**
+- `itm` = "Image to Music" (per its own `APP_NAME`), a React/Tone.js sibling of `imgsic` — same
+  idea, two codebases. Filed as an open question (which is canonical), not a contradiction.
+- `dave_zheng` KiCad PCB has a `331_`-prefixed Gerber → maybe a course PCB (ECE 331?), unconfirmed.
+- `ev/` is two **team-owned** repos under `github.com/dukeelectricvehicles-25-26`, not Dave's
+  personal account — Duke Electric Vehicles club firmware. Contributor, not owner.
+- `gkweb` is the only **client** project (Green-Keen Consulting), vs. Dave's self-directed builds.
+- `uni/` (surveyed, not pulled) resolves course-code ambiguity: the two `230`s are different
+  semesters (fall 2025 vs spring 2026), corroborating the probability-vs-semiconductors split.
+
+**Sequencing (Dave's call): structure + project pointers first (this entry), then `uni/`
+academic spine, then career docs, then a full `/ingest`.** Repos stay external and untouched.
+
+## 2026-07-17 (cont.) — three clarifications resolved + ev docs pulled
+
+Dave answered the three open project questions:
+1. **itm is a dead prototype**, older than imgsic; imgsic is the separate, live successor. Updated
+   [[itm]] (status: dead), removed the open question from [[_index]].
+2. **dave_zheng PCB is probably a [[230-semiconductors]] lab** (Dave, tentative — "not sure,
+   probably"). Linked as probable, not asserted; the `331_` Gerber prefix stays unexplained.
+3. **ev knowledge pulled into the vault.** Because the DEV firmware repo is team-owned (external,
+   Dave could lose access), snapshotted its three team-authored docs into `raw/repos/ev-firmware/`
+   — README.md, AGENTS.md, docs/canlibrary.md — verbatim, docs-only, never code, per schema. This
+   is the first use of `raw/repos/` and the `source: git_repo` snapshot type. The substantive
+   knowledge is the CANbus shared-state architecture (`g_vehicle` global, `DevBoard` enum, per-board
+   write-your-own-signals discipline, ESP32/Teensy timer setup) — flagged in [[ev-firmware]] as a
+   reusable-pattern candidate for concept promotion at `/ingest`.
+
+Manifest deliberately NOT hand-edited — it's `/ingest`-maintained and empty for all 114 raw files
+(no ingest has run yet); adding only these three would be inconsistent and violate its own note.
