@@ -538,3 +538,24 @@ leasing application + insurance (`job/apt/`), and the **Sterling background-chec
 (`job/sterling/`). The recruiting *facts* (Lockheed application, WD offer, RTX internship) are
 recorded in [[professional-profile]]; the documents are not. `job/` was never read except by
 filename for these facts — the sensitive PDFs were not opened.
+
+## 2026-07-17 — /ingest run, batch 1 of 9: 316 (databases)
+
+First real ingest. Worklist: 114 markdown sources (95 notion + 16 drive + 3 repos), 0 in the
+manifest. Batching **by course** (aligns with the class-hub goal); assets (124 PNGs) are treated
+as attachments to their parent source card, not read-and-promoted individually.
+
+**316 batch — 17 files → 17 source cards + 6 concepts.** Manifest now tracks these 17.
+- Concepts promoted: [[relational-algebra]], [[functional-dependencies]], [[database-normalization]],
+  [[entity-relationship-model]], [[database-transactions]], [[sql]].
+- Promotions **declined** (kept as source cards, flagged as candidates): fixed-point recursion
+  (WITH RECURSIVE) and semi-structured data / XML-DTD-XPath-XQuery. When in doubt, don't promote.
+- [[316]] course card rebuilt as the **class hub** — links every concept + all 17 source cards,
+  so from the course you reach all its boards/docs. This is the class-centric view Dave wanted,
+  built in wiki/ (not by moving raw files).
+- **Dave's error filed** ([[contradictions]]): the relational-algebra monotonicity classification
+  swaps union and difference (union is monotone in both args; difference is non-monotone in S).
+  Stated correctly in [[relational-algebra]] with the divergence flagged inline; raw untouched.
+
+Batches remaining (by course): 350, 270, 353, 230-semiconductors, 280, 230-probability, misc,
+repos/ev. ~97 files to go.

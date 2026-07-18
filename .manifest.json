@@ -1,5 +1,118 @@
 {
   "version": 1,
   "note": "sha256 of each raw/ file -> wiki pages derived from it. Makes /ingest incremental: unchanged files are skipped, which is what keeps a daily /lint cheap. Maintained by /ingest; do not hand-edit.",
-  "sources": {}
+  "sources": {
+    "raw/notion/316/course___index.md": {
+      "sha256": "ef7b4f09149d16a6564231022432bc565a8aaa23196a4d371f2a030a6f0b60f3",
+      "derived": [
+        "sources/notion-316-index"
+      ]
+    },
+    "raw/notion/316/mid-1___exam.md": {
+      "sha256": "ca85c26d058580f2e467204e986e6ea858733010f76c29e26e54b96b018fd432",
+      "derived": [
+        "sources/notion-316-mid-1-exam"
+      ]
+    },
+    "raw/notion/316/mid-2___exam.md": {
+      "sha256": "20189c3acbb286d806ce484fad2b8913b7256ed80634df3f47e9d91b099286df",
+      "derived": [
+        "sources/notion-316-mid-2-exam"
+      ]
+    },
+    "raw/notion/316/mid-1__relational-model-and-algebra.md": {
+      "sha256": "710a13ae697ae27d00cab41cb5424c43e8751ee15a94ae692c076a8cf058d81d",
+      "derived": [
+        "sources/notion-316-relational-model-algebra",
+        "concepts/relational-algebra"
+      ]
+    },
+    "raw/notion/316/mid-1__relational-database-design-e-r.md": {
+      "sha256": "14926292d606ee486e9434c757bcb605d53f7a12a33008275432596a05ee5cd8",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/notion/316/course__sql-querying.md": {
+      "sha256": "a977e90abed668d5235f688723f7350da761adf26d16d68b009dded71bcaaf4a",
+      "derived": [
+        "sources/notion-316-sql-querying",
+        "concepts/sql"
+      ]
+    },
+    "raw/notion/316/course__sql-constraints.md": {
+      "sha256": "1429f3334a16c9c6e86ddfddbce3c52b5149de8e3504feba475d00bb041cf04f",
+      "derived": [
+        "sources/notion-316-sql-constraints",
+        "concepts/sql"
+      ]
+    },
+    "raw/notion/316/course__sql-triggers.md": {
+      "sha256": "ad11f9f59275765fc777f3a027a7edeec7a447fc9c6c2c03340d281251005f0b",
+      "derived": [
+        "sources/notion-316-sql-triggers",
+        "concepts/sql"
+      ]
+    },
+    "raw/notion/316/course__sql-views.md": {
+      "sha256": "2283f015998d0edb3ddddb8413bcd7212a81158e4613bb4ed68933e5e05d4269",
+      "derived": [
+        "sources/notion-316-sql-views",
+        "concepts/sql"
+      ]
+    },
+    "raw/notion/316/course__sql-recursion.md": {
+      "sha256": "1c34f86a99463a5daf9e8707554f0ae0ab6f3bd3622afa8d01e77805397669d9",
+      "derived": [
+        "sources/notion-316-sql-recursion",
+        "concepts/sql"
+      ]
+    },
+    "raw/notion/316/course__sql-transactions.md": {
+      "sha256": "0bd29c8d0bf4c72b0e09e1ab98089ea2ad04001c7fa1af7e5b02d6a4baa4f773",
+      "derived": [
+        "sources/notion-316-sql-transactions",
+        "concepts/database-transactions"
+      ]
+    },
+    "raw/notion/316/mid-2__xml-dtd.md": {
+      "sha256": "90add5e4f0fa50bb53f369d5c40ff2300e02a25980616e43353af3b6622f7e42",
+      "derived": [
+        "sources/notion-316-xml-dtd"
+      ]
+    },
+    "raw/notion/316/mid-2__xpath-xquery.md": {
+      "sha256": "e8bdbd7ae0a74fdd40c526913e72556bfd0a7e3acf4879f123897496f4c0bcc9",
+      "derived": [
+        "sources/notion-316-xpath-xquery"
+      ]
+    },
+    "raw/drive/316/hw1-prompt.md": {
+      "sha256": "89ea07f83a2bb20d958a5cc9dd14ff96bff485e4eef448b2caa234bc2f75c840",
+      "derived": [
+        "sources/drive-316-hw1-prompt"
+      ]
+    },
+    "raw/drive/316/hw3-prompt.md": {
+      "sha256": "8e3c64531752ea85c8a9f9ff483eb08ce733f7bf14bfcef74fe504f370654f47",
+      "derived": [
+        "sources/drive-316-hw3-prompt"
+      ]
+    },
+    "raw/drive/316/hw4-prompt.md": {
+      "sha256": "db18c28b8b0400db99afa976b8e37f1f5edccafde8ef143daef9882cd2d3d37c",
+      "derived": [
+        "sources/drive-316-hw4-prompt"
+      ]
+    },
+    "raw/drive/316/schedule.md": {
+      "sha256": "2804523adec3dca183999c75906ae8b22691824b21177228f53eab207b7aad4c",
+      "derived": [
+        "sources/drive-316-schedule"
+      ]
+    }
+  }
 }

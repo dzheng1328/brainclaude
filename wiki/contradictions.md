@@ -859,3 +859,21 @@ combinations), promote nothing until Dave rules. When uncertain which, do not pr
 ---
 
 ---
+
+---
+
+## Dave's error (316) — relational-algebra monotonicity classification swapped
+
+**Source:** ^[[sources/notion-316-relational-model-algebra]] (`raw/notion/316/mid-1__relational-model-and-algebra.md`, "classification of rel ops").
+
+The note classifies **union** as "monotone wrt R, non-monotone wrt S" and **difference** as
+simply "monotone." Both are wrong, and they look swapped:
+- **Union** $R \cup S$ is monotone in **both** arguments (adding rows to either input only adds
+  output rows).
+- **Difference** $R - S$ is monotone in R but **non-monotone in S** (adding a row to S can remove
+  a row from the output).
+
+This is a symbolic/classification error of exactly the kind CLAUDE.md's "lessons" section predicts
+(worked intuition fine, formal statement flipped). The correct version is stated in
+[[relational-algebra]] with the divergence flagged inline, per the promotion rule. Raw snapshot
+left untouched. Filed 2026-07-17 during the 316 ingest.

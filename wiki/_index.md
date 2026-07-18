@@ -15,7 +15,11 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 
 ## Concepts
 
-*(none yet — this becomes the graph)*
+*Ingested from [[316]] (2026-07-17):*
+- [[relational-algebra]] · [[functional-dependencies]] · [[database-normalization]]
+- [[entity-relationship-model]] · [[database-transactions]] · [[sql]]
+
+*(more arrive as `/ingest` processes each course)*
 
 ## Entities
 
@@ -50,6 +54,7 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 
 - [[sources/uni-flood-modeling]] — Automating Flood Modeling, Data+ 2025 research poster
 - [[sources/uni-350-cheat-sheets]] — ECE/CS 350 midterm cheat sheets (topic map for digital systems)
+- **316** (17 cards) — one per Notion board + Drive doc; hub is [[316]]. `/ingest`-generated.
 
 ## Synthesis
 
