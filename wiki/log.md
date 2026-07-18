@@ -653,3 +653,37 @@ worked result is correct) — consistent with the known pattern, not filed as a 
 
 Vault now has 19 concepts (6 from 316 + 7 from 350 + 6 from 230-semiconductors). Remaining courses
 to deep-ingest: 270, 353, 280, 230-probability.
+
+---
+
+## 2026-07-18 — deep-ingest 230-probability
+
+Deep pass over the fall-2025 probability/statistics course, reading the 8 concept-bearing Notion
+bodies (course-level + mid-2). Second of the two 230s.
+
+**6 concepts promoted:**
+- [[expectation-and-variance]] — E[X] (discrete/continuous), linearity, indicator variables,
+  tail-sum formula, variance, SD, standardization.
+- [[common-discrete-distributions]] — binomial, geometric (both conventions), negative binomial
+  (four variants), with the hypergeometric relation.
+- [[poisson-distribution]] — rare-event counts, the mean = variance signature, binomial and normal
+  limits.
+- [[normal-distribution]] — Gaussian, standard-normal CDF $\Phi$, normal approximation to the
+  binomial with continuity correction and the sampling-without-replacement correction factor.
+- [[law-of-large-numbers-and-clt]] — sample-mean convergence (LLN) and CLT.
+- [[confidence-intervals]] — interval estimation from a sample proportion via $\Phi$.
+
+**Resolved a real source-vs-source conflict in the concept layer.** The long-standing OPEN conflict
+(two of Dave's own pages state LLN and CLT differently, each right where the other is wrong) is now
+implemented as "link, don't merge" in [[law-of-large-numbers-and-clt]]: LLN cites the exam page (has
+the sample-mean bar), CLT cites the course page (consistent SD), and each source's error is flagged
+inline. Contradiction entry updated with a pointer; left OPEN only for Dave to confirm the
+SD-vs-variance normal-parameterization convention.
+
+**Bookkeeping:** 8 deep-read 230-probability source cards' manifest `derived` now list their concepts
+and dropped `catalog_level`. [[230-probability]] course card gained a Concepts hub section. Declined:
+the `random-variable-transformation` and `normal-approx-to-binomial` course pages are stubs (already
+noted in [[contradictions]]); mid-1's combinatorics error kept as a flagged source card, not promoted.
+
+Vault now has 25 concepts (6 × 316, 7 × 350, 6 × 230-semiconductors, 6 × 230-probability). Remaining
+courses to deep-ingest: 270, 353, 280.

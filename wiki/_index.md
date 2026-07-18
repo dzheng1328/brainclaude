@@ -27,6 +27,10 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 - [[semiconductor-carrier-statistics]] · [[carrier-transport]] · [[pn-junction]]
 - [[mos-capacitor]] · [[mosfet-structure-and-energy-band-diagrams]] · [[electronic-band-structure]]
 
+*From [[230-probability]] (probability & statistics):*
+- [[expectation-and-variance]] · [[common-discrete-distributions]] · [[poisson-distribution]]
+- [[normal-distribution]] · [[law-of-large-numbers-and-clt]] · [[confidence-intervals]]
+
 *(more arrive as `/ingest` deep-processes each course)*
 
 ## Entities
@@ -63,10 +67,10 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 - [[sources/uni-flood-modeling]] — Automating Flood Modeling, Data+ 2025 research poster
 - [[sources/uni-350-cheat-sheets]] — ECE/CS 350 midterm cheat sheets (topic map for digital systems)
 - **One source card per raw file — 114 total.** Each course card is the hub linking its own cards:
-  [[316]] (deep, 6 concepts) · [[350]] (deep, 7) · [[230-semiconductors]] (deep, 6) · [[270]] ·
-  [[353]] · [[280]] · [[230-probability]] · [[ev-firmware]]. The remaining four are
-  **catalog-level** (provenance + title; bodies not re-read) — deep concept promotion available
-  per course on request.
+  [[316]] (deep, 6 concepts) · [[350]] (deep, 7) · [[230-semiconductors]] (deep, 6) ·
+  [[230-probability]] (deep, 6) · [[270]] · [[353]] · [[280]] · [[ev-firmware]]. The remaining
+  three are **catalog-level** (provenance + title; bodies not re-read) — deep concept promotion
+  available per course on request.
 - `raw/notion/misc/` (4 cards) — not class material (`janet`, `technical-interview`, `roudy-notes`,
   index); need a career/personal home, see open items.
 

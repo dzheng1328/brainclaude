@@ -208,23 +208,23 @@
     "raw/notion/230-probability/course__expectation.md": {
       "sha256": "4b6b9052bed2a5813f48adf0a7b38ba74b1e232f9bc1195b552c612c95e78a09",
       "derived": [
-        "sources/notion-230-probability-course-expectation"
-      ],
-      "catalog_level": true
+        "sources/notion-230-probability-course-expectation",
+        "concepts/expectation-and-variance"
+      ]
     },
     "raw/notion/230-probability/course__lln-clt.md": {
       "sha256": "cc7be13d6fa3a8e46abd4985de7c1fe68cf9a6d4987ecc8142cdf07350d87e9b",
       "derived": [
-        "sources/notion-230-probability-course-lln-clt"
-      ],
-      "catalog_level": true
+        "sources/notion-230-probability-course-lln-clt",
+        "concepts/law-of-large-numbers-and-clt"
+      ]
     },
     "raw/notion/230-probability/course__normal-approx-to-binomial.md": {
       "sha256": "006a929cc8dd4e664ec396609982920fd9dd72cbe64555a2308ed8b3e64b8acd",
       "derived": [
-        "sources/notion-230-probability-course-normal-approx-to-binomial"
-      ],
-      "catalog_level": true
+        "sources/notion-230-probability-course-normal-approx-to-binomial",
+        "concepts/common-discrete-distributions"
+      ]
     },
     "raw/notion/230-probability/course__random-variable-transformation.md": {
       "sha256": "fcb78193a8cde0290aecb3560f633da8d0b85b8b87746bbaab1b0b5a236ac55f",
@@ -250,37 +250,38 @@
     "raw/notion/230-probability/mid-2__confidence-intervals.md": {
       "sha256": "98b00bc2ebd1bfbe526ba4b85d385099da0c65daee05cfb53d1cda836a15bba3",
       "derived": [
-        "sources/notion-230-probability-mid-2-confidence-intervals"
-      ],
-      "catalog_level": true
+        "sources/notion-230-probability-mid-2-confidence-intervals",
+        "concepts/confidence-intervals"
+      ]
     },
     "raw/notion/230-probability/mid-2__discrete-distributions.md": {
       "sha256": "cc55b3f4e7f8292a37d0f0fac4102bac6049b6f55c017c6f45f78c452deb9278",
       "derived": [
-        "sources/notion-230-probability-mid-2-discrete-distributions"
-      ],
-      "catalog_level": true
+        "sources/notion-230-probability-mid-2-discrete-distributions",
+        "concepts/common-discrete-distributions"
+      ]
     },
     "raw/notion/230-probability/mid-2__expected-value-normal-distributions.md": {
       "sha256": "3e42f9f74323b3f8fb6ddd3c97e4db8ac7dc5305d19c8a386418fd92326941f2",
       "derived": [
-        "sources/notion-230-probability-mid-2-expected-value-normal-distributions"
-      ],
-      "catalog_level": true
+        "sources/notion-230-probability-mid-2-expected-value-normal-distributions",
+        "concepts/expectation-and-variance",
+        "concepts/normal-distribution"
+      ]
     },
     "raw/notion/230-probability/mid-2__law-of-large-numbers-clt.md": {
       "sha256": "3a80091fe0dda6d70a6db8d99f611c94ae85dc3b7b87c2296e25c7edd06af87c",
       "derived": [
-        "sources/notion-230-probability-mid-2-law-of-large-numbers-clt"
-      ],
-      "catalog_level": true
+        "sources/notion-230-probability-mid-2-law-of-large-numbers-clt",
+        "concepts/law-of-large-numbers-and-clt"
+      ]
     },
     "raw/notion/230-probability/mid-2__poisson.md": {
       "sha256": "c0d156d31e1bbdfdd73e63229b8f47cb4efb9ae11f295f7b0c7759d52549505d",
       "derived": [
-        "sources/notion-230-probability-mid-2-poisson"
-      ],
-      "catalog_level": true
+        "sources/notion-230-probability-mid-2-poisson",
+        "concepts/poisson-distribution"
+      ]
     },
     "raw/notion/230-semiconductors/final___exam.md": {
       "sha256": "7ea23c7ad5476c27fcc4cbd0ceb373756bc74020b0aeb31127dee550d97dc47d",

@@ -16,15 +16,24 @@ Probability course, fall 2025. The `230` number is shared with the unrelated
 [[academic-timeline]]. **Department code unconfirmed** — do not invent one ([[CLAUDE]]).
 
 Local archive `uni/fall 2025/230/` holds cheat sheets, a final, homework, and resources. ^[[uni/]]
-Additional exam-review material was pulled from Notion into `raw/notion/230-probability/`. Known
-concept-level content includes the Law of Large Numbers vs. Central Limit Theorem (a real
-cross-source conflict is filed in [[contradictions]]).
+Additional exam-review material was pulled from Notion into `raw/notion/230-probability/`.
+
+## Concepts (deep-ingested 2026-07-18)
+
+- [[expectation-and-variance]] — E[X], linearity, indicators, tail-sum, variance, SD, standardization
+- [[common-discrete-distributions]] — binomial, geometric, negative binomial (and hypergeometric)
+- [[poisson-distribution]] — rare-event counts, mean = variance, binomial/normal limits
+- [[normal-distribution]] — Gaussian, $\Phi$, normal approximation with continuity correction
+- [[law-of-large-numbers-and-clt]] — sample-mean convergence, CLT (encodes the source-conflict resolution)
+- [[confidence-intervals]] — interval estimation from a sample proportion via $\Phi$
+
+The [[law-of-large-numbers-and-clt]] page implements the "link, don't merge" resolution of the
+real source-vs-source conflict filed in [[contradictions]] (exam page correct on LLN, course page
+correct on CLT). **Not promoted:** the `random-variable-transformation` and `normal-approx` course
+pages are stubs (see [[contradictions]]); mid-1's combinatorics has a flagged error, kept as a
+source card only.
 
 ## Sources (class boards & docs)
-
-*Catalog-level source cards (provenance anchors, generated 2026-07-17 without re-reading
-bodies). Concepts not yet promoted for this course — a deeper pass can extract them on
-request.*
 
 **Course-level boards:** ^[[sources/notion-230-probability-course-index]] ^[[sources/notion-230-probability-course-expectation]] ^[[sources/notion-230-probability-course-lln-clt]] ^[[sources/notion-230-probability-course-normal-approx-to-binomial]] ^[[sources/notion-230-probability-course-random-variable-transformation]]
 

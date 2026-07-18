@@ -501,6 +501,11 @@ force a choice between two sources that are each right about something.
 in his exam notes by cross-referencing his own course notes. That is the entire point of the
 system, working on the fourth wave.
 
+**Implemented 2026-07-18 in [[law-of-large-numbers-and-clt]]:** the concept states both theorems
+correctly, cites the exam page for LLN and the course page for CLT (link, don't merge), and flags
+each source's error inline. Still awaiting Dave to confirm the SD-vs-variance normal parameterization
+convention; left OPEN for that.
+
 ---
 
 ## NOTE — `230-probability` stubs (no action)
