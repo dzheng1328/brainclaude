@@ -2,9 +2,10 @@
 
 Catalog of every wiki page. Maintained by `/ingest`. Grouped by kind, sliced by domain.
 
-**Status:** `raw/` holds 95 Notion snapshots, 16 Drive snapshots, 3 repo-doc snapshots
-(`raw/repos/ev-firmware/`), 124 assets. **Concept/source graph still unpopulated** — no `/ingest`
-run yet. The one populated area is project pointer cards (below), indexed by hand, not ingested.
+**Status:** `raw/` holds 95 Notion snapshots, 16 Drive snapshots, 5 repo-doc snapshots
+(`raw/repos/ev-firmware/`, `raw/repos/hw-cnn-accelerator/`), 124 assets. **Graph populated:** all
+7 coursework courses deep-ingested — **41 concepts**, 118 source cards, 4 synthesis pages, 33 entities.
+Last updated 2026-07-18.
 
 ## Domains
 
@@ -42,6 +43,9 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 *From [[280]] signals & systems (ECE 280):*
 - [[lti-systems-and-convolution]] · [[fourier-series-signals]] · [[fourier-transform-and-filtering]]
 
+*From [[hw-cnn-accelerator]]'s own repo docs (project knowledge, snapshotted):*
+- [[systolic-array-dataflow]] · [[neural-network-quantization]]
+
 *All coursework now deep-ingested. New concepts arrive when new raw material is pulled.*
 
 ## Entities
@@ -49,6 +53,7 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 ### Projects (`entities/projects/` — pointer cards, repos stay external)
 
 - [[hw-cnn-accelerator]] — solo systolic-array GEMM accelerator (Verilog), runs an MLP on MNIST
+- [[ece-350-connect4]] — Connect 4 on a custom 5-stage pipelined FPGA CPU (350 final, w/ partner)
 - [[imgsic]] — image → ambient music web app (Vite + Tone.js + Claude vision)
 - [[gohelpme]] — real-time volunteer dispatch, 1st place CUHackIt (résumé; no local repo)
 - [[itm]] — "Image to Music" React/Tone.js prototype, dead; superseded by imgsic

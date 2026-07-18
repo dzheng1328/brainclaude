@@ -794,3 +794,81 @@ transform-domain, the one idea shared by [[laplace-transform]] (353) and [[fouri
 catalog-level source cards are labs, exams, and non-course material — provenance anchors by design, not
 pending work. Fourier now has three lenses in the graph: [[fourier-series]] (353, ODE/BVP),
 [[fourier-series-signals]] + [[fourier-transform-and-filtering]] (280, signals/filters).
+
+---
+
+## 2026-07-18 — /lint health check (report only, no auto-fix)
+
+First full lint after the coursework deep-ingest sweep. Scope: entire vault (39 concepts, 116 source
+cards, 32 entities, 4 synthesis). **Findings, by severity:**
+
+**Broken provenance (2):**
+1. `wiki/entities/courses/350.md:15` cites `^[[sources/drive-350-assignment]]` — no such card. Correct
+   slug: `drive-350-final-project-assignment`. (Same bug class as the 230-semi slug fixed 2026-07-18.)
+2. `wiki/entities/projects/hw-cnn-accelerator.md:23` cites `^[[sources/notion-hw-cnn-accelerator]]` —
+   no such card, and no raw snapshot of the Notion project page exists. The 2026-07-05 GEMM/MLP reframe
+   claim is effectively uncited. Fix: snapshot the Notion project page into `raw/` (as done for
+   ev-firmware docs), or re-cite.
+
+**Missing referenced page (1):**
+3. `[[ece-350-connect4]]` is referenced by 5 pages (`350`, `academic-timeline`,
+   `coursework-behind-hw-cnn-accelerator`, `dave-zheng-pcb`, `ev-firmware`) but has no card. It is a
+   distinct, substantial hardware project per [[CLAUDE]]. Should get a pointer card in
+   `wiki/entities/projects/`.
+
+**Broken internal link (1):**
+4. `[[ev]]` used in `sources/repos-ev-readme.md:17`, `repos-ev-agents.md:17`, `repos-ev-canlibrary.md:17`
+   — resolves to nothing; the project card is `ev-firmware`. Should be `[[ev-firmware]]`.
+
+**Uncited claims:** none beyond the two dangling citations above — every concept carries source
+citations; cross-course "same idea as X" sentences are wikilink navigation, not uncited assertions.
+
+**Contradictions:** no new ones. Existing OPEN ledger items are handled/awaiting-Dave by design (LLN
+convention resolved, variation-of-parameters blocked, Nyquist hole documented).
+
+**Stale snapshots:** none — all 95 `raw/notion/` files fetched 2026-07-15/16, within 90 days.
+
+**Orphans:** none — every concept/entity/synthesis page has an inbound link.
+
+**Checked-and-clean (not findings, recorded so they aren't re-investigated):** citations to the `uni/`
+external archive (PDFs), repo-doc citations (`README.md`, `CLAUDE.md`, `App.tsx`, `canlibrary.md`,
+etc.), the `[[CLAUDE]]` schema-file convention, and `[[230]]` disambiguation are all intentional
+external/file references per the project schema, not broken wiki links.
+
+Net: vault is in good health. 4 concrete fixes queued for Dave's decision (2 provenance, 1 missing
+project card, 1 link slug); none touch concept correctness.
+
+---
+
+## 2026-07-18 — wire hw-cnn-accelerator's own docs into the vault (Goal-A step 2) + lint fixes
+
+Closed the loop the earlier /query opened: snapshotted the accelerator repo's knowledge docs and
+promoted the reusable ideas, so the vault now answers questions about the project's *internals*, not
+just its coursework roots.
+
+**Repo docs snapshotted** (docs only, never code — per the projects schema, commit `abd00b2`):
+- `raw/repos/hw-cnn-accelerator/decisions.md` (verbatim) → [[sources/repos-hw-cnn-decisions]]
+- `raw/repos/hw-cnn-accelerator/learnings.md` (verbatim) → [[sources/repos-hw-cnn-learnings]]
+
+**2 concepts promoted** (genuinely reusable ideas earned building the project):
+- [[systolic-array-dataflow]] — output-stationary vs. weight-stationary, skewed dataflow, K/N tiling
+  with the algebraic non-contamination proof ($3N-2=22>2(N-1)=14$).
+- [[neural-network-quantization]] — hardware-forced symmetric per-tensor int8, requantization, argmax
+  invariance (chosen so the test oracle is bit-exact integer arithmetic).
+Both wire back to the 350 concepts ([[binary-multiplication]], [[twos-complement-arithmetic]],
+[[pipelining-and-hazards]]) and forward into [[coursework-behind-hw-cnn-accelerator]], whose "gap
+noted" section is now marked closed. Learnings (make -C / cocotb NBA-read gotchas) left as a source
+card — tooling-specific, not concept-worthy.
+
+**Lint fixes applied (from the same-day /lint report):**
+1. `350.md` — broken citation `sources/drive-350-assignment` → `sources/drive-350-final-project-assignment`.
+2. `hw-cnn-accelerator.md` — dangling `sources/notion-hw-cnn-accelerator` citation replaced with the
+   real `sources/repos-hw-cnn-decisions` (the reframe decision is in the repo's decision log). Provenance
+   finding resolved.
+3. Created [[ece-350-connect4]] project card — was referenced by 5 pages with no card (lint's missing-page
+   finding). Connect 4 on a 5-stage pipelined FPGA CPU, 350 final w/ Faiz Ali; distinct from the solo
+   accelerator.
+4. `repos-ev-*` source cards — `[[ev]]` → `[[ev-firmware]]` (broken internal link).
+
+All four /lint findings now closed. Stale top-of-`_index` status line ("graph still unpopulated")
+refreshed. Vault: 41 concepts, 118 source cards, 4 synthesis, 33 entities.

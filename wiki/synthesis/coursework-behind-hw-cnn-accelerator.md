@@ -55,7 +55,16 @@ The [[professional-profile]] shows hands-on embedded/FPGA-adjacent work ([[jones
 [[ev-firmware]]), and [[ece-350-connect4]] is a *separate* FPGA project (pipelined CPU) sharing the
 same Verilog/RTL skill area — distinct scope, do not conflate.
 
-**Gap noted:** the accelerator's own design decisions (im2col lowering, the K/N tiling rationale)
-live in the repo's `docs/decisions.md`, not the vault — see [[hw-cnn-accelerator]]. Snapshotting
-those docs into `raw/repos/` (as was done for [[ev-firmware]]) would let the vault answer questions
-about the accelerator's internals, not just its coursework roots.
+## The accelerator's own internals (gap now closed)
+
+As of 2026-07-18 the repo's `docs/decisions.md` and `docs/learnings.md` are snapshotted into
+`raw/repos/hw-cnn-accelerator/` (commit `abd00b2`), and the two genuinely reusable ideas earned there
+are promoted: [[systolic-array-dataflow]] (output-stationary choice, skewed dataflow, the K/N tiling
+non-contamination proof) and [[neural-network-quantization]] (hardware-forced symmetric int8,
+requantization, argmax invariance). So the vault now answers questions about the accelerator's
+*internals*, not just its coursework roots — the loop this page opened is closed. ^[[sources/repos-hw-cnn-decisions]]
+
+The through-line: [[binary-multiplication]] + [[twos-complement-arithmetic]] (350) are the MAC math,
+[[neural-network-quantization]] decides what integers flow through it, [[systolic-array-dataflow]]
+arranges the tiles in space, and [[pipelining-and-hazards]] (350) is the scheduling family the K/N
+tiling belongs to.

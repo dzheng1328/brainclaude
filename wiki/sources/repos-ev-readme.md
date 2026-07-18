@@ -14,4 +14,4 @@ catalog_level: true
 
 Team-owned DEV firmware repo doc "README". See [[ev-firmware]].
 
-Raw: `raw/repos/ev-firmware/README.md`. Part of [[ev]].
+Raw: `raw/repos/ev-firmware/README.md`. Part of [[ev-firmware]].
