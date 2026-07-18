@@ -872,3 +872,37 @@ card — tooling-specific, not concept-worthy.
 
 All four /lint findings now closed. Stale top-of-`_index` status line ("graph still unpopulated")
 refreshed. Vault: 41 concepts, 118 source cards, 4 synthesis, 33 entities.
+
+---
+
+## 2026-07-18 — Google Drive ingest: survey + personal domain seeded
+
+Connected the Google Drive MCP and surveyed the whole Drive (metadata only) before pulling content.
+
+**Key reconciliation finding (so future ingests don't redo work):** ~80% of the Drive is coursework —
+a nested `uni/` tree (`fall 2025`, `spring 2025`, `spring 2026`) plus root-level course docs (270 labs,
+`FinalExam-Template-ECE230L`, `ECE350 Technical Report`, 350 cheat sheets, `proc-toolchain.zip`). **This
+Drive is the origin of the vault's existing `drive-*` source cards**, and the courses are already
+deep-ingested (41 concepts). The Drive coursework tree therefore maps onto the existing course hubs —
+**do not re-mirror it**; it would burn tokens and add homework/lab artifacts as noise. The genuinely new
+material is personal, plus a couple project/career docs.
+
+**Ingested (personal domain — first entries ever):**
+- [[taiwan-seoul-trip]] — the Aug 2026 Taiwan trip that flows into the fall-2026 Yonsei move. Trip shape
+  + study-abroad transition captured as knowledge. Source: [[sources/drive-personal-taiwan-seoul-itinerary]].
+
+**Privacy handling (important):** the itinerary Google Doc contained a **plaintext site login/password**,
+a D-2 visa application number, a Yonsei housing/lease code, a rejected mountain-permit application number,
+and personal phone numbers. Per the vault privacy rule + the standing rule against storing credentials,
+the doc was **not** snapshotted into `raw/` at all — only the non-sensitive trip shape was promoted, and
+the source card records provenance (Drive file id) with `snapshotted: false`. Flagged to Dave that a
+password sits in plaintext in that Doc.
+
+**Noise policy (Dave, 2026-07-18):** skip childhood docs (5th/6th-grade essays), loose screenshots/photos,
+and duplicate file versions. Focus personal ingest on travel + study-abroad; ingest new project/career docs.
+
+**Still queued from Drive:** the "2026 Accounting Firm Platform" spec (likely [[gkweb]]-related → project),
+the `j*b` job tracker + old resume drafts (→ career), and the Yonsei housing/registration PDFs (→ personal,
+facts only). Coursework tree: reconciled as already-covered, not re-pulled.
+
+Counts: 41 concepts, 119 source cards, 34 entities, 4 synthesis. Personal domain: 0 → 2 pages.
