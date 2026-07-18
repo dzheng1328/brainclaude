@@ -611,3 +611,45 @@ codes and combinational building blocks (mux/demux/encoders); Verilog tooling is
 
 Vault now has 13 concepts (6 from 316 + 7 from 350). Next Goal-A steps: /query test, then wire a
 project's own CLAUDE.md at these concepts.
+
+---
+
+## 2026-07-18 — deep-ingest 230-semiconductors (ECE 230L)
+
+Deep pass over the device-physics course, reading the 12 concept-bearing Notion bodies (mid-1
+foundations + mid-2 devices). Continues the "do all the courses" sweep after 316 and 350; started
+here because its CMOS/MOSFET material connects to the already-promoted [[cmos-logic]] and the
+hardware theme.
+
+**6 concepts promoted:**
+- [[semiconductor-carrier-statistics]] — intrinsic/extrinsic doping, law of mass action, charge
+  neutrality, Fermi-level positioning (merges "the semiconductor in equilibrium" + "semiconductor
+  fundamentals and energy bands").
+- [[carrier-transport]] — drift, diffusion, mobility, conductivity/resistivity, Einstein relation,
+  diffusion length (resolves a long-standing gap-marker link; merges the mid-1 and mid-2 transport
+  pages).
+- [[pn-junction]] — depletion region, built-in voltage, forward/reverse bias, ideal diode equation,
+  quasi-Fermi levels.
+- [[mos-capacitor]] — accumulation/depletion/inversion, surface potential, C–V curve, threshold
+  voltage, flat-band.
+- [[mosfet-structure-and-energy-band-diagrams]] — NMOS/PMOS as switch, transconductance/subthreshold
+  swing/cutoff frequency, the two cutlines (resolves another gap-marker link).
+- [[electronic-band-structure]] — E–k diagrams, effective mass as curvature, density of states,
+  direct vs. indirect gap.
+
+These wire the device-physics substrate under the digital stack: [[mos-capacitor]] +
+[[mosfet-structure-and-energy-band-diagrams]] are the transistor switches that [[cmos-logic]] (350)
+composes into gates, which in turn underlie [[hw-cnn-accelerator]] and [[ece-350-connect4]].
+
+**Bookkeeping:** 12 deep-read 230-semi source cards' manifest `derived` now list their concepts and
+dropped `catalog_level`. [[230-semiconductors]] course card gained a Concepts hub section. **Fixed a
+broken citation slug:** the course card and [[cmos-logic]] both cited `sources/drive-230-semi-cmos-template`,
+which does not exist — the real card is `sources/drive-230-semiconductors-final-exam-template-cmos-logic`.
+Declined (candidates, left as source cards): crystal structure & Miller indices, and the
+infinite-potential-well quantum mechanics — foundational physics, not device concepts.
+
+Minor source error noted inline in [[carrier-transport]] (a "$120$" for a stated "$1200$" mobility;
+worked result is correct) — consistent with the known pattern, not filed as a contradiction.
+
+Vault now has 19 concepts (6 from 316 + 7 from 350 + 6 from 230-semiconductors). Remaining courses
+to deep-ingest: 270, 353, 280, 230-probability.

@@ -30,4 +30,6 @@ GND, exactly one conducting for any input. Minimizing literals ([[boolean-algebr
 transistor count.
 
 Part of [[350]]; the same PUN/PDN gate-design material also appears in [[230-semiconductors]]
-(ECE 230L), which approaches it from the device-physics side (see [[sources/drive-230-semi-cmos-template]]).
+(ECE 230L), which approaches it from the device-physics side — the transistor switches are
+[[mosfet-structure-and-energy-band-diagrams|MOSFETs]] built on the [[mos-capacitor]] (see
+[[sources/drive-230-semiconductors-final-exam-template-cmos-logic]]).

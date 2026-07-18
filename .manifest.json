@@ -299,9 +299,9 @@
     "raw/notion/230-semiconductors/mid-1__carrier-transport-drift-diffusion.md": {
       "sha256": "fe607342d61c098ccdbf9fb3be0bfee2cb251e9440b24baf87266ed850e279e5",
       "derived": [
-        "sources/notion-230-semiconductors-mid-1-carrier-transport-drift-diffusion"
-      ],
-      "catalog_level": true
+        "sources/notion-230-semiconductors-mid-1-carrier-transport-drift-diffusion",
+        "concepts/carrier-transport"
+      ]
     },
     "raw/notion/230-semiconductors/mid-1__crystal-structure-of-solids.md": {
       "sha256": "b6416c92a2422b3b0bb07a0cfc3a2d379f1023766daeb1a61cff10331d4446e2",
@@ -313,23 +313,23 @@
     "raw/notion/230-semiconductors/mid-1__quantum-mechanics.md": {
       "sha256": "64e3f5398b7fc80c90bdd3081e7fcbd896a484598e097aa0e8a9553c82b691b2",
       "derived": [
-        "sources/notion-230-semiconductors-mid-1-quantum-mechanics"
-      ],
-      "catalog_level": true
+        "sources/notion-230-semiconductors-mid-1-quantum-mechanics",
+        "concepts/electronic-band-structure"
+      ]
     },
     "raw/notion/230-semiconductors/mid-1__quantum-theory-of-solids.md": {
       "sha256": "3a548a80ca599e31a2ef1bc3dd1631d3f6fc64ce812428359862207cff6a5f4c",
       "derived": [
-        "sources/notion-230-semiconductors-mid-1-quantum-theory-of-solids"
-      ],
-      "catalog_level": true
+        "sources/notion-230-semiconductors-mid-1-quantum-theory-of-solids",
+        "concepts/electronic-band-structure"
+      ]
     },
     "raw/notion/230-semiconductors/mid-1__the-semiconductor-in-equilibrium.md": {
       "sha256": "25a3f98c6936001fb31369d54778544829375a844a17b31728b52e55393de1ca",
       "derived": [
-        "sources/notion-230-semiconductors-mid-1-the-semiconductor-in-equilibrium"
-      ],
-      "catalog_level": true
+        "sources/notion-230-semiconductors-mid-1-the-semiconductor-in-equilibrium",
+        "concepts/semiconductor-carrier-statistics"
+      ]
     },
     "raw/notion/230-semiconductors/mid-2___exam.md": {
       "sha256": "e1bf46f0ea5c0040d364798023df6f15fa1bd55e4e35ea206b792b361b64ba6e",
@@ -341,58 +341,58 @@
     "raw/notion/230-semiconductors/mid-2__carrier-transport.md": {
       "sha256": "e9607c5690f37645df0848dcb384659ead395bdec0ba0d9657cc13ead192eb5e",
       "derived": [
-        "sources/notion-230-semiconductors-mid-2-carrier-transport"
-      ],
-      "catalog_level": true
+        "sources/notion-230-semiconductors-mid-2-carrier-transport",
+        "concepts/carrier-transport"
+      ]
     },
     "raw/notion/230-semiconductors/mid-2__mos-capacitor-core-concepts.md": {
       "sha256": "88b7f47731be997fc6bc55939186504340edc4337b747e55089d89818a5ece1f",
       "derived": [
-        "sources/notion-230-semiconductors-mid-2-mos-capacitor-core-concepts"
-      ],
-      "catalog_level": true
+        "sources/notion-230-semiconductors-mid-2-mos-capacitor-core-concepts",
+        "concepts/mos-capacitor"
+      ]
     },
     "raw/notion/230-semiconductors/mid-2__mos-capacitor-cv-curves-math.md": {
       "sha256": "09df93269db9b3d1506172ea8c07d5b4111008a05a6d03fda586cf66ee12934a",
       "derived": [
-        "sources/notion-230-semiconductors-mid-2-mos-capacitor-cv-curves-math"
-      ],
-      "catalog_level": true
+        "sources/notion-230-semiconductors-mid-2-mos-capacitor-cv-curves-math",
+        "concepts/mos-capacitor"
+      ]
     },
     "raw/notion/230-semiconductors/mid-2__mosfet-fundamentals-structure.md": {
       "sha256": "d5a3f1c9484fd4afb0eb21ecf7e9e66464993558955b718bff313fd3d6412e14",
       "derived": [
-        "sources/notion-230-semiconductors-mid-2-mosfet-fundamentals-structure"
-      ],
-      "catalog_level": true
+        "sources/notion-230-semiconductors-mid-2-mosfet-fundamentals-structure",
+        "concepts/mosfet-structure-and-energy-band-diagrams"
+      ]
     },
     "raw/notion/230-semiconductors/mid-2__mosfet-structure-and-energy-band-diagrams.md": {
       "sha256": "e9399b3f6c3e41614f409e5bca8ec885b11e0583ed69ccbb8be15a5d490265df",
       "derived": [
-        "sources/notion-230-semiconductors-mid-2-mosfet-structure-and-energy-band-diagrams"
-      ],
-      "catalog_level": true
+        "sources/notion-230-semiconductors-mid-2-mosfet-structure-and-energy-band-diagrams",
+        "concepts/mosfet-structure-and-energy-band-diagrams"
+      ]
     },
     "raw/notion/230-semiconductors/mid-2__pn-junction-in-equilibrium.md": {
       "sha256": "da7fd431c63d8178d734b138bd3693cc18ccb8ad5c562dca5491ae50cbf6011e",
       "derived": [
-        "sources/notion-230-semiconductors-mid-2-pn-junction-in-equilibrium"
-      ],
-      "catalog_level": true
+        "sources/notion-230-semiconductors-mid-2-pn-junction-in-equilibrium",
+        "concepts/pn-junction"
+      ]
     },
     "raw/notion/230-semiconductors/mid-2__pn-junction-under-bias.md": {
       "sha256": "563e47c0820d00074ba9c5ec1559f8297dd2acfc88eb816acfd7b036d8a9ceef",
       "derived": [
-        "sources/notion-230-semiconductors-mid-2-pn-junction-under-bias"
-      ],
-      "catalog_level": true
+        "sources/notion-230-semiconductors-mid-2-pn-junction-under-bias",
+        "concepts/pn-junction"
+      ]
     },
     "raw/notion/230-semiconductors/mid-2__semiconductor-fundamentals-and-energy-bands.md": {
       "sha256": "8481a3de90e24a783524da456d10513cc67e7dca6e87ba82b350a61d9ba00241",
       "derived": [
-        "sources/notion-230-semiconductors-mid-2-semiconductor-fundamentals-and-energy-bands"
-      ],
-      "catalog_level": true
+        "sources/notion-230-semiconductors-mid-2-semiconductor-fundamentals-and-energy-bands",
+        "concepts/semiconductor-carrier-statistics"
+      ]
     },
     "raw/notion/270/final___exam.md": {
       "sha256": "69a5f49006aa2e506d7f61ea9b03e3446b7a86d5a1c563920256b061d52c9f07",

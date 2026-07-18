@@ -23,6 +23,10 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 - [[finite-state-machines]] · [[fsm-state-minimization]] · [[boolean-algebra]]
 - [[twos-complement-arithmetic]] · [[binary-multiplication]] · [[cmos-logic]] · [[pipelining-and-hazards]]
 
+*From [[230-semiconductors]] device physics (ECE 230L — the substrate under the hardware):*
+- [[semiconductor-carrier-statistics]] · [[carrier-transport]] · [[pn-junction]]
+- [[mos-capacitor]] · [[mosfet-structure-and-energy-band-diagrams]] · [[electronic-band-structure]]
+
 *(more arrive as `/ingest` deep-processes each course)*
 
 ## Entities
@@ -59,9 +63,10 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 - [[sources/uni-flood-modeling]] — Automating Flood Modeling, Data+ 2025 research poster
 - [[sources/uni-350-cheat-sheets]] — ECE/CS 350 midterm cheat sheets (topic map for digital systems)
 - **One source card per raw file — 114 total.** Each course card is the hub linking its own cards:
-  [[316]] (deep-ingested, 6 concepts) · [[350]] · [[270]] · [[353]] · [[230-semiconductors]] ·
-  [[280]] · [[230-probability]] · [[ev-firmware]]. All except 316 are **catalog-level**
-  (provenance + title; bodies not re-read) — deep concept promotion available per course on request.
+  [[316]] (deep, 6 concepts) · [[350]] (deep, 7) · [[230-semiconductors]] (deep, 6) · [[270]] ·
+  [[353]] · [[280]] · [[230-probability]] · [[ev-firmware]]. The remaining four are
+  **catalog-level** (provenance + title; bodies not re-read) — deep concept promotion available
+  per course on request.
 - `raw/notion/misc/` (4 cards) — not class material (`janet`, `technical-interview`, `roudy-notes`,
   index); need a career/personal home, see open items.
 

@@ -18,14 +18,23 @@ the Drive pull ([[contradictions]]). ^[[uni/]]
 
 Content spans MOSFET device physics (band diagrams, PN junctions, C-V curves — from Notion) and
 CMOS gate-level logic (PUN/PDN, transistor sizing — from the Drive exam template
-^[[sources/drive-230-semi-cmos-template]]). Likely home of the [[dave-zheng-pcb]] lab board.
-Related concepts: [[mosfet-structure-and-energy-band-diagrams]], [[carrier-transport]].
+^[[sources/drive-230-semiconductors-final-exam-template-cmos-logic]]). Likely home of the
+[[dave-zheng-pcb]] lab board.
+
+## Concepts (deep-ingested 2026-07-18)
+
+- [[semiconductor-carrier-statistics]] — intrinsic/extrinsic doping, mass action, Fermi level
+- [[carrier-transport]] — drift, diffusion, mobility, conductivity, Einstein relation
+- [[pn-junction]] — depletion region, built-in voltage, forward/reverse bias, diode equation
+- [[mos-capacitor]] — accumulation/depletion/inversion, C–V curve, threshold voltage
+- [[mosfet-structure-and-energy-band-diagrams]] — NMOS/PMOS switching, $g_m$/$SS$/$f_T$, cutlines
+- [[electronic-band-structure]] — E–k diagrams, effective mass, DOS, direct vs. indirect gap
+
+The MOSFET/MOS-capacitor material connects device physics to [[cmos-logic]] (350) from the
+gate-design side. **Not promoted (candidates):** crystal structure & Miller indices, and the
+infinite-potential-well quantum mechanics — foundational physics kept as source cards.
 
 ## Sources (class boards & docs)
-
-*Catalog-level source cards (provenance anchors, generated 2026-07-17 without re-reading
-bodies). Concepts not yet promoted for this course — a deeper pass can extract them on
-request.*
 
 **Midterm 1:** ^[[sources/notion-230-semiconductors-mid-1-crystal-structure-of-solids]] ^[[sources/notion-230-semiconductors-mid-1-quantum-mechanics]] ^[[sources/notion-230-semiconductors-mid-1-exam]] ^[[sources/notion-230-semiconductors-mid-1-quantum-theory-of-solids]] ^[[sources/notion-230-semiconductors-mid-1-the-semiconductor-in-equilibrium]] ^[[sources/notion-230-semiconductors-mid-1-carrier-transport-drift-diffusion]]
 
