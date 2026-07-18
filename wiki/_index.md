@@ -69,6 +69,7 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 
 - [[academic-timeline]] — Dave's full course/research history by semester (the education backbone)
 - [[professional-profile]] — Dave's professional profile & recruiting trajectory (career backbone)
+- [[coursework-behind-hw-cnn-accelerator]] — /query answer: which concepts feed the accelerator
 
 ## Open items
 
