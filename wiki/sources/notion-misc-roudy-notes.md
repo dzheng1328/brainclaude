@@ -1,7 +1,7 @@
 ---
 kind: source
-domain: education
-course: "misc"
+domain: career
+course: career-notes
 title: "roudy notes"
 raw_file: raw/notion/misc/roudy-notes.md
 source_kind: notion
@@ -15,4 +15,4 @@ catalog_level: true
 
 Catalog card (provenance anchor). Notion/Drive board titled "roudy notes" (none) for misc. Summarized at title level — body not re-read during the lightweight cataloging pass; see the raw file for full content.
 
-Raw: `raw/notion/misc/roudy-notes.md`. Part of [[misc]].
+Raw: `raw/notion/misc/roudy-notes.md`. Career notes; see [[professional-profile]].
