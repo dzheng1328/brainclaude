@@ -789,6 +789,14 @@ thin extraction (see below), no other corroborating signal either way. Recorded 
 isn't silently lost if more evidence turns up later. **Needs Dave to confirm** whether
 "ECE230L" is the same course.
 
+**RESOLVED (2026-07-17) — CONFIRMED, no longer tentative.** The `uni/` archive settles it: the
+folder `uni/spring 2026/230/` (the semiconductors 230, by semester) directly contains
+`FinalExam-Template-ECE230L.pdf` alongside the CMOS device-physics coursework. The CMOS-logic
+fragment and the device-physics material live in the *same course folder* — so `230-semiconductors`
+**is** ECE 230L, spring 2026. Not a third course. See [[academic-timeline]] and the course card
+[[230-semiconductors]]. Dave also confirmed the [[dave-zheng-pcb]] board is probably a 230-semi lab,
+consistent with this.
+
 ---
 
 ## NOTE — two Drive extraction limitations, not source errors

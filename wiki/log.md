@@ -468,3 +468,44 @@ Dave answered the three open project questions:
 
 Manifest deliberately NOT hand-edited — it's `/ingest`-maintained and empty for all 114 raw files
 (no ingest has run yet); adding only these three would be inconsistent and violate its own note.
+
+## 2026-07-17 (cont.) — uni/ academic spine built (spine + selective docs)
+
+Dave chose "spine + selective docs" for the `uni/` pull, and "index event, exclude docs" for
+sensitive personal/financial material. Executed.
+
+**The archive:** `uni/` is ~2,900 real files (the 33k count was stray `.venv`/site-packages).
+Mapped the full academic history by semester. NOT ingested wholesale — 540 PDFs stay referenced
+by path, not copied.
+
+**Spine written:**
+- [[academic-timeline]] (`wiki/synthesis/`) — the education backbone: every course by semester,
+  freshman fall 2024 → junior fall 2026 (Yonsei study abroad), plus summer 2025 research.
+- 18 course entity cards (`wiki/entities/courses/`): cs-201, egr-101, ethics-189, math-218,
+  writing-101 (F24); ece-110, ece-250, egr-102, math-219 (S25); univ-104, 230-probability, 280,
+  316, 353 (F25); 216, 230-semiconductors, 270, 350 (S26). Each cites the `uni/` folder structure.
+  Department codes stated only where derivable; 270 and 216 flagged as unconfirmed, not guessed.
+
+**Selective docs (real knowledge, read + source-carded):**
+- [[sources/uni-flood-modeling]] — the Data+ 2025 "Automating Flood Modeling" poster (Will Lin,
+  Keyan Miao, Dave; Nicholas Institute). HEC-RAS batch automation via synthetic scenario generation
+  (Beta-dist fitting of friction/infiltration/inflow, NOAA Atlas 14 precip), NetCDF→GeoTIFF→Folium
+  pipeline. Dave's first research. New [[data-plus]] entity created.
+- [[sources/uni-350-cheat-sheets]] — the two ECE/CS 350 midterm cheat sheets. Handwritten scans;
+  OCR of formulas is unreliable, so the card records *topic coverage* only (K-maps, Quine-McCluskey,
+  FSM minimization, CMOS PUN/PDN, Hamming codes, pipeline hazards) and explicitly refuses to assert
+  transcribed formulas — a deliberate guard against laundering garbled OCR (the same failure caught
+  earlier on the 353 practice midterm). High value as a concept map for `/ingest`.
+
+**Resolved:** the two `230`s are different *semesters* (F25 probability vs S26 semiconductors),
+and `uni/spring 2026/230/` containing `FinalExam-Template-ECE230L.pdf` **confirms** the previously
+tentative `230-semiconductors` = ECE 230L link — updated in [[contradictions]].
+
+**Excluded per Dave (privacy):** `fall 2026/study abroad - duke/` and `css/2026/` hold a SoFi
+statement, personal-info consent forms, and CSS Profile financial-aid docs. Recorded study-abroad
+as a timeline fact only; **no sensitive/PII/financial document copied into the vault.**
+
+**Course IDs newly established from `uni/`:** 104 = UNIV 104 (Art-Science Survey seminar);
+CS 201 = data structures (Java); Math 218 = linear algebra; ECE 250 has C programming (comp
+systems/arch, inferred); EGR 102 = embedded design (Arduino LoRa GPS/IMU). Dave's high school
+appears as Diamond Bar HS (from a certificate); the "chuzel hs" folder meaning is unresolved.

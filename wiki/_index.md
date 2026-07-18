@@ -31,17 +31,25 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 - [[ev-firmware]] — Duke Electric Vehicles club firmware (PlatformIO + CANbus, team-owned)
 - [[dave-zheng-pcb]] — KiCad PCB project, "331"-prefixed (course? unconfirmed)
 
+### Courses (`entities/courses/` — academic spine, from `uni/`)
+
+- Fall 2024: [[cs-201]], [[egr-101]], [[ethics-189]], [[math-218]], [[writing-101]]
+- Spring 2025: [[ece-110]], [[ece-250]], [[egr-102]], [[math-219]]
+- Fall 2025: [[univ-104]], [[230-probability]], [[280]], [[316]], [[353]]
+- Spring 2026: [[216]], [[230-semiconductors]], [[270]], [[350]]
+
 ### Other entities
 
-*(none yet — courses, people, tools)*
+- [[data-plus]] — Duke Data+ summer research program (flood modeling, summer 2025)
 
 ## Sources
 
-*(none yet — one card per raw file)*
+- [[sources/uni-flood-modeling]] — Automating Flood Modeling, Data+ 2025 research poster
+- [[sources/uni-350-cheat-sheets]] — ECE/CS 350 midterm cheat sheets (topic map for digital systems)
 
 ## Synthesis
 
-*(none yet — earned from `/query`, not auto-generated)*
+- [[academic-timeline]] — Dave's full course/research history by semester (the education backbone)
 
 ## Open items
 
@@ -49,6 +57,9 @@ run yet. The one populated area is project pointer cards (below), indexed by han
   `230` labels two unrelated courses (probability vs. semiconductor devices).
 - **[[dave-zheng-pcb]]** — probably a [[230-semiconductors]] lab PCB (Dave, tentative); the
   `331` prefix is still unexplained.
-- **Not yet pulled:** `uni/` academic spine (education), career docs (resume/cover/job).
+- **Not yet pulled:** career docs (resume/cover/job).
+- **[[216]]** — writing-intensive course, subject/department unidentified from the archive.
 
 *Resolved 2026-07-17:* [[itm]] confirmed a dead prototype superseded by [[imgsic]] (Dave).
+`uni/` academic spine built (timeline + 18 course cards + flood-research & 350-cheatsheet sources).
+The two `230`s confirmed as different semesters; **ECE230L link now confirmed**, see [[contradictions]].
