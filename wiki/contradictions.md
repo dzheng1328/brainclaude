@@ -119,6 +119,11 @@ treat them identically and be wrong about one of them.
 
 Same page: `9,4\times10^9` (comma for decimal point).
 
+**Implemented 2026-07-18 in [[wave-reflection-at-boundaries]]:** concept states the correct
+$v = c/\sqrt{\epsilon_r}$, cites the source, and flags the divergence inline (formula garbled,
+numeric answer correct) per the "promote understanding, not transcription" rule. Verified at ingest
+as predicted. Nothing left open.
+
 ---
 
 ## CLOSED (probably harmless) — aliases are unresolvable via the API, and probably point at content we already have
@@ -503,8 +508,14 @@ system, working on the fourth wave.
 
 **Implemented 2026-07-18 in [[law-of-large-numbers-and-clt]]:** the concept states both theorems
 correctly, cites the exam page for LLN and the course page for CLT (link, don't merge), and flags
-each source's error inline. Still awaiting Dave to confirm the SD-vs-variance normal parameterization
-convention; left OPEN for that.
+each source's error inline.
+
+**RESOLVED 2026-07-18 (Dave: "not important, do whatever is more suitable").** Vault convention is
+the **SD parameterization $\mathcal{N}(\mu, \sigma)$** — it matches Dave's own course page and every
+formula already written in [[normal-distribution]], [[law-of-large-numbers-and-clt]], and
+[[confidence-intervals]] uses $\sigma$ (SD) explicitly, so no rewrites and no ambiguity. Any future
+page using $\mathcal{N}(\mu, \sigma^2)$ should be normalized to SD or state its variance convention
+explicitly. Nothing left open here.
 
 ---
 

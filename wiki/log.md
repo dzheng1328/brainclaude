@@ -687,3 +687,43 @@ noted in [[contradictions]]); mid-1's combinatorics error kept as a flagged sour
 
 Vault now has 25 concepts (6 × 316, 7 × 350, 6 × 230-semiconductors, 6 × 230-probability). Remaining
 courses to deep-ingest: 270, 353, 280.
+
+---
+
+## 2026-07-18 — deep-ingest 270 (ECE 270, Fields & Waves)
+
+Deep pass over the fields-and-waves course, reading the 13 concept-bearing Notion bodies (mid-1
+transmission lines, mid-2 EM waves, final acoustics + quantum). The richest course so far.
+
+**8 concepts promoted:**
+- [[transmission-line-theory]] — $Z_0=\sqrt{L/C}$, $v_p$, phasor/time-domain wave expressions,
+  critical length, reflection coefficient, the input-impedance master equation, quarter/half-wave
+  transforms, stub reactances (merges 4 mid-1 pages).
+- [[bounce-diagrams-and-transients]] — step injection, source/load reflections, steady state,
+  time-domain reflectometry.
+- [[impedance-matching]] — single shunt-stub match analytically and on the Smith chart, quarter-wave
+  transformer.
+- [[electromagnetic-plane-waves]] — E/H fields, intrinsic impedance $\eta$, polarization, Poynting
+  power density, inverse-square law.
+- [[wave-reflection-at-boundaries]] — normal-incidence $\Gamma$/$\tau$, $|\Gamma|^2$ energy split,
+  AR coatings and radomes.
+- [[waves-in-lossy-media]] — complex permittivity, loss tangent, attenuation constant, skin depth,
+  nepers/dB.
+- [[oblique-incidence-and-antennas]] — parallel/perp reflection, Brewster angle, Snell's law, dipole
+  radiation, efficiency/gain/directivity, the Friis equation (merges the two oblique-incidence pages).
+- [[wave-impedance-analogy]] — **the course's unifying idea**: transmission lines, EM waves, sound,
+  and quantum particles all obey $\Gamma=(Z_2-Z_1)/(Z_2+Z_1)$ with $|\Gamma|^2$ reflected power. Folds
+  the acoustics and quantum finals in as instances rather than thin standalone pages, and links out to
+  [[electronic-band-structure]] ([[230-semiconductors]]) via de Broglie / infinite-well / tunneling.
+
+**Resolved the 270 radome source error in the concept layer.** [[wave-reflection-at-boundaries]]
+states the correct $v=c/\sqrt{\epsilon_r}$, cites the source, and flags the garbled-formula /
+correct-answer divergence inline (the "promote understanding, not transcription" rule). Contradiction
+entry updated; verified at ingest as the pull agent predicted.
+
+**Bookkeeping:** 13 deep-read 270 source cards' manifest `derived` now list their concepts and dropped
+`catalog_level`. [[270]] course card gained a Concepts hub section. Drive lab reports (`raw/drive/270/`)
+left as source cards, not promoted.
+
+Vault now has 33 concepts (6×316, 7×350, 6×230-semi, 6×230-prob, 8×270). Remaining courses to
+deep-ingest: 353, 280.

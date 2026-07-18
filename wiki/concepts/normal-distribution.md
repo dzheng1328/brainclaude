@@ -9,7 +9,8 @@ course: "230-probability"
 
 The normal (Gaussian) distribution $\mathcal{N}(\mu, \sigma)$ is the bell curve: symmetric about its
 mean $\mu$ (which is also its peak), with spread set by $\sigma$, and total area 1 so that areas *are*
-probabilities. ^[[sources/notion-230-probability-mid-2-expected-value-normal-distributions]] Because
+probabilities. *(Vault convention: the second parameter is the **standard deviation** $\sigma$, not
+the variance — see [[contradictions]].)* ^[[sources/notion-230-probability-mid-2-expected-value-normal-distributions]] Because
 the density has no elementary antiderivative, probabilities are read from the **standard normal CDF**
 
 $$\Phi(z) = \int_{-\infty}^{z}\frac{1}{\sqrt{2\pi}}e^{-x^2/2}\,dx$$

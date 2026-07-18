@@ -405,16 +405,16 @@
     "raw/notion/270/final__acoustics.md": {
       "sha256": "d69fb4e1b0b6aa3464fdbfd1f957188481f9613db3333f7e406e0ab0b517b329",
       "derived": [
-        "sources/notion-270-final-acoustics"
-      ],
-      "catalog_level": true
+        "sources/notion-270-final-acoustics",
+        "concepts/wave-impedance-analogy"
+      ]
     },
     "raw/notion/270/final__quantum.md": {
       "sha256": "44f13efdc8b9dd71dce2847e22690a81e1854272e848ef447dab3b7e2d76fa18",
       "derived": [
-        "sources/notion-270-final-quantum"
-      ],
-      "catalog_level": true
+        "sources/notion-270-final-quantum",
+        "concepts/wave-impedance-analogy"
+      ]
     },
     "raw/notion/270/mid-1___exam.md": {
       "sha256": "818283b386208bf1c2eef2d6b593f6ceb1b83ac5a7cddbdffdc61136e9872ce3",
@@ -426,44 +426,44 @@
     "raw/notion/270/mid-1__ac-steady-state-and-input-impedance.md": {
       "sha256": "d0c3838d5f03b281e3476692583197f8bb0709e52a2f79f2f788922ee761e5f3",
       "derived": [
-        "sources/notion-270-mid-1-ac-steady-state-and-input-impedance"
-      ],
-      "catalog_level": true
+        "sources/notion-270-mid-1-ac-steady-state-and-input-impedance",
+        "concepts/transmission-line-theory"
+      ]
     },
     "raw/notion/270/mid-1__critical-lengths-where-tl-effects-matter.md": {
       "sha256": "c0b48147154d114c2badc69915816814bbdb0ed727aefe33078ad5fd6ab43b65",
       "derived": [
-        "sources/notion-270-mid-1-critical-lengths-where-tl-effects-matter"
-      ],
-      "catalog_level": true
+        "sources/notion-270-mid-1-critical-lengths-where-tl-effects-matter",
+        "concepts/transmission-line-theory"
+      ]
     },
     "raw/notion/270/mid-1__impedance-matching.md": {
       "sha256": "f1a76713ed55efd093c178a4a5f8e0ec9018083a5f55039900d13332c84b7886",
       "derived": [
-        "sources/notion-270-mid-1-impedance-matching"
-      ],
-      "catalog_level": true
+        "sources/notion-270-mid-1-impedance-matching",
+        "concepts/impedance-matching"
+      ]
     },
     "raw/notion/270/mid-1__power-delivery-and-phasors.md": {
       "sha256": "6ca1ff9c467138a37cf068f1d21c54b6fd5547072108b895d5150d9ca753533a",
       "derived": [
-        "sources/notion-270-mid-1-power-delivery-and-phasors"
-      ],
-      "catalog_level": true
+        "sources/notion-270-mid-1-power-delivery-and-phasors",
+        "concepts/transmission-line-theory"
+      ]
     },
     "raw/notion/270/mid-1__transients-bounce-diagrams-interconnects.md": {
       "sha256": "76eedb9dfced89a0ea3b8f9fa2221ccd545c63d128a4e59d906fc64d2bdfba4e",
       "derived": [
-        "sources/notion-270-mid-1-transients-bounce-diagrams-interconnects"
-      ],
-      "catalog_level": true
+        "sources/notion-270-mid-1-transients-bounce-diagrams-interconnects",
+        "concepts/bounce-diagrams-and-transients"
+      ]
     },
     "raw/notion/270/mid-1__transmission-line-fundamentals.md": {
       "sha256": "4d0ba8e4443e67b3881560819a7e058f1ab0a37d55c42a49564496f7196f38ce",
       "derived": [
-        "sources/notion-270-mid-1-transmission-line-fundamentals"
-      ],
-      "catalog_level": true
+        "sources/notion-270-mid-1-transmission-line-fundamentals",
+        "concepts/transmission-line-theory"
+      ]
     },
     "raw/notion/270/mid-2___exam.md": {
       "sha256": "e20950f8e84d144cbd7f0dc57d398f213808c0a9f0f7b3821e1824e1c8fddb90",
@@ -475,37 +475,37 @@
     "raw/notion/270/mid-2__electromagnetic-plane-waves-and-power.md": {
       "sha256": "1ebd15288eabf8715f18bb7f98ec7de2d93725401142c671b0b862b8e3fb4473",
       "derived": [
-        "sources/notion-270-mid-2-electromagnetic-plane-waves-and-power"
-      ],
-      "catalog_level": true
+        "sources/notion-270-mid-2-electromagnetic-plane-waves-and-power",
+        "concepts/electromagnetic-plane-waves"
+      ]
     },
     "raw/notion/270/mid-2__oblique-incidence-antennas.md": {
       "sha256": "97b4dc1aabb64e34ff6cf63bcbf46b072aca9ef78d6ac5ce80e5dc87a2b577c7",
       "derived": [
-        "sources/notion-270-mid-2-oblique-incidence-antennas"
-      ],
-      "catalog_level": true
+        "sources/notion-270-mid-2-oblique-incidence-antennas",
+        "concepts/oblique-incidence-and-antennas"
+      ]
     },
     "raw/notion/270/mid-2__oblique-incidence-parallel-vs-perp.md": {
       "sha256": "d1b9517f390ed9f5cfc16cdca038f8b223d00adcf3557aa20805b0ff0af19c3b",
       "derived": [
-        "sources/notion-270-mid-2-oblique-incidence-parallel-vs-perp"
-      ],
-      "catalog_level": true
+        "sources/notion-270-mid-2-oblique-incidence-parallel-vs-perp",
+        "concepts/oblique-incidence-and-antennas"
+      ]
     },
     "raw/notion/270/mid-2__wave-reflection-and-transmission-at-normal-indicdence.md": {
       "sha256": "bd70be3ecd4df2caff7ffd976ba6dd81d860f2188e3da56acf84f097e83162f5",
       "derived": [
-        "sources/notion-270-mid-2-wave-reflection-and-transmission-at-normal-indicdence"
-      ],
-      "catalog_level": true
+        "sources/notion-270-mid-2-wave-reflection-and-transmission-at-normal-indicdence",
+        "concepts/wave-reflection-at-boundaries"
+      ]
     },
     "raw/notion/270/mid-2__waves-in-conducting-and-lossy-materials.md": {
       "sha256": "cf025d726908fd1cb3be18da18e17fff10abb7ed0b0d0b0e9bd852c38577cf73",
       "derived": [
-        "sources/notion-270-mid-2-waves-in-conducting-and-lossy-materials"
-      ],
-      "catalog_level": true
+        "sources/notion-270-mid-2-waves-in-conducting-and-lossy-materials",
+        "concepts/waves-in-lossy-media"
+      ]
     },
     "raw/notion/280/course___index.md": {
       "sha256": "714cab85e3127a6ee051bc218b22b8f1f2e7981f16ddc24d16d9cc4f18fa60c8",

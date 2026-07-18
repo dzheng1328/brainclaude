@@ -31,6 +31,11 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 - [[expectation-and-variance]] · [[common-discrete-distributions]] · [[poisson-distribution]]
 - [[normal-distribution]] · [[law-of-large-numbers-and-clt]] · [[confidence-intervals]]
 
+*From [[270]] fields & waves (ECE 270 — transmission lines & electromagnetics):*
+- [[transmission-line-theory]] · [[bounce-diagrams-and-transients]] · [[impedance-matching]]
+- [[electromagnetic-plane-waves]] · [[wave-reflection-at-boundaries]] · [[waves-in-lossy-media]]
+- [[oblique-incidence-and-antennas]] · [[wave-impedance-analogy]] (the unifying idea)
+
 *(more arrive as `/ingest` deep-processes each course)*
 
 ## Entities
@@ -68,9 +73,9 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 - [[sources/uni-350-cheat-sheets]] — ECE/CS 350 midterm cheat sheets (topic map for digital systems)
 - **One source card per raw file — 114 total.** Each course card is the hub linking its own cards:
   [[316]] (deep, 6 concepts) · [[350]] (deep, 7) · [[230-semiconductors]] (deep, 6) ·
-  [[230-probability]] (deep, 6) · [[270]] · [[353]] · [[280]] · [[ev-firmware]]. The remaining
-  three are **catalog-level** (provenance + title; bodies not re-read) — deep concept promotion
-  available per course on request.
+  [[230-probability]] (deep, 6) · [[270]] (deep, 8) · [[353]] · [[280]] · [[ev-firmware]]. The
+  remaining two (353, 280) are **catalog-level** (provenance + title; bodies not re-read) — deep
+  concept promotion available per course on request.
 - `raw/notion/misc/` (4 cards) — not class material (`janet`, `technical-interview`, `roudy-notes`,
   index); need a career/personal home, see open items.
 
