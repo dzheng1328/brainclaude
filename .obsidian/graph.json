@@ -5,18 +5,35 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
-  "colorGroups": [],
-  "collapse-display": true,
-  "showArrow": false,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "[domain:education]",
+      "color": { "a": 1, "rgb": 5017087 }
+    },
+    {
+      "query": "[domain:projects]",
+      "color": { "a": 1, "rgb": 4176208 }
+    },
+    {
+      "query": "[domain:career]",
+      "color": { "a": 1, "rgb": 14917640 }
+    },
+    {
+      "query": "[domain:personal]",
+      "color": { "a": 1, "rgb": 10711543 }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": true,
   "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1,
-  "collapse-forces": true,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
+  "nodeSizeMultiplier": 0.816710069444444,
+  "lineSizeMultiplier": 0.800759548611111,
+  "collapse-forces": false,
+  "centerStrength": 0.721397569444444,
+  "repelStrength": 20,
   "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.41539579305933627,
+  "linkDistance": 30,
+  "scale": 0.3385151939358166,
   "close": true
 }

@@ -7,12 +7,36 @@ Catalog of every wiki page. Maintained by `/ingest`. Grouped by kind, sliced by 
 7 coursework courses deep-ingested — **41 concepts**, 118 source cards, 4 synthesis pages, 33 entities.
 Last updated 2026-07-18.
 
-## Domains
+## By domain
 
-- **education** — coursework, exam notes, academic history (`uni/`, Notion/Drive course pulls)
-- **projects** — code & hardware repos (indexed by pointer, see below)
-- **career** — resume drafts, cover letters, job/offer docs *(not yet pulled)*
-- **personal** — private context *(not yet pulled)*
+The vault's backbone is **kind** (concepts / entities / sources), so the folders don't split by
+domain — instead every page carries a `domain:` tag and this section is the view that slices by it.
+The same four domains color the Obsidian graph (education = blue, projects = green, career = amber,
+personal = purple). Current split: **education 169 · projects 19 · career 8 · personal 0.**
+
+### 🎓 education — coursework, concepts, academic history
+- **Courses (18):** [[316]] · [[350]] · [[353]] · [[280]] · [[270]] · [[230-probability]] ·
+  [[230-semiconductors]] · [[216]] · [[univ-104]] · [[math-218]] · [[math-219]] · [[cs-201]] ·
+  [[ece-110]] · [[ece-250]] · [[egr-101]] · [[egr-102]] · [[ethics-189]] · [[writing-101]]
+- **Concepts (39):** the full graph — see [Concepts](#concepts) below, grouped by course.
+- **Synthesis:** [[academic-timeline]] · [[convolution-and-transforms]]
+- **Research:** [[data-plus]]
+- 109 source cards (provenance anchors).
+
+### 🔧 projects — code & hardware (indexed by pointer, repos stay external)
+- **Project cards (11):** [[hw-cnn-accelerator]] · [[ece-350-connect4]] · [[synth]] · [[imgsic]] ·
+  [[gohelpme]] · [[gkweb]] · [[hacknc]] · [[daily-tickers]] · [[ev-firmware]] · [[dave-zheng-pcb]] ·
+  [[itm]]
+- **Concepts (2):** [[systolic-array-dataflow]] · [[neural-network-quantization]]
+- **Synthesis:** [[coursework-behind-hw-cnn-accelerator]]
+
+### 💼 career — profile, research labs, recruiting
+- [[professional-profile]] · [[jones-seel-lab]] · [[catalyst-tech-society]] · [[rtx-internship]]
+- 4 source cards (résumé, CV — sensitive docs recorded as facts, not copied).
+
+### 🌱 personal — private context
+- **Empty — nothing pulled yet.** This is where non-academic, non-career, non-project material would
+  land if/when added.
 
 ## Concepts
 
