@@ -39,7 +39,10 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 *From [[353]] diff eq & linear algebra (Math 353):*
 - [[laplace-transform]] · [[fourier-series]] · [[linear-systems-eigenvalue-method]]
 
-*(more arrive as `/ingest` deep-processes each course)*
+*From [[280]] signals & systems (ECE 280):*
+- [[lti-systems-and-convolution]] · [[fourier-series-signals]] · [[fourier-transform-and-filtering]]
+
+*All coursework now deep-ingested. New concepts arrive when new raw material is pulled.*
 
 ## Entities
 
@@ -76,9 +79,9 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 - [[sources/uni-350-cheat-sheets]] — ECE/CS 350 midterm cheat sheets (topic map for digital systems)
 - **One source card per raw file — 114 total.** Each course card is the hub linking its own cards:
   [[316]] (deep, 6 concepts) · [[350]] (deep, 7) · [[230-semiconductors]] (deep, 6) ·
-  [[230-probability]] (deep, 6) · [[270]] (deep, 8) · [[353]] (deep, 3) · [[280]] · [[ev-firmware]].
-  Only [[280]] remains **catalog-level** (provenance + title; bodies not re-read) — deep concept
-  promotion available on request.
+  [[230-probability]] (deep, 6) · [[270]] (deep, 8) · [[353]] (deep, 3) · [[280]] (deep, 3) ·
+  [[ev-firmware]]. **All coursework courses now deep-ingested** (39 concepts). Non-course source
+  cards (labs, exams, misc) remain provenance anchors by design.
 - `raw/notion/misc/` (4 cards) — not class material (`janet`, `technical-interview`, `roudy-notes`,
   index); need a career/personal home, see open items.
 
@@ -87,6 +90,7 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 - [[academic-timeline]] — Dave's full course/research history by semester (the education backbone)
 - [[professional-profile]] — Dave's professional profile & recruiting trajectory (career backbone)
 - [[coursework-behind-hw-cnn-accelerator]] — /query answer: which concepts feed the accelerator
+- [[convolution-and-transforms]] — one theorem across [[353]] (Laplace) and [[280]] (Fourier)
 
 ## Open items
 

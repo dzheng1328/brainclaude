@@ -761,3 +761,36 @@ section noting the withheld material.
 
 Vault now has 36 concepts (6×316, 7×350, 6×230-semi, 6×230-prob, 8×270, 3×353). Remaining: 280
 (signals & systems) — the last course, and it carries the 280 convolution error-note to resolve.
+
+---
+
+## 2026-07-18 — deep-ingest 280 (ECE 280, Signals & Systems) — coursework sweep complete
+
+Deep pass over the last course. Read all clean 280 course bodies; the two flagged trouble spots were
+verified and handled as the ledger recommended.
+
+**3 concepts promoted:**
+- [[lti-systems-and-convolution]] — impulse response, $y=x*h$, causality, BIBO stability, sifting /
+  commutativity / associativity, flip-and-slide, worked step response. Promoted from the correct
+  `course__lti-convolution` page.
+- [[fourier-series-signals]] — Dirichlet conditions, complex-exponential harmonic decomposition,
+  reading $X[k]$ (fundamental frequency as GCD; pulse-train coefficients).
+- [[fourier-transform-and-filtering]] — rect↔sinc pairs, graphical time↔freq with duality, the
+  convolution theorem ($\mathcal{F}\{x*h\}=X\cdot H$), ideal LTI filters.
+
+**Synthesis page created:** [[convolution-and-transforms]] — convolution-in-time = multiplication-in-
+transform-domain, the one idea shared by [[laplace-transform]] (353) and [[fourier-transform-and-filtering]]
+(280). Earned by a genuine cross-course link, not auto-generated. Linked into `_index.md`.
+
+**Withheld / gaps (verified, per standing rule):**
+- `mid-1__chat-review` — **not promoted at all** (two independent convolution errors: $r*r$ stated as
+  $\tfrac12 t^2$ not $t^3/6$, plus a garbled distributive identity). Convolution came from the correct
+  course page instead. Noted inline in the concept and in [[contradictions]].
+- **Nyquist / sampling** — `course__nyquist` is blank upstream; a real hole in Dave's notes, stated
+  explicitly in [[fourier-transform-and-filtering]] rather than papered over.
+
+**Milestone:** all seven coursework courses (316, 350, 230-semiconductors, 230-probability, 270, 353,
+280) are now deep-ingested. **39 concepts** total (6+7+6+6+8+3+3) plus 3 synthesis pages. The remaining
+catalog-level source cards are labs, exams, and non-course material — provenance anchors by design, not
+pending work. Fourier now has three lenses in the graph: [[fourier-series]] (353, ODE/BVP),
+[[fourier-series-signals]] + [[fourier-transform-and-filtering]] (280, signals/filters).

@@ -517,37 +517,38 @@
     "raw/notion/280/course__convolution-in-fourier.md": {
       "sha256": "9dcb0d53c9ecadb83263d92c243be484b9adf752183cf8e42bfa49d56c94f5e7",
       "derived": [
-        "sources/notion-280-course-convolution-in-fourier"
-      ],
-      "catalog_level": true
+        "sources/notion-280-course-convolution-in-fourier",
+        "concepts/fourier-transform-and-filtering"
+      ]
     },
     "raw/notion/280/course__fourier-series-comp-filters.md": {
       "sha256": "0ea6731995ae7c91226624f1d033e1dcf49d910e3fb8339465c871ce7cdec376",
       "derived": [
-        "sources/notion-280-course-fourier-series-comp-filters"
-      ],
-      "catalog_level": true
+        "sources/notion-280-course-fourier-series-comp-filters",
+        "concepts/fourier-series-signals",
+        "concepts/fourier-transform-and-filtering"
+      ]
     },
     "raw/notion/280/course__fourier-series-decomp.md": {
       "sha256": "a86f962c3d64e0fbad48ba0214aaafdbb57fdfacff6d16aa44d304311fd95def",
       "derived": [
-        "sources/notion-280-course-fourier-series-decomp"
-      ],
-      "catalog_level": true
+        "sources/notion-280-course-fourier-series-decomp",
+        "concepts/fourier-series-signals"
+      ]
     },
     "raw/notion/280/course__fourier-series.md": {
       "sha256": "08efb89cbe5f7b8914623c0fe4af2a178ac60c9d36db6533f0777777cc7f3e4b",
       "derived": [
-        "sources/notion-280-course-fourier-series"
-      ],
-      "catalog_level": true
+        "sources/notion-280-course-fourier-series",
+        "concepts/fourier-series-signals"
+      ]
     },
     "raw/notion/280/course__lti-convolution.md": {
       "sha256": "76d55a3f5dbf96c8ecfbd66b34d5c671598041cc1070d332295eb80393d698f1",
       "derived": [
-        "sources/notion-280-course-lti-convolution"
-      ],
-      "catalog_level": true
+        "sources/notion-280-course-lti-convolution",
+        "concepts/lti-systems-and-convolution"
+      ]
     },
     "raw/notion/280/course__nyquist.md": {
       "sha256": "0b1626c2a015e738ca31d70964c4b56277fcc7301e0e23476a2020a06fde510b",
@@ -559,9 +560,9 @@
     "raw/notion/280/course__time-to-freq-domain-and-back-graphically.md": {
       "sha256": "631549de7deb35d951f023524c8cca1eeaff6a92de76a65a7d7cec1ad9afa78a",
       "derived": [
-        "sources/notion-280-course-time-to-freq-domain-and-back-graphically"
-      ],
-      "catalog_level": true
+        "sources/notion-280-course-time-to-freq-domain-and-back-graphically",
+        "concepts/fourier-transform-and-filtering"
+      ]
     },
     "raw/notion/280/mid-1___exam.md": {
       "sha256": "f50e41a93ffe1172a0fbeb0ba85b30a54edd11244f3ce696b9f5a69f18f475b9",

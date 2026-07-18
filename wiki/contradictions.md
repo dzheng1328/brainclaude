@@ -67,6 +67,12 @@ synthesizes #1 into a concept page, the vault teaches a false identity forever, 
 citation making it look authoritative. **Do not promote convolution algebra from this
 source until Dave rules on it.**
 
+**Handled at ingest 2026-07-18.** `mid-1__chat-review` was **not promoted at all** — no concept cites
+it. Convolution was promoted instead from the correct `course__lti-convolution` page (into
+[[lti-systems-and-convolution]]), which states commutativity/associativity and $r*u=\tfrac12 t^2u$
+correctly and never asserts the bad distributive identity. The withholding is noted inline in the
+concept. Still flagged for Dave only if he wants the chat-review file itself corrected upstream.
+
 Cosmetic, mirrored as-is, no action: "unit quadrativ", "LTI properies", "usuall",
 `N: y(t) = x(t=1)` (probably `x(t+1)`), `\infin` for `\infty` throughout.
 
@@ -458,6 +464,10 @@ failure mode as the blank `280 mid 2` exam row.
 This is not a pull failure and not an alias artifact. Sampling/Nyquist is a **real hole in
 Dave's notes**, and the vault will have a correspondingly real hole. `/query` on sampling
 will return nothing, correctly.
+
+**Confirmed at ingest 2026-07-18.** `course__nyquist.md` is frontmatter-only. No concept promoted; the
+gap is stated explicitly in [[fourier-transform-and-filtering]] so a reader knows the hole is real and
+not an oversight. Fills if Dave ever pulls sampling notes.
 
 Flagging because it's the kind of gap that looks like a bug later. It isn't. **Needs Dave
 only if he wants to fill it.**
