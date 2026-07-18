@@ -699,30 +699,30 @@
     "raw/notion/353/course__11-17-review.md": {
       "sha256": "143b2e9444723f0b2e51eacff06164665c20ecd83b9b43f54f3867ff30dcdbeb",
       "derived": [
-        "sources/notion-353-course-11-17-review"
-      ],
-      "catalog_level": true
+        "sources/notion-353-course-11-17-review",
+        "concepts/laplace-transform"
+      ]
     },
     "raw/notion/353/course__improper-integral-laplace-transform.md": {
       "sha256": "7443ae0119c5a0eadd4800c8d0b20c8d2cd0ad6643980506acd09437c3ef351e",
       "derived": [
-        "sources/notion-353-course-improper-integral-laplace-transform"
-      ],
-      "catalog_level": true
+        "sources/notion-353-course-improper-integral-laplace-transform",
+        "concepts/laplace-transform"
+      ]
     },
     "raw/notion/353/course__matrices-eigenvalues-two-point.md": {
       "sha256": "b8d694c71594a5cae632a88f11d1d75815c2ead8e318633cfeee55661c9d185b",
       "derived": [
-        "sources/notion-353-course-matrices-eigenvalues-two-point"
-      ],
-      "catalog_level": true
+        "sources/notion-353-course-matrices-eigenvalues-two-point",
+        "concepts/linear-systems-eigenvalue-method"
+      ]
     },
     "raw/notion/353/course__periodic-functions-trigonometric-series-fourier-series.md": {
       "sha256": "ceeb7788b464807d2e354dfb9a905c86d00b211e485fd1ee51057c2addfe5cf9",
       "derived": [
-        "sources/notion-353-course-periodic-functions-trigonometric-series-fourier-series"
-      ],
-      "catalog_level": true
+        "sources/notion-353-course-periodic-functions-trigonometric-series-fourier-series",
+        "concepts/fourier-series"
+      ]
     },
     "raw/notion/353/course__variation-of-parameters.md": {
       "sha256": "97b82e6c4d7544e165e8d035aeba37729037c25d95bbc6f034e1ec51f0009f67",

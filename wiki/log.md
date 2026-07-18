@@ -727,3 +727,37 @@ left as source cards, not promoted.
 
 Vault now has 33 concepts (6×316, 7×350, 6×230-semi, 6×230-prob, 8×270). Remaining courses to
 deep-ingest: 353, 280.
+
+---
+
+## 2026-07-18 — deep-ingest 353 (Math 353, Diff Eq & Linear Algebra)
+
+Deep pass over the differential-equations course. This course carries the corpus's densest cluster of
+flagged source errors, so the promotion decisions were as much about what to *withhold* as what to
+promote — verified each of the four OPEN 353 flags in [[contradictions]] by reading the bodies.
+
+**3 concepts promoted (from the clean, verified-correct material):**
+- [[laplace-transform]] — improper-integral definition, transform table, differentiation property,
+  solving ODEs by partial fractions, unit-step/time-shift, convolution, Dirac delta. (Malformed
+  $\mathcal{L}\{\cos t\}$ and the skipped sifting property not reproduced.)
+- [[fourier-series]] — period-$2\pi$ and general period-$2L$ coefficients, even/odd symmetry, midpoint
+  convergence at jumps. The source's master formula drops the $\sin$ from the $b_n$ term; corrected and
+  flagged inline.
+- [[linear-systems-eigenvalue-method]] — $\mathbf{x}'=A\mathbf{x}$ via eigenvalues (distinct real,
+  complex, defective/generalized), Wronskian test, two-tank worked problem, and the *correct* matrix
+  variation-of-parameters ($\mathbf{x}_p=\Phi\int\Phi^{-1}\mathbf{f}$).
+
+**Withheld by the "promote understanding, not transcription" rule:**
+- **variation-of-parameters** (scalar) — the method is executed incorrectly ($y_1$/$y_2$ swapped
+  relative to its own theorem; normalized then used un-normalized $f$). **Blocked entirely**, no concept,
+  left catalog-level in the manifest.
+- **Two-point BVP eigenvalue problem** — operator-sign errors ($\mathcal{L}y=y''$, $=-\lambda y$) and the
+  $\lambda>0$ case (the $\lambda_n=(n\pi/L)^2$, $\sin(n\pi x/L)$ payoff) is simply absent. Not promoted;
+  the result is referenced only as a gap-marker in [[fourier-series]], never asserted with this citation
+  (provenance discipline — can't cite a source for something it doesn't contain).
+
+Contradiction entries updated with the ingest decisions. [[353]] course card gained a Concepts hub
+section noting the withheld material.
+
+Vault now has 36 concepts (6×316, 7×350, 6×230-semi, 6×230-prob, 8×270, 3×353). Remaining: 280
+(signals & systems) — the last course, and it carries the 280 convolution error-note to resolve.

@@ -616,6 +616,21 @@ are where things break. Dave computes correctly and transcribes carelessly. That
 should drive promotion decisions — his worked results are trustworthy, his formula statements
 need checking.
 
+**Handled at ingest 2026-07-18.** Verified all four flags by reading the bodies. Decisions:
+- **variation-of-parameters** — confirmed wrong ($y_1$/$y_2$ swapped vs. its own theorem; un-normalized
+  $f=x^4$ used after normalizing). **Blocked entirely** — no concept promoted from it. (Note: a
+  *separate*, correct matrix variation-of-parameters example lives in `matrices-eigenvalues-two-point`
+  and is promoted via [[linear-systems-eigenvalue-method]].)
+- **matrices-eigenvalues-two-point** — the eigenvalue-method content (superposition, Wronskian,
+  distinct/complex/defective cases, two-tank problem) is correct and promoted to
+  [[linear-systems-eigenvalue-method]]. The BVP section's operator-sign errors and missing $\lambda>0$
+  case mean the BVP eigenvalue problem is **not** promoted; its $\sin(n\pi x/L)$ payoff is referenced
+  only as a gap-marker in [[fourier-series]], never asserted from this source.
+- **improper-integral-laplace-transform** — promoted to [[laplace-transform]]; the malformed
+  $\mathcal{L}\{\cos t\}$ and skipped sifting-property are not reproduced.
+- **periodic-functions...fourier-series** — promoted to [[fourier-series]]; the missing-$\sin$ master
+  formula is corrected and flagged inline. Nothing here left open.
+
 ---
 
 ## OPEN — `353 mid 2` is marked "Mastered / Done!" but is structurally empty
