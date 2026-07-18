@@ -61,6 +61,20 @@ A page may legitimately touch two domains (an ECE course project is both `educat
 fork the `concepts/`/`entities/` folders per domain — the kind-based folders stay the
 backbone; `domain:` is a tag on top, and `_index.md` groups by it as a view.
 
+**Exception — the `personal` domain is path-separated and git-private (amended 2026-07-18, Dave's
+call).** Dave's private context (travel, study-abroad logistics, etc.) is kept *in* the vault so it's
+usable locally, but it must **never** reach the git remote. Since git filters by path — not by the
+`domain:` tag — every `personal`-domain wiki page lives under **`wiki/personal/`**, which is
+**gitignored** (as is `raw/` for personal raw snapshots). Rules:
+- Write personal pages to `wiki/personal/` (any kind — entity, source, note), never to the committed
+  `wiki/concepts|entities|sources/`. Mark them `private: true` in frontmatter.
+- **Committed files must not enumerate or embed personal specifics** — `_index.md`, `log.md`,
+  `.manifest.json`, and any committed page stay clean of personal content (no personal titles, links,
+  or details). `_index.md`'s personal section is a generic "local only" pointer, not a list.
+- **Credentials are never stored anywhere in the vault**, gitignored or not — passwords/tokens/keys go
+  in a password manager. Everything else personal may be kept in full under `wiki/personal/`.
+- Personal content is not tracked in the committed `.manifest.json`.
+
 ## Projects — indexed, not ingested
 
 Dave's code and hardware projects are **living repositories**, most with their own git remote

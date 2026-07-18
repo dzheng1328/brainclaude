@@ -4,15 +4,17 @@ Catalog of every wiki page. Maintained by `/ingest`. Grouped by kind, sliced by 
 
 **Status:** `raw/` holds 95 Notion snapshots, 16 Drive snapshots, 5 repo-doc snapshots
 (`raw/repos/ev-firmware/`, `raw/repos/hw-cnn-accelerator/`), 124 assets. **Graph populated:** all
-7 coursework courses deep-ingested — **41 concepts**, 119 source cards, 4 synthesis pages, 34 entities.
-Google Drive ingest started 2026-07-18 (personal domain now seeded). Last updated 2026-07-18.
+7 coursework courses deep-ingested — **41 concepts**, 118 source cards, 4 synthesis pages, 33 entities
+(committed graph). The **personal** domain is kept locally in gitignored `wiki/personal/` + `raw/` and is
+not counted here. Google Drive ingest started 2026-07-18. Last updated 2026-07-18.
 
 ## By domain
 
 The vault's backbone is **kind** (concepts / entities / sources), so the folders don't split by
 domain — instead every page carries a `domain:` tag and this section is the view that slices by it.
 The same four domains color the Obsidian graph (education = blue, projects = green, career = amber,
-personal = purple). Current split: **education 169 · projects 19 · career 8 · personal 2.**
+personal = purple). Current split (committed graph): **education 169 · projects 19 · career 8.** The **personal** domain is
+gitignored (local only), so its pages aren't part of the pushed repo.
 
 ### 🎓 education — coursework, concepts, academic history
 - **Courses (18):** [[316]] · [[350]] · [[353]] · [[280]] · [[270]] · [[230-probability]] ·
@@ -34,9 +36,11 @@ personal = purple). Current split: **education 169 · projects 19 · career 8 ·
 - [[professional-profile]] · [[jones-seel-lab]] · [[catalyst-tech-society]] · [[rtx-internship]]
 - 4 source cards (résumé, CV — sensitive docs recorded as facts, not copied).
 
-### 🌱 personal — private context
-- [[taiwan-seoul-trip]] — Aug 2026 Taiwan trip + the move into the fall-2026 Yonsei exchange
-- Being populated from Google Drive (2026-07-18 onward); sensitive PII kept as facts, never copied.
+### 🌱 personal — private context (local only)
+- **Lives in the gitignored `wiki/personal/` and `raw/`** — never committed or pushed. Visible in
+  Obsidian on this machine, but intentionally absent from the git remote. Full personal detail is kept
+  there; the only thing excluded outright is plaintext credentials (those belong in a password manager).
+- This committed index does not enumerate personal entries by design.
 
 ## Concepts
 
@@ -101,7 +105,6 @@ personal = purple). Current split: **education 169 · projects 19 · career 8 ·
 - [[jones-seel-lab]] — Duke research lab, embedded/IoT flood-mapping firmware (career)
 - [[catalyst-tech-society]] — Duke student tech org, Dave = Professional Chair (career)
 - [[rtx-internship]] — RTX (Raytheon) internship w/ housing, ~summer 2026 (career)
-- [[taiwan-seoul-trip]] — Aug 2026 Taiwan trip + fall-2026 Yonsei move (**personal**)
 
 ## Sources
 

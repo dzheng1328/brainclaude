@@ -7,6 +7,13 @@
 # unless one is set up separately.
 raw/
 
+# Personal domain — kept locally in the vault (visible in Obsidian), NEVER committed/pushed.
+# Dave's private second brain holds real personal info (travel, study-abroad logistics, etc.);
+# it must not reach the git remote. git filters by path, not by the `domain:` frontmatter tag,
+# so personal-domain pages get a dedicated gitignored home instead of the kind-based folders.
+# raw/ (above) already covers personal raw snapshots; this covers the personal wiki layer.
+wiki/personal/
+
 # Obsidian: keep shared config (appearance, plugins, graph settings),
 # ignore per-machine UI state that churns on every pane you open.
 .obsidian/workspace.json
