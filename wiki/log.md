@@ -585,3 +585,29 @@ wire each course card into a hub. No bodies re-read.
 Prior contradiction/error notes from the original pull (280 convolution errors, 270 garbled velocity
 formula, 353 OCR) remain in [[contradictions]] as OPEN — they were flagged by the reading agents at
 pull time and still apply; this cataloging pass did not re-verify them.
+
+## 2026-07-17 — Goal A, deep-ingest 1: 350 (digital systems)
+
+Started "Goal A" (make the brain usable in projects) by deep-ingesting the highest-leverage course:
+350 feeds both hardware projects and is where most gap-marker links pointed. Read the 350 Notion
+concept bodies (FSM cluster, arithmetic, Booth's, CMOS, Quine-McCluskey, truth tables) — the
+expected token cost of a deep pass, scoped to concept-bearing pages only (skipped nav + verilog +
+project docs already seen).
+
+**7 concepts promoted:**
+- [[finite-state-machines]], [[fsm-state-minimization]] (resolves the most-referenced gap-marker
+  link — cited from [[hw-cnn-accelerator]], [[ece-350-connect4]], and elsewhere),
+- [[boolean-algebra]], [[twos-complement-arithmetic]], [[binary-multiplication]] (Booth's),
+  [[cmos-logic]] (shares PUN/PDN with [[230-semiconductors]]), [[pipelining-and-hazards]].
+
+These wire directly into the projects: Booth's + two's-complement → the MAC datapath of
+[[hw-cnn-accelerator]]; FSM + pipelining → the [[ece-350-connect4]] pipelined CPU; CMOS bridges to
+the ECE 230L device-physics side.
+
+**Bookkeeping:** 11 deep-read 350 source cards upgraded from catalog-level → promoted (dropped the
+`catalog_level` flag, added Promotes links, manifest `derived` now lists the concepts). [[350]]
+course card gained a Concepts hub section. Declined (candidates, left as source cards): Hamming
+codes and combinational building blocks (mux/demux/encoders); Verilog tooling is course-specific.
+
+Vault now has 13 concepts (6 from 316 + 7 from 350). Next Goal-A steps: /query test, then wire a
+project's own CLAUDE.md at these concepts.

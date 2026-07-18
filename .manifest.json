@@ -593,16 +593,16 @@
     "raw/notion/350/mid-1__arithmetic.md": {
       "sha256": "e2035009c5a934b85a017ad44447c9a5abea2ad02b80f5e7b8ad5a6bad648921",
       "derived": [
-        "sources/notion-350-mid-1-arithmetic"
-      ],
-      "catalog_level": true
+        "sources/notion-350-mid-1-arithmetic",
+        "concepts/twos-complement-arithmetic"
+      ]
     },
     "raw/notion/350/mid-1__multiplication-booths.md": {
       "sha256": "0872ccbcbdf96ddac45d3de3c1333f6661c0f4d474242df53d3cb94c9ca98248",
       "derived": [
-        "sources/notion-350-mid-1-multiplication-booths"
-      ],
-      "catalog_level": true
+        "sources/notion-350-mid-1-multiplication-booths",
+        "concepts/binary-multiplication"
+      ]
     },
     "raw/notion/350/mid-1__mux-demux-de-en-coders.md": {
       "sha256": "262444144101cd432d5121ee77d9b422821450aea9462126f5ea7138e5bbdcf6",
@@ -621,9 +621,9 @@
     "raw/notion/350/mid-1__truth-tables-the-works.md": {
       "sha256": "835c87a2c45f45697c70d47b00f9ca4cad692be42a4d6485a4c2f2cf43551c86",
       "derived": [
-        "sources/notion-350-mid-1-truth-tables-the-works"
-      ],
-      "catalog_level": true
+        "sources/notion-350-mid-1-truth-tables-the-works",
+        "concepts/boolean-algebra"
+      ]
     },
     "raw/notion/350/mid-2___exam.md": {
       "sha256": "28ff09d1e349b3dd4a7e3dbdacb1e299190a5d50fb79b97b495daf9753ca4131",
@@ -635,23 +635,23 @@
     "raw/notion/350/mid-2__cmos-logic.md": {
       "sha256": "2f7c94560a5f326c2bd142d87b1e375ea9243c00e10c65ed21176b7459a0c1d1",
       "derived": [
-        "sources/notion-350-mid-2-cmos-logic"
-      ],
-      "catalog_level": true
+        "sources/notion-350-mid-2-cmos-logic",
+        "concepts/cmos-logic"
+      ]
     },
     "raw/notion/350/mid-2__fsm-analysis.md": {
       "sha256": "a12db1ceaf0751ab4024676dd3b7ed7fe73cfa16d56edea3bba2eec5f2cc113b",
       "derived": [
-        "sources/notion-350-mid-2-fsm-analysis"
-      ],
-      "catalog_level": true
+        "sources/notion-350-mid-2-fsm-analysis",
+        "concepts/finite-state-machines"
+      ]
     },
     "raw/notion/350/mid-2__fsm-state-minimization.md": {
       "sha256": "df55c98c3fbcb075c5dbdfdd5070fed198061b6f35391c87b417243274b58ace",
       "derived": [
-        "sources/notion-350-mid-2-fsm-state-minimization"
-      ],
-      "catalog_level": true
+        "sources/notion-350-mid-2-fsm-state-minimization",
+        "concepts/fsm-state-minimization"
+      ]
     },
     "raw/notion/350/mid-2__hamming-codes.md": {
       "sha256": "747cb3a592b7b86af2c874fba4ec40285093063f45c79c0bb8c5c7c2473b4331",
@@ -663,37 +663,37 @@
     "raw/notion/350/mid-2__implication-charts.md": {
       "sha256": "e80c9b0abf880d8bd092003aa4052c58a9fd2cc5a323a70a91d6a9c6dae14189",
       "derived": [
-        "sources/notion-350-mid-2-implication-charts"
-      ],
-      "catalog_level": true
+        "sources/notion-350-mid-2-implication-charts",
+        "concepts/fsm-state-minimization"
+      ]
     },
     "raw/notion/350/mid-2__mealy-fsms-sequence-detectors.md": {
       "sha256": "c25dfcbb9a579845040bf44e253b24b5e0f752f35b4c01bed7fda2ec9f4769ec",
       "derived": [
-        "sources/notion-350-mid-2-mealy-fsms-sequence-detectors"
-      ],
-      "catalog_level": true
+        "sources/notion-350-mid-2-mealy-fsms-sequence-detectors",
+        "concepts/finite-state-machines"
+      ]
     },
     "raw/notion/350/mid-2__quine-mccluskey-algorithm.md": {
       "sha256": "b8da1b51a8143748372efe4e4038f7ea64416323b1d47ad022dea1d9a724c984",
       "derived": [
-        "sources/notion-350-mid-2-quine-mccluskey-algorithm"
-      ],
-      "catalog_level": true
+        "sources/notion-350-mid-2-quine-mccluskey-algorithm",
+        "concepts/boolean-algebra"
+      ]
     },
     "raw/notion/350/mid-2__row-matching-mealy-friendly-method.md": {
       "sha256": "1adb6d8918a72db84616b3cd62edce4432d578063cfcf97fcc0ff512cf585bf8",
       "derived": [
-        "sources/notion-350-mid-2-row-matching-mealy-friendly-method"
-      ],
-      "catalog_level": true
+        "sources/notion-350-mid-2-row-matching-mealy-friendly-method",
+        "concepts/fsm-state-minimization"
+      ]
     },
     "raw/notion/350/mid-2__state-partitioning-the-moore-friendly-method.md": {
       "sha256": "dc980e5240b32bb405ee95c7ad35373d297308cebd286b2e472143cc3383b374",
       "derived": [
-        "sources/notion-350-mid-2-state-partitioning-the-moore-friendly-method"
-      ],
-      "catalog_level": true
+        "sources/notion-350-mid-2-state-partitioning-the-moore-friendly-method",
+        "concepts/fsm-state-minimization"
+      ]
     },
     "raw/notion/353/course__11-17-review.md": {
       "sha256": "143b2e9444723f0b2e51eacff06164665c20ecd83b9b43f54f3867ff30dcdbeb",

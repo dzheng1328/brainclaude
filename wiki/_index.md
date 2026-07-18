@@ -15,11 +15,15 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 
 ## Concepts
 
-*Ingested from [[316]] (2026-07-17):*
+*From [[316]] databases:*
 - [[relational-algebra]] · [[functional-dependencies]] · [[database-normalization]]
 - [[entity-relationship-model]] · [[database-transactions]] · [[sql]]
 
-*(more arrive as `/ingest` processes each course)*
+*From [[350]] digital systems (feeds the hardware projects):*
+- [[finite-state-machines]] · [[fsm-state-minimization]] · [[boolean-algebra]]
+- [[twos-complement-arithmetic]] · [[binary-multiplication]] · [[cmos-logic]] · [[pipelining-and-hazards]]
+
+*(more arrive as `/ingest` deep-processes each course)*
 
 ## Entities
 
