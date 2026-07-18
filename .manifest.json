@@ -113,6 +113,685 @@
       "derived": [
         "sources/drive-316-schedule"
       ]
+    },
+    "raw/drive/230-semiconductors/final-exam-template-cmos-logic.md": {
+      "sha256": "af29a87992461b6e9bd1a3457ee1a8b50e1e2bd0b56063a23cee8a5bedc32f48",
+      "derived": [
+        "sources/drive-230-semiconductors-final-exam-template-cmos-logic"
+      ],
+      "catalog_level": true
+    },
+    "raw/drive/270/lab-1.md": {
+      "sha256": "949811374262c9cdfe732e76e6fd9f1af9f0e638e8f9315de1fdf19bfa8fb36e",
+      "derived": [
+        "sources/drive-270-lab-1"
+      ],
+      "catalog_level": true
+    },
+    "raw/drive/270/lab-4.md": {
+      "sha256": "79b8bda5c8b5e178fa4aa2aa8acbbf536b4956a55ba99313bea58966e471a9c1",
+      "derived": [
+        "sources/drive-270-lab-4"
+      ],
+      "catalog_level": true
+    },
+    "raw/drive/270/optics-lab-tab1.md": {
+      "sha256": "479ac86d87e2c34650d32c37956e7405b060d39be7b3d723825f584f47c9090e",
+      "derived": [
+        "sources/drive-270-optics-lab-tab1"
+      ],
+      "catalog_level": true
+    },
+    "raw/drive/280/lab-1-discussion.md": {
+      "sha256": "e4c203256c6b192aba2b31259faac5a90f0dff4d4a984c20adce26877bacb430",
+      "derived": [
+        "sources/drive-280-lab-1-discussion"
+      ],
+      "catalog_level": true
+    },
+    "raw/drive/280/lab-1-music-synthesis-handout.md": {
+      "sha256": "ea46fec1ff399d833e619e993d0d95fc948fdffae59d1495dd3feff5d0089cdc",
+      "derived": [
+        "sources/drive-280-lab-1-music-synthesis-handout"
+      ],
+      "catalog_level": true
+    },
+    "raw/drive/280/lab-1-report.md": {
+      "sha256": "89db1d5def7444c1c3c80dd52f44f67fa4fa1ed524e6ac78e22088bfd539ad68",
+      "derived": [
+        "sources/drive-280-lab-1-report"
+      ],
+      "catalog_level": true
+    },
+    "raw/drive/350/final-project-assignment.md": {
+      "sha256": "dbb71cd754ca5dbc0099a6bca87b8799e1f2ab4c52cdcb4685ac138e117a0167",
+      "derived": [
+        "sources/drive-350-final-project-assignment"
+      ],
+      "catalog_level": true
+    },
+    "raw/drive/350/final-project-proposal-connect4.md": {
+      "sha256": "8810b6e308e66401b8c93853ef779fd241c48a358f2f42fab6a6265a093e16c3",
+      "derived": [
+        "sources/drive-350-final-project-proposal-connect4"
+      ],
+      "catalog_level": true
+    },
+    "raw/drive/350/final-project-proposal-poker.md": {
+      "sha256": "e75db9974119b875b45a5f7ea8dbb20c8ddb6a35c15225c35bce6b5d3dd8d156",
+      "derived": [
+        "sources/drive-350-final-project-proposal-poker"
+      ],
+      "catalog_level": true
+    },
+    "raw/drive/350/technical-report-connect4.md": {
+      "sha256": "7b90c3897cfd710197ec8009ad72f854fb75efe1917f6b7b361a32c8e1eaa9b3",
+      "derived": [
+        "sources/drive-350-technical-report-connect4"
+      ],
+      "catalog_level": true
+    },
+    "raw/drive/353/practice-midterm-1.md": {
+      "sha256": "2f0897bf9c1200d8c313575179679ada2814f380bded0022aea1f895237009c0",
+      "derived": [
+        "sources/drive-353-practice-midterm-1"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-probability/course___index.md": {
+      "sha256": "c89a045a4513dadd9927f536d9464a7726283d3982328c05ae2a6778d1c12928",
+      "derived": [
+        "sources/notion-230-probability-course-index"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-probability/course__expectation.md": {
+      "sha256": "4b6b9052bed2a5813f48adf0a7b38ba74b1e232f9bc1195b552c612c95e78a09",
+      "derived": [
+        "sources/notion-230-probability-course-expectation"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-probability/course__lln-clt.md": {
+      "sha256": "cc7be13d6fa3a8e46abd4985de7c1fe68cf9a6d4987ecc8142cdf07350d87e9b",
+      "derived": [
+        "sources/notion-230-probability-course-lln-clt"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-probability/course__normal-approx-to-binomial.md": {
+      "sha256": "006a929cc8dd4e664ec396609982920fd9dd72cbe64555a2308ed8b3e64b8acd",
+      "derived": [
+        "sources/notion-230-probability-course-normal-approx-to-binomial"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-probability/course__random-variable-transformation.md": {
+      "sha256": "fcb78193a8cde0290aecb3560f633da8d0b85b8b87746bbaab1b0b5a236ac55f",
+      "derived": [
+        "sources/notion-230-probability-course-random-variable-transformation"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-probability/mid-1___exam.md": {
+      "sha256": "37b4d75cbdd3ffb9004d06674870cc8e4da89c4fd30516b00d6fb008fe23c6a8",
+      "derived": [
+        "sources/notion-230-probability-mid-1-exam"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-probability/mid-2___exam.md": {
+      "sha256": "e35bb6e13624d2c3a1d93ec8816adb9909f649b7082a9b4e6907fd05d4de9f7b",
+      "derived": [
+        "sources/notion-230-probability-mid-2-exam"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-probability/mid-2__confidence-intervals.md": {
+      "sha256": "98b00bc2ebd1bfbe526ba4b85d385099da0c65daee05cfb53d1cda836a15bba3",
+      "derived": [
+        "sources/notion-230-probability-mid-2-confidence-intervals"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-probability/mid-2__discrete-distributions.md": {
+      "sha256": "cc55b3f4e7f8292a37d0f0fac4102bac6049b6f55c017c6f45f78c452deb9278",
+      "derived": [
+        "sources/notion-230-probability-mid-2-discrete-distributions"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-probability/mid-2__expected-value-normal-distributions.md": {
+      "sha256": "3e42f9f74323b3f8fb6ddd3c97e4db8ac7dc5305d19c8a386418fd92326941f2",
+      "derived": [
+        "sources/notion-230-probability-mid-2-expected-value-normal-distributions"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-probability/mid-2__law-of-large-numbers-clt.md": {
+      "sha256": "3a80091fe0dda6d70a6db8d99f611c94ae85dc3b7b87c2296e25c7edd06af87c",
+      "derived": [
+        "sources/notion-230-probability-mid-2-law-of-large-numbers-clt"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-probability/mid-2__poisson.md": {
+      "sha256": "c0d156d31e1bbdfdd73e63229b8f47cb4efb9ae11f295f7b0c7759d52549505d",
+      "derived": [
+        "sources/notion-230-probability-mid-2-poisson"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-semiconductors/final___exam.md": {
+      "sha256": "7ea23c7ad5476c27fcc4cbd0ceb373756bc74020b0aeb31127dee550d97dc47d",
+      "derived": [
+        "sources/notion-230-semiconductors-final-exam"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-semiconductors/mid-1___exam.md": {
+      "sha256": "66da5230281726c2bfc7253bd97d821611b4035942d191a6c56900931a009a04",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-1-exam"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-semiconductors/mid-1__carrier-transport-drift-diffusion.md": {
+      "sha256": "fe607342d61c098ccdbf9fb3be0bfee2cb251e9440b24baf87266ed850e279e5",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-1-carrier-transport-drift-diffusion"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-semiconductors/mid-1__crystal-structure-of-solids.md": {
+      "sha256": "b6416c92a2422b3b0bb07a0cfc3a2d379f1023766daeb1a61cff10331d4446e2",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-1-crystal-structure-of-solids"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-semiconductors/mid-1__quantum-mechanics.md": {
+      "sha256": "64e3f5398b7fc80c90bdd3081e7fcbd896a484598e097aa0e8a9553c82b691b2",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-1-quantum-mechanics"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-semiconductors/mid-1__quantum-theory-of-solids.md": {
+      "sha256": "3a548a80ca599e31a2ef1bc3dd1631d3f6fc64ce812428359862207cff6a5f4c",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-1-quantum-theory-of-solids"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-semiconductors/mid-1__the-semiconductor-in-equilibrium.md": {
+      "sha256": "25a3f98c6936001fb31369d54778544829375a844a17b31728b52e55393de1ca",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-1-the-semiconductor-in-equilibrium"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-semiconductors/mid-2___exam.md": {
+      "sha256": "e1bf46f0ea5c0040d364798023df6f15fa1bd55e4e35ea206b792b361b64ba6e",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-2-exam"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-semiconductors/mid-2__carrier-transport.md": {
+      "sha256": "e9607c5690f37645df0848dcb384659ead395bdec0ba0d9657cc13ead192eb5e",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-2-carrier-transport"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-semiconductors/mid-2__mos-capacitor-core-concepts.md": {
+      "sha256": "88b7f47731be997fc6bc55939186504340edc4337b747e55089d89818a5ece1f",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-2-mos-capacitor-core-concepts"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-semiconductors/mid-2__mos-capacitor-cv-curves-math.md": {
+      "sha256": "09df93269db9b3d1506172ea8c07d5b4111008a05a6d03fda586cf66ee12934a",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-2-mos-capacitor-cv-curves-math"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-semiconductors/mid-2__mosfet-fundamentals-structure.md": {
+      "sha256": "d5a3f1c9484fd4afb0eb21ecf7e9e66464993558955b718bff313fd3d6412e14",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-2-mosfet-fundamentals-structure"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-semiconductors/mid-2__mosfet-structure-and-energy-band-diagrams.md": {
+      "sha256": "e9399b3f6c3e41614f409e5bca8ec885b11e0583ed69ccbb8be15a5d490265df",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-2-mosfet-structure-and-energy-band-diagrams"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-semiconductors/mid-2__pn-junction-in-equilibrium.md": {
+      "sha256": "da7fd431c63d8178d734b138bd3693cc18ccb8ad5c562dca5491ae50cbf6011e",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-2-pn-junction-in-equilibrium"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-semiconductors/mid-2__pn-junction-under-bias.md": {
+      "sha256": "563e47c0820d00074ba9c5ec1559f8297dd2acfc88eb816acfd7b036d8a9ceef",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-2-pn-junction-under-bias"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/230-semiconductors/mid-2__semiconductor-fundamentals-and-energy-bands.md": {
+      "sha256": "8481a3de90e24a783524da456d10513cc67e7dca6e87ba82b350a61d9ba00241",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-2-semiconductor-fundamentals-and-energy-bands"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/270/final___exam.md": {
+      "sha256": "69a5f49006aa2e506d7f61ea9b03e3446b7a86d5a1c563920256b061d52c9f07",
+      "derived": [
+        "sources/notion-270-final-exam"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/270/final__acoustics.md": {
+      "sha256": "d69fb4e1b0b6aa3464fdbfd1f957188481f9613db3333f7e406e0ab0b517b329",
+      "derived": [
+        "sources/notion-270-final-acoustics"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/270/final__quantum.md": {
+      "sha256": "44f13efdc8b9dd71dce2847e22690a81e1854272e848ef447dab3b7e2d76fa18",
+      "derived": [
+        "sources/notion-270-final-quantum"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/270/mid-1___exam.md": {
+      "sha256": "818283b386208bf1c2eef2d6b593f6ceb1b83ac5a7cddbdffdc61136e9872ce3",
+      "derived": [
+        "sources/notion-270-mid-1-exam"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/270/mid-1__ac-steady-state-and-input-impedance.md": {
+      "sha256": "d0c3838d5f03b281e3476692583197f8bb0709e52a2f79f2f788922ee761e5f3",
+      "derived": [
+        "sources/notion-270-mid-1-ac-steady-state-and-input-impedance"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/270/mid-1__critical-lengths-where-tl-effects-matter.md": {
+      "sha256": "c0b48147154d114c2badc69915816814bbdb0ed727aefe33078ad5fd6ab43b65",
+      "derived": [
+        "sources/notion-270-mid-1-critical-lengths-where-tl-effects-matter"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/270/mid-1__impedance-matching.md": {
+      "sha256": "f1a76713ed55efd093c178a4a5f8e0ec9018083a5f55039900d13332c84b7886",
+      "derived": [
+        "sources/notion-270-mid-1-impedance-matching"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/270/mid-1__power-delivery-and-phasors.md": {
+      "sha256": "6ca1ff9c467138a37cf068f1d21c54b6fd5547072108b895d5150d9ca753533a",
+      "derived": [
+        "sources/notion-270-mid-1-power-delivery-and-phasors"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/270/mid-1__transients-bounce-diagrams-interconnects.md": {
+      "sha256": "76eedb9dfced89a0ea3b8f9fa2221ccd545c63d128a4e59d906fc64d2bdfba4e",
+      "derived": [
+        "sources/notion-270-mid-1-transients-bounce-diagrams-interconnects"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/270/mid-1__transmission-line-fundamentals.md": {
+      "sha256": "4d0ba8e4443e67b3881560819a7e058f1ab0a37d55c42a49564496f7196f38ce",
+      "derived": [
+        "sources/notion-270-mid-1-transmission-line-fundamentals"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/270/mid-2___exam.md": {
+      "sha256": "e20950f8e84d144cbd7f0dc57d398f213808c0a9f0f7b3821e1824e1c8fddb90",
+      "derived": [
+        "sources/notion-270-mid-2-exam"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/270/mid-2__electromagnetic-plane-waves-and-power.md": {
+      "sha256": "1ebd15288eabf8715f18bb7f98ec7de2d93725401142c671b0b862b8e3fb4473",
+      "derived": [
+        "sources/notion-270-mid-2-electromagnetic-plane-waves-and-power"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/270/mid-2__oblique-incidence-antennas.md": {
+      "sha256": "97b4dc1aabb64e34ff6cf63bcbf46b072aca9ef78d6ac5ce80e5dc87a2b577c7",
+      "derived": [
+        "sources/notion-270-mid-2-oblique-incidence-antennas"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/270/mid-2__oblique-incidence-parallel-vs-perp.md": {
+      "sha256": "d1b9517f390ed9f5cfc16cdca038f8b223d00adcf3557aa20805b0ff0af19c3b",
+      "derived": [
+        "sources/notion-270-mid-2-oblique-incidence-parallel-vs-perp"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/270/mid-2__wave-reflection-and-transmission-at-normal-indicdence.md": {
+      "sha256": "bd70be3ecd4df2caff7ffd976ba6dd81d860f2188e3da56acf84f097e83162f5",
+      "derived": [
+        "sources/notion-270-mid-2-wave-reflection-and-transmission-at-normal-indicdence"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/270/mid-2__waves-in-conducting-and-lossy-materials.md": {
+      "sha256": "cf025d726908fd1cb3be18da18e17fff10abb7ed0b0d0b0e9bd852c38577cf73",
+      "derived": [
+        "sources/notion-270-mid-2-waves-in-conducting-and-lossy-materials"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/280/course___index.md": {
+      "sha256": "714cab85e3127a6ee051bc218b22b8f1f2e7981f16ddc24d16d9cc4f18fa60c8",
+      "derived": [
+        "sources/notion-280-course-index"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/280/course__convolution-in-fourier.md": {
+      "sha256": "9dcb0d53c9ecadb83263d92c243be484b9adf752183cf8e42bfa49d56c94f5e7",
+      "derived": [
+        "sources/notion-280-course-convolution-in-fourier"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/280/course__fourier-series-comp-filters.md": {
+      "sha256": "0ea6731995ae7c91226624f1d033e1dcf49d910e3fb8339465c871ce7cdec376",
+      "derived": [
+        "sources/notion-280-course-fourier-series-comp-filters"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/280/course__fourier-series-decomp.md": {
+      "sha256": "a86f962c3d64e0fbad48ba0214aaafdbb57fdfacff6d16aa44d304311fd95def",
+      "derived": [
+        "sources/notion-280-course-fourier-series-decomp"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/280/course__fourier-series.md": {
+      "sha256": "08efb89cbe5f7b8914623c0fe4af2a178ac60c9d36db6533f0777777cc7f3e4b",
+      "derived": [
+        "sources/notion-280-course-fourier-series"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/280/course__lti-convolution.md": {
+      "sha256": "76d55a3f5dbf96c8ecfbd66b34d5c671598041cc1070d332295eb80393d698f1",
+      "derived": [
+        "sources/notion-280-course-lti-convolution"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/280/course__nyquist.md": {
+      "sha256": "0b1626c2a015e738ca31d70964c4b56277fcc7301e0e23476a2020a06fde510b",
+      "derived": [
+        "sources/notion-280-course-nyquist"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/280/course__time-to-freq-domain-and-back-graphically.md": {
+      "sha256": "631549de7deb35d951f023524c8cca1eeaff6a92de76a65a7d7cec1ad9afa78a",
+      "derived": [
+        "sources/notion-280-course-time-to-freq-domain-and-back-graphically"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/280/mid-1___exam.md": {
+      "sha256": "f50e41a93ffe1172a0fbeb0ba85b30a54edd11244f3ce696b9f5a69f18f475b9",
+      "derived": [
+        "sources/notion-280-mid-1-exam"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/280/mid-1__chat-review.md": {
+      "sha256": "00e039fc607554eebf23abe6fcf3ec1215600f5a525c1f8615fdccd95460fa51",
+      "derived": [
+        "sources/notion-280-mid-1-chat-review"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/280/mid-2___exam.md": {
+      "sha256": "3ae4068c9f1f3b2bf9d6b7925f43459ce2e707dc4a68d66022b68ae6086a259a",
+      "derived": [
+        "sources/notion-280-mid-2-exam"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/350/mid-1___exam.md": {
+      "sha256": "3ffdfa6e9f08fbb6046191ad5d28a079af0e643f3f387fb60e06f1e59c47a121",
+      "derived": [
+        "sources/notion-350-mid-1-exam"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/350/mid-1__arithmetic.md": {
+      "sha256": "e2035009c5a934b85a017ad44447c9a5abea2ad02b80f5e7b8ad5a6bad648921",
+      "derived": [
+        "sources/notion-350-mid-1-arithmetic"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/350/mid-1__multiplication-booths.md": {
+      "sha256": "0872ccbcbdf96ddac45d3de3c1333f6661c0f4d474242df53d3cb94c9ca98248",
+      "derived": [
+        "sources/notion-350-mid-1-multiplication-booths"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/350/mid-1__mux-demux-de-en-coders.md": {
+      "sha256": "262444144101cd432d5121ee77d9b422821450aea9462126f5ea7138e5bbdcf6",
+      "derived": [
+        "sources/notion-350-mid-1-mux-demux-de-en-coders"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/350/mid-1__on-verilog.md": {
+      "sha256": "a63ff2934d5e70d5131f707a8cce5f3373ebd6a5397da318bcd58590d6a03859",
+      "derived": [
+        "sources/notion-350-mid-1-on-verilog"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/350/mid-1__truth-tables-the-works.md": {
+      "sha256": "835c87a2c45f45697c70d47b00f9ca4cad692be42a4d6485a4c2f2cf43551c86",
+      "derived": [
+        "sources/notion-350-mid-1-truth-tables-the-works"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/350/mid-2___exam.md": {
+      "sha256": "28ff09d1e349b3dd4a7e3dbdacb1e299190a5d50fb79b97b495daf9753ca4131",
+      "derived": [
+        "sources/notion-350-mid-2-exam"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/350/mid-2__cmos-logic.md": {
+      "sha256": "2f7c94560a5f326c2bd142d87b1e375ea9243c00e10c65ed21176b7459a0c1d1",
+      "derived": [
+        "sources/notion-350-mid-2-cmos-logic"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/350/mid-2__fsm-analysis.md": {
+      "sha256": "a12db1ceaf0751ab4024676dd3b7ed7fe73cfa16d56edea3bba2eec5f2cc113b",
+      "derived": [
+        "sources/notion-350-mid-2-fsm-analysis"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/350/mid-2__fsm-state-minimization.md": {
+      "sha256": "df55c98c3fbcb075c5dbdfdd5070fed198061b6f35391c87b417243274b58ace",
+      "derived": [
+        "sources/notion-350-mid-2-fsm-state-minimization"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/350/mid-2__hamming-codes.md": {
+      "sha256": "747cb3a592b7b86af2c874fba4ec40285093063f45c79c0bb8c5c7c2473b4331",
+      "derived": [
+        "sources/notion-350-mid-2-hamming-codes"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/350/mid-2__implication-charts.md": {
+      "sha256": "e80c9b0abf880d8bd092003aa4052c58a9fd2cc5a323a70a91d6a9c6dae14189",
+      "derived": [
+        "sources/notion-350-mid-2-implication-charts"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/350/mid-2__mealy-fsms-sequence-detectors.md": {
+      "sha256": "c25dfcbb9a579845040bf44e253b24b5e0f752f35b4c01bed7fda2ec9f4769ec",
+      "derived": [
+        "sources/notion-350-mid-2-mealy-fsms-sequence-detectors"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/350/mid-2__quine-mccluskey-algorithm.md": {
+      "sha256": "b8da1b51a8143748372efe4e4038f7ea64416323b1d47ad022dea1d9a724c984",
+      "derived": [
+        "sources/notion-350-mid-2-quine-mccluskey-algorithm"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/350/mid-2__row-matching-mealy-friendly-method.md": {
+      "sha256": "1adb6d8918a72db84616b3cd62edce4432d578063cfcf97fcc0ff512cf585bf8",
+      "derived": [
+        "sources/notion-350-mid-2-row-matching-mealy-friendly-method"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/350/mid-2__state-partitioning-the-moore-friendly-method.md": {
+      "sha256": "dc980e5240b32bb405ee95c7ad35373d297308cebd286b2e472143cc3383b374",
+      "derived": [
+        "sources/notion-350-mid-2-state-partitioning-the-moore-friendly-method"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/353/course__11-17-review.md": {
+      "sha256": "143b2e9444723f0b2e51eacff06164665c20ecd83b9b43f54f3867ff30dcdbeb",
+      "derived": [
+        "sources/notion-353-course-11-17-review"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/353/course__improper-integral-laplace-transform.md": {
+      "sha256": "7443ae0119c5a0eadd4800c8d0b20c8d2cd0ad6643980506acd09437c3ef351e",
+      "derived": [
+        "sources/notion-353-course-improper-integral-laplace-transform"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/353/course__matrices-eigenvalues-two-point.md": {
+      "sha256": "b8d694c71594a5cae632a88f11d1d75815c2ead8e318633cfeee55661c9d185b",
+      "derived": [
+        "sources/notion-353-course-matrices-eigenvalues-two-point"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/353/course__periodic-functions-trigonometric-series-fourier-series.md": {
+      "sha256": "ceeb7788b464807d2e354dfb9a905c86d00b211e485fd1ee51057c2addfe5cf9",
+      "derived": [
+        "sources/notion-353-course-periodic-functions-trigonometric-series-fourier-series"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/353/course__variation-of-parameters.md": {
+      "sha256": "97b82e6c4d7544e165e8d035aeba37729037c25d95bbc6f034e1ec51f0009f67",
+      "derived": [
+        "sources/notion-353-course-variation-of-parameters"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/353/mid-1___exam.md": {
+      "sha256": "72cdf8fe6cdac25a5d10ba8e0015eb0fce2dde7e396530fadb1ef6c4d7a6b78d",
+      "derived": [
+        "sources/notion-353-mid-1-exam"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/353/mid-2___exam.md": {
+      "sha256": "1c3e6d15b11f3154648ac8a8b3e2a0fef27fc2361c1bd76b381b85a31ee71293",
+      "derived": [
+        "sources/notion-353-mid-2-exam"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/misc/c___index.md": {
+      "sha256": "2d5cd25cf524f1f5296c9f681be18e1390287979d49acea5bc8a4fdbf7d6e885",
+      "derived": [
+        "sources/notion-misc-c-index"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/misc/c__janet.md": {
+      "sha256": "f7caed6ec9a007a23a47ba35746b649c022fd96de835bd7fe455e7c87e321df8",
+      "derived": [
+        "sources/notion-misc-c-janet"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/misc/c__technical-interview.md": {
+      "sha256": "17a9babd805b8a8f77df87903436785cceb075a2c75b5b177a91045598e01f90",
+      "derived": [
+        "sources/notion-misc-c-technical-interview"
+      ],
+      "catalog_level": true
+    },
+    "raw/notion/misc/roudy-notes.md": {
+      "sha256": "18121951dbb772df96c4e27228affcf8e7db987f6bc58255451cc64e87ab0239",
+      "derived": [
+        "sources/notion-misc-roudy-notes"
+      ],
+      "catalog_level": true
+    },
+    "raw/repos/ev-firmware/AGENTS.md": {
+      "sha256": "749c78b0ea8640ee400a038849fd460781e7ec529b946d8a857f8e560ee70e12",
+      "derived": [
+        "sources/repos-ev-agents"
+      ],
+      "catalog_level": true
+    },
+    "raw/repos/ev-firmware/README.md": {
+      "sha256": "312a512b5e2d75ba475f39dd8401696b43243b1f4c53beabb832d85355eb6cd4",
+      "derived": [
+        "sources/repos-ev-readme"
+      ],
+      "catalog_level": true
+    },
+    "raw/repos/ev-firmware/canlibrary.md": {
+      "sha256": "6bbf0efefe57ecf104b0f9edbca68f5b3dac6ec4a75c73c41a14e70ae1ae8d97",
+      "derived": [
+        "sources/repos-ev-canlibrary"
+      ],
+      "catalog_level": true
     }
   }
 }

@@ -559,3 +559,29 @@ as attachments to their parent source card, not read-and-promoted individually.
 
 Batches remaining (by course): 350, 270, 353, 230-semiconductors, 280, 230-probability, misc,
 repos/ev. ~97 files to go.
+
+## 2026-07-17 — /ingest batches 2–9: lightweight cataloging pass
+
+Per Dave: don't re-read every file (token burn); we already know each file's class from the folder
+structure. So instead of deep concept-extraction per course, ran a **cataloging pass** — build a
+source card for every remaining raw file from its **frontmatter only** (title + provenance), and
+wire each course card into a hub. No bodies re-read.
+
+- **97 new source cards** generated (manifest now covers all 114 raw files). Every card is marked
+  `catalog_level: true` and states honestly that the body was not re-read — provenance anchor, not a
+  content summary. Naming: `<src>-<course>-<slug>`.
+- **8 course/entity cards turned into hubs** (230-probability, 230-semiconductors, 270, 280, 350, 353
+  got "Sources (class boards & docs)" sections grouped by exam; [[ev-firmware]] and [[316]] already
+  had theirs). From any class you now reach all its Notion boards + Drive docs — the class-centric
+  view, built by linking in wiki/, no raw files moved.
+- **Concepts:** only 316 has promoted concepts (the earlier deep pass). All other courses are
+  catalogued but not concept-extracted — a deeper pass can promote any course's concepts on request
+  without re-pulling (the raw is already here). Existing gap-marker links ([[fsm-state-minimization]],
+  [[carrier-transport]], [[mosfet-structure-and-energy-band-diagrams]]) remain as markers.
+- **misc/ (4 files)** catalogued but flagged: not class material — `janet`, `technical-interview`,
+  `roudy-notes`, an index. Domain defaulted to education by the script; needs reassignment to
+  career/personal. Left for Dave.
+
+Prior contradiction/error notes from the original pull (280 convolution errors, 270 garbled velocity
+formula, 353 OCR) remain in [[contradictions]] as OPEN — they were flagged by the reading agents at
+pull time and still apply; this cataloging pass did not re-verify them.

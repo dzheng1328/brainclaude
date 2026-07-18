@@ -54,7 +54,12 @@ run yet. The one populated area is project pointer cards (below), indexed by han
 
 - [[sources/uni-flood-modeling]] — Automating Flood Modeling, Data+ 2025 research poster
 - [[sources/uni-350-cheat-sheets]] — ECE/CS 350 midterm cheat sheets (topic map for digital systems)
-- **316** (17 cards) — one per Notion board + Drive doc; hub is [[316]]. `/ingest`-generated.
+- **One source card per raw file — 114 total.** Each course card is the hub linking its own cards:
+  [[316]] (deep-ingested, 6 concepts) · [[350]] · [[270]] · [[353]] · [[230-semiconductors]] ·
+  [[280]] · [[230-probability]] · [[ev-firmware]]. All except 316 are **catalog-level**
+  (provenance + title; bodies not re-read) — deep concept promotion available per course on request.
+- `raw/notion/misc/` (4 cards) — not class material (`janet`, `technical-interview`, `roudy-notes`,
+  index); need a career/personal home, see open items.
 
 ## Synthesis
 
