@@ -4,9 +4,11 @@ Catalog of every wiki page. Maintained by `/ingest`. Grouped by kind, sliced by 
 
 **Status:** `raw/` holds 95 Notion snapshots, 16 Drive snapshots, 5 repo-doc snapshots
 (`raw/repos/ev-firmware/`, `raw/repos/hw-cnn-accelerator/`), 124 assets. **Graph populated:** all
-7 coursework courses deep-ingested — **41 concepts**, 120 source cards, 4 synthesis pages, 33 entities
+7 coursework courses deep-ingested — **41 concepts**, 121 source cards, 4 synthesis pages, 33 entities
 (committed graph). The **personal** domain is kept locally in gitignored `wiki/personal/` + `raw/` and is
-not counted here. Google Drive ingest ongoing since 2026-07-18. Last updated 2026-07-18.
+not counted here. Google Drive ingest complete for non-coursework material as of 2026-07-18 (remaining
+unexplored items are photos/screenshots/binary archives — no ingestible knowledge). Last updated
+2026-07-18.
 
 ## By domain
 

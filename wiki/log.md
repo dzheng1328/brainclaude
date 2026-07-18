@@ -938,3 +938,32 @@ Dave already flagged (5th/6th-grade essays); all six skipped, no card created.
 
 Counts: 41 concepts (unchanged), 120 source cards (+3 vs. last commit — 2 new + duplicate check),
 33 entities. Coursework tree remains reconciled, not re-pulled. Drive ingest continues on request.
+
+---
+
+## 2026-07-18 — Google Drive ingest, batch 3: 270 lab 8 + remaining root-level survey
+
+Finished triaging the remaining root-level Drive items. `270 lab 1`, `270 lab 4` (+ a duplicate "Copy
+of"), and `270 Optics Lab` are duplicates of already-catalogued `raw/drive/270/` files — skipped.
+`lab 8` (Slides) was new; added as `raw/drive/270/lab-8.md` + [[sources/drive-270-lab-8]] and wired into
+the [[270]] course card. Text extraction returned no usable content (image/diagram-heavy deck) —
+logged per the unreadable-source guardrail rather than silently dropped.
+
+**Personal domain (local only, not described further here):** one new entry added, parallel in
+character to [[taiwan-seoul-trip]]. Distinguished from noise correctly — read before judging by title,
+per [[CLAUDE]]'s own lesson, rather than assumed.
+
+**Skipped as out of scope / noise:** `proc-toolchain.zip` (97MB binary archive, not text-readable via
+this tool); the remaining loose screenshots/`IMG_*.jpeg` photos; generic "Untitled document/spreadsheet/
+presentation" entries too small to be substantive.
+
+Counts: 41 concepts, 121 source cards, 33 entities (committed graph). Drive survey is now essentially
+exhausted for non-coursework material — remaining unexplored items are photos/screenshots/binary
+archives, none of which carry ingestible knowledge.
+
+**Also this session:** diagnosed why Obsidian required manual "reload without saving" for every vault
+change — the vault sits under macOS's iCloud "Desktop & Documents Folders" sync
+(`FXICloudDriveDocuments=1`), which is a known source of file-watcher lag/misses in Obsidian. Recommended
+relocating the vault out of the synced path as the real fix; flagged the `.obsidian/graph.json`/`app.json`
+caveat separately (those specific files need a pane reopen regardless of iCloud, since Obsidian reads
+them at pane-open time, not live).

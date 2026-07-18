@@ -814,6 +814,12 @@
       "derived": [
         "sources/drive-gkweb-2026-accounting-firm-platform-spec"
       ]
+    },
+    "raw/drive/270/lab-8.md": {
+      "sha256": "ed454f49120624094915ddb66b413c551c1ef490d183e9673ec25d6596a4b2d2",
+      "derived": [
+        "sources/drive-270-lab-8"
+      ]
     }
   }
 }
