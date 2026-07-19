@@ -2,7 +2,7 @@
 
 Catalog of every wiki page. Maintained by `/ingest`. Grouped by kind, sliced by domain.
 
-**Status:** `raw/` holds 95 Notion snapshots, 16 Drive snapshots, 5 repo-doc snapshots
+**Status:** `raw/` holds 95 Notion snapshots, 18 Drive snapshots, 5 repo-doc snapshots
 (`raw/repos/ev-firmware/`, `raw/repos/hw-cnn-accelerator/`), 124 assets. **Graph populated:** all
 7 coursework courses deep-ingested — **41 concepts**, 121 source cards, 4 synthesis pages, 33 entities
 (committed graph). The **personal** domain is kept locally in gitignored `wiki/personal/` + `raw/` and is
@@ -15,7 +15,7 @@ unexplored items are photos/screenshots/binary archives — no ingestible knowle
 The vault's backbone is **kind** (concepts / entities / sources), so the folders don't split by
 domain — instead every page carries a `domain:` tag and this section is the view that slices by it.
 The same four domains color the Obsidian graph (education = blue, projects = green, career = amber,
-personal = purple). Current split (committed graph): **education 169 · projects 19 · career 8.** The **personal** domain is
+personal = purple). Current split (committed graph): **education 170 · projects 20 · career 9.** The **personal** domain is
 gitignored (local only), so its pages aren't part of the pushed repo.
 
 ### 🎓 education — coursework, concepts, academic history
@@ -25,7 +25,7 @@ gitignored (local only), so its pages aren't part of the pushed repo.
 - **Concepts (39):** the full graph — see [Concepts](#concepts) below, grouped by course.
 - **Synthesis:** [[academic-timeline]] · [[convolution-and-transforms]]
 - **Research:** [[data-plus]]
-- 109 source cards (provenance anchors).
+- 110 source cards (provenance anchors).
 
 ### 🔧 projects — code & hardware (indexed by pointer, repos stay external)
 - **Project cards (11):** [[hw-cnn-accelerator]] · [[ece-350-connect4]] · [[synth]] · [[imgsic]] ·
@@ -33,10 +33,12 @@ gitignored (local only), so its pages aren't part of the pushed repo.
   [[itm]]
 - **Concepts (2):** [[systolic-array-dataflow]] · [[neural-network-quantization]]
 - **Synthesis:** [[coursework-behind-hw-cnn-accelerator]]
+- 6 source cards (provenance anchors — includes the [[gkweb]] platform spec).
 
 ### 💼 career — profile, research labs, recruiting
 - [[professional-profile]] · [[jones-seel-lab]] · [[catalyst-tech-society]] · [[rtx-internship]]
-- 4 source cards (résumé, CV — sensitive docs recorded as facts, not copied).
+- 5 source cards (résumé, CV, job-search tracker — sensitive/raw content recorded as aggregate facts,
+  not copied).
 
 ### 🌱 personal — private context (local only)
 - **Lives in the gitignored `wiki/personal/` and `raw/`** — never committed or pushed. Visible in
@@ -112,13 +114,15 @@ gitignored (local only), so its pages aren't part of the pushed repo.
 
 - [[sources/uni-flood-modeling]] — Automating Flood Modeling, Data+ 2025 research poster
 - [[sources/uni-350-cheat-sheets]] — ECE/CS 350 midterm cheat sheets (topic map for digital systems)
-- **One source card per raw file — 114 total.** Each course card is the hub linking its own cards:
-  [[316]] (deep, 6 concepts) · [[350]] (deep, 7) · [[230-semiconductors]] (deep, 6) ·
-  [[230-probability]] (deep, 6) · [[270]] (deep, 8) · [[353]] (deep, 3) · [[280]] (deep, 3) ·
-  [[ev-firmware]]. **All coursework courses now deep-ingested** (39 concepts). Non-course source
-  cards (labs, exams, misc) remain provenance anchors by design.
-- `raw/notion/misc/` (4 cards) — not class material (`janet`, `technical-interview`, `roudy-notes`,
-  index); need a career/personal home, see open items.
+- **One source card per raw file — 121 total** (committed graph; 3 more are intentional exceptions:
+  2 cite the external `uni/` archive directly, 1 is deliberately `snapshotted: false` — see [[log]]).
+  Each course/project card is the hub linking its own cards: [[316]] (deep, 6 concepts) ·
+  [[350]] (deep, 7) · [[230-semiconductors]] (deep, 6) · [[230-probability]] (deep, 6) ·
+  [[270]] (deep, 8) · [[353]] (deep, 3) · [[280]] (deep, 3) · [[ev-firmware]] ·
+  [[hw-cnn-accelerator]] (repo docs, 2 concepts). **All coursework courses now deep-ingested**
+  (39 education concepts). Non-course source cards (labs, exams) remain provenance anchors by design.
+- `raw/notion/misc/` (4 cards — `janet`, `technical-interview`, `roudy-notes`, index) — **resolved**:
+  filed under `domain: career` (Dave's call). See [[professional-profile]] and the career section above.
 
 ## Synthesis
 
