@@ -26,6 +26,15 @@ builds — the only one in the current set that is work-for-a-third-party rather
 Green-Keen is a cross-border US/China **accounting firm**, which lines up with a planning doc found
 in Drive: a 6-phase stack/build spec (Next.js 15/React 19, Shadcn+Aceternity+Magic UI for the landing
 page, Zod-validated lead-gen forms including a tax/ROI calculator, WCAG 2.2 + schema.org production
-checklist). ^[[sources/drive-gkweb-2026-accounting-firm-platform-spec]] Read as **roadmap/research**,
-not an as-built record — the live repo (Next.js 16 per its own `CLAUDE.md`) is the source of truth for
-what's actually shipped; the spec may describe planned-but-not-yet-built features.
+checklist). ^[[sources/drive-gkweb-2026-accounting-firm-platform-spec]]
+
+**The spec was substantially built.** The repo's own `CLAUDE.md`, read directly, confirms it: the
+exact brand colors from the spec are implemented (`ledger-navy #101585`, `mocha-mousse #A47864`,
+`copper-audit #B87333`, `champagne-gold #F7E7CE`), an Aceternity hero component exists
+(`components/aceternity/hero.tsx`), and both API routes (`/api/contact`, `/api/apply`) use
+Zod validation with POST-redirect-GET for progressive enhancement — matching the spec's
+requirements precisely. ^[[sources/repos-gkweb-claude]] Routes: `POST /api/contact` sends via
+Resend; `POST /api/apply` inserts into a Vercel Postgres `applications` table, then emails via
+Resend. Styling is Tailwind v4 with Inter (body) and Playfair (display) fonts. ^[[sources/repos-gkweb-claude]]
+Integrations beyond the spec: Calendly for booking, and the `applications` table auto-creates on
+first request. ^[[sources/repos-gkweb-readme]]

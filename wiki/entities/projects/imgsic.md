@@ -22,10 +22,20 @@ The **non-negotiable design principle** (from the repo's own CLAUDE.md): raw not
 never be piped straight into Tone.js triggers — a prior attempt failed exactly that way and
 sounded amateur. All musical parameters pass through a composer/arrangement layer that adds
 phrasing, rests, dynamics, and chord voicing before playback. `composer.js` (what should happen)
-stays cleanly separated from `player.js` (how Tone.js renders it). ^[[imgsic/CLAUDE.md]]
+stays cleanly separated from `player.js` (how Tone.js renders it). ^[[sources/repos-imgsic-claude]]
+
+**Full architecture, from the repo's own CLAUDE.md:** `uploader.js` (drag-and-drop → base64) →
+`api.js` (POST to `/api/analyze` or stub JSON) → `composer/` (harmony.js does chord parsing/voice
+leading, melody.js builds scale-based contours with rests, dynamics.js shapes velocity/phrase arc)
+→ `engine/` (Tone.Transport scheduling, a Chorus→AutoFilter→PingPongDelay→Reverb effects chain, a
+sampler factory for piano/strings/pads/choir/marimba). The vision API returns a fixed JSON contract
+(mood, tempo, key, mode, chordProgression, melodyContour, dynamics, instruments, texture) with
+enumerated valid values that the composer and engine depend on. Uses `claude-haiku-4-5-20251001`
+deliberately — structured JSON extraction from an image doesn't need a larger model.
+^[[sources/repos-imgsic-claude]]
 
 **Relationship to other work:** [[itm]] ("Image to Music") is a sibling React/Tone.js take on
-the same image→music idea — likely an earlier or parallel version. Worth reconciling which is
-canonical.
+the same image→music idea, confirmed dead (its own README is generic Vite/React boilerplate with
+no project-specific content, and it isn't even a git repo) — [[imgsic]] is the canonical version.
 
 Latest work (2026-06): Phase 1 — image-appropriate sound palette and register.

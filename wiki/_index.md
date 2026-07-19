@@ -2,20 +2,23 @@
 
 Catalog of every wiki page. Maintained by `/ingest`. Grouped by kind, sliced by domain.
 
-**Status:** `raw/` holds 95 Notion snapshots, 18 Drive snapshots, 5 repo-doc snapshots
-(`raw/repos/ev-firmware/`, `raw/repos/hw-cnn-accelerator/`), 124 assets. **Graph populated:** all
-7 coursework courses deep-ingested — **41 concepts**, 121 source cards, 4 synthesis pages, 33 entities
-(committed graph). The **personal** domain is kept locally in gitignored `wiki/personal/` + `raw/` and is
-not counted here. Google Drive ingest complete for non-coursework material as of 2026-07-18 (remaining
-unexplored items are photos/screenshots/binary archives — no ingestible knowledge). Last updated
-2026-07-18.
+**Status:** `raw/` holds 95 Notion snapshots, 18 Drive snapshots, 10 repo-doc snapshots
+(`raw/repos/ev-firmware/`, `raw/repos/hw-cnn-accelerator/`, `raw/repos/gkweb/`, `raw/repos/synth/`,
+`raw/repos/imgsic/`), 124 assets. **Graph populated:** all 7 coursework courses deep-ingested —
+**41 concepts**, 126 source cards, 4 synthesis pages, 33 entities (committed graph). The **personal**
+domain is kept locally in gitignored `wiki/personal/` + `raw/` and is not counted here. Google Drive
+ingest complete for non-coursework material; `uni/` local archive deliberately not swept (homework/
+lecture artifacts, no synthesized-notes layer — low value per token, Dave's call 2026-07-18). All
+project repos with their own docs (ev-firmware, hw-cnn-accelerator, gkweb, synth, imgsic) now
+snapshotted; `itm`, `daily-tickers`, `gohelpme` have no substantive repo docs of their own. Last
+updated 2026-07-18.
 
 ## By domain
 
 The vault's backbone is **kind** (concepts / entities / sources), so the folders don't split by
 domain — instead every page carries a `domain:` tag and this section is the view that slices by it.
 The same four domains color the Obsidian graph (education = blue, projects = green, career = amber,
-personal = purple). Current split (committed graph): **education 170 · projects 20 · career 9.** The **personal** domain is
+personal = purple). Current split (committed graph): **education 170 · projects 25 · career 9.** The **personal** domain is
 gitignored (local only), so its pages aren't part of the pushed repo.
 
 ### 🎓 education — coursework, concepts, academic history
@@ -33,7 +36,8 @@ gitignored (local only), so its pages aren't part of the pushed repo.
   [[itm]]
 - **Concepts (2):** [[systolic-array-dataflow]] · [[neural-network-quantization]]
 - **Synthesis:** [[coursework-behind-hw-cnn-accelerator]]
-- 6 source cards (provenance anchors — includes the [[gkweb]] platform spec).
+- 11 source cards (provenance anchors — includes the [[gkweb]] platform spec + repo-doc snapshots
+  for [[gkweb]], [[synth]], and [[imgsic]]).
 
 ### 💼 career — profile, research labs, recruiting
 - [[professional-profile]] · [[jones-seel-lab]] · [[catalyst-tech-society]] · [[rtx-internship]]

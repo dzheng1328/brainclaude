@@ -967,3 +967,51 @@ change — the vault sits under macOS's iCloud "Desktop & Documents Folders" syn
 relocating the vault out of the synced path as the real fix; flagged the `.obsidian/graph.json`/`app.json`
 caveat separately (those specific files need a pane reopen regardless of iCloud, since Obsidian reads
 them at pane-open time, not live).
+
+---
+
+## 2026-07-18 — Project repo doc snapshots (gkweb, synth, imgsic) + uni/ sweep declined
+
+Closed out the last real ingestion item: snapshotting the four remaining projects' own docs, matching
+the pattern already proven for ev-firmware and hw-cnn-accelerator.
+
+**Surveyed `uni/` first — Dave's instinct was right, more so than I gave credit for.** File-type
+counts across the 9 courses with no deep concepts (fall 2024 + spring 2025) showed 143 files for
+CS 201 (mostly `.java`/`.class`), 79 PDFs for Math 218, `.stl`/`.ino` project artifacts for EGR 101,
+etc. — homework, lecture slides, and code, with **no equivalent of the synthesized Notion
+exam-review notes** that made the 7-course sweep efficient. This isn't "repeats of Notion," it's a
+worse trade: no pre-synthesized layer at all, so promoting concepts would mean reading dozens of raw
+PDFs/code files for a handful of maybe-promotable ideas. **Decision: skip the `uni/` sweep entirely,
+including the cheap EGR 102 peek** (Dave's call, 2026-07-18). This is not a gap to revisit casually —
+it would need someone to actually sit down and write synthesized notes first (the way Notion has for
+the other 7 courses) before a deep-ingest pass would be worth the tokens.
+
+**Read `itm`'s README before snapshotting it — turned out to be generic, unedited Vite/React
+boilerplate** (not even a git repo). Confirms and hardens the existing "dead, superseded by imgsic"
+verdict; skipped, no snapshot.
+
+**Snapshotted (docs only, verbatim, per the projects schema):**
+- `raw/repos/gkweb/{README,CLAUDE}.md` (commit `99e0424`)
+- `raw/repos/synth/README.md` (commit `303c44e`)
+- `raw/repos/imgsic/{README,CLAUDE}.md` (commit `e5175b5`)
+
+**Real finding — the gkweb Drive spec was substantially implemented.** Reading the repo's own
+`CLAUDE.md` directly confirms it: the exact brand-color hex values from the earlier Drive planning
+doc ([[sources/drive-gkweb-2026-accounting-firm-platform-spec]]) — `ledger-navy #101585`,
+`mocha-mousse #A47864`, `copper-audit #B87333`, `champagne-gold #F7E7CE` — are literally in the
+codebase, along with an Aceternity hero component and Zod-validated POST-redirect-GET forms matching
+the spec's requirements. Resolves the "roadmap vs. as-built" uncertainty flagged when that spec was
+first found.
+
+**synth** enriched with a feature not previously captured: `synth_pro`'s sample loader + offline WAV
+export (`sample_io.c`). **imgsic** enriched with its full architecture (uploader → api → composer →
+engine), the exact Claude-vision JSON schema contract, and confirms `itm` is dead (not just
+superseded) — resolving the "worth reconciling which is canonical" note from its own card.
+
+No new concepts promoted from any of the four — all genuinely project-scoped stack/architecture
+detail, consistent with the earlier gkweb-spec decision (enrich the card, don't manufacture a
+concept from planning/architecture docs).
+
+**This closes out ingestion for real.** Vault: 41 concepts, 126 source cards, 4 synthesis pages,
+33 entities (committed graph). Next phase per the original roadmap is Goal B — making the vault
+self-maintaining (scheduled re-sync + periodic `/lint`) — not further source-hunting.

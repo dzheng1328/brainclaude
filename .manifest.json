@@ -820,6 +820,36 @@
       "derived": [
         "sources/drive-270-lab-8"
       ]
+    },
+    "raw/repos/gkweb/README.md": {
+      "sha256": "c248281240bc06949a3909e90f73c85f094f15671511a9b26922608e5138da46",
+      "derived": [
+        "sources/repos-gkweb-readme"
+      ]
+    },
+    "raw/repos/gkweb/CLAUDE.md": {
+      "sha256": "24f565dc3c2182e0e9d5cc0d88a6e806e90e88a7c95997dc7092e5e93ab0e128",
+      "derived": [
+        "sources/repos-gkweb-claude"
+      ]
+    },
+    "raw/repos/synth/README.md": {
+      "sha256": "deef2319f6756436f721c63b048bd603460a01ef2d30b7be9499f8d99cd202c6",
+      "derived": [
+        "sources/repos-synth-readme"
+      ]
+    },
+    "raw/repos/imgsic/README.md": {
+      "sha256": "e5e35a3505e8cdcc05aa327c7431582c2aa06add1e0326e5a33b7f62e5aee9b1",
+      "derived": [
+        "sources/repos-imgsic-readme"
+      ]
+    },
+    "raw/repos/imgsic/CLAUDE.md": {
+      "sha256": "004714dd2cf6a07075fa44f01c97e022986b0a506f2757bf696787da00791a4f",
+      "derived": [
+        "sources/repos-imgsic-claude"
+      ]
     }
   }
 }
