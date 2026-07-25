@@ -850,6 +850,30 @@
       "derived": [
         "sources/repos-imgsic-claude"
       ]
+    },
+    "raw/repos/tradefabe/README.md": {
+      "sha256": "ca42311c98997e3819cf77c5598127c05552cba3f1068ef90df1c1027c7a3ec8",
+      "derived": [
+        "sources/repos-tradefabe-readme"
+      ]
+    },
+    "raw/repos/tradefabe/CLAUDE.md": {
+      "sha256": "9e159c4268b270e217e86d84b73a03ebf9a6f5774e33311eb89aef5e2af09efb",
+      "derived": [
+        "sources/repos-tradefabe-claude"
+      ]
+    },
+    "raw/repos/tradefabe/DOCTRINE.md": {
+      "sha256": "9ff3839f49af756a9650be59c6c54177f0f4c06ed50aa4d9ed05e983851e19fc",
+      "derived": [
+        "sources/repos-tradefabe-doctrine"
+      ]
+    },
+    "raw/repos/tradefabe/STRATEGIES.md": {
+      "sha256": "c8254b8b56b9143348ac8dd4b0fa82b899b47cb74410b94fff05c526b2f87e83",
+      "derived": [
+        "sources/repos-tradefabe-strategies"
+      ]
     }
   }
 }

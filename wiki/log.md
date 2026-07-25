@@ -1015,3 +1015,53 @@ concept from planning/architecture docs).
 **This closes out ingestion for real.** Vault: 41 concepts, 126 source cards, 4 synthesis pages,
 33 entities (committed graph). Next phase per the original roadmap is Goal B — making the vault
 self-maintaining (scheduled re-sync + periodic `/lint`) — not further source-hunting.
+
+---
+
+## 2026-07-24 — new project: tradefabe, plus Goal B lands (daily project sync)
+
+Two things, prompted by the same conversation: Dave is actively building on a new project
+(`tradefabe`) day-to-day and wants the vault to actually keep up with that, not just log a
+one-time snapshot that goes stale.
+
+**tradefabe indexed.** A doctrine-governed trading-strategy research lab + autonomous
+paper-trading engine (paper only, no real money/credentials — hard rule stated in its own
+`CLAUDE.md`). Snapshotted its 4 top-level docs (`README.md`, `CLAUDE.md`, `DOCTRINE.md`,
+`STRATEGIES.md`, commit `1591b9b`) into `raw/repos/tradefabe/`, one source card each, and a
+pointer card at [[tradefabe]] — same pattern as the other project repos. Headline finding
+worth carrying: 12+ retail strategies tested, only diversified buy-and-hold and delta-neutral
+crypto funding carry survived a pre-registered out-of-sample kill rule; a same-day doctrine
+amendment (v1.3, Bonferroni correction) retroactively flipped 3 of 4 "piggyback" constructions
+from ALIVE to DEAD. Not promoted to a concept this pass — flagged in the pointer card as a
+candidate (the noise-floor/multiple-testing methodology is genuinely reusable beyond this
+project) for a future `/ingest` or `/query` to judge, per the "when in doubt, do not promote"
+rule.
+
+**Root-caused why the daily `/lint` task looked like it stopped running.** It hadn't run
+2026-07-19 through 2026-07-23 — five silent days. Cause: the vault moved from
+`~/Documents/brainclaude` to `~/brainclaude` on 2026-07-18 (see the entry above), but
+`brainclaude-daily-lint`'s own `SKILL.md` still hardcoded the old path three times. That
+directory no longer exists at all, which lines up with the task producing no session in that
+window. Fixed by repointing the three references to `~/brainclaude`. This is the same failure
+shape as the [[CLAUDE]]-documented `fetched:` date bug from the first pull: an agent
+faithfully executing a stale literal, not a logic error.
+
+**Goal B (scheduled re-sync) actually implemented, not just deferred.** Added
+`.claude/commands/sync-projects.md`: a **mechanical-only** re-sync — diff each `status:
+active` project's on-disk docs against its `raw/repos/<project>/` snapshot, re-sync on
+change, refresh only mechanical pointer-card frontmatter (status/stack/last_commit), and
+*flag* (never auto-write) anything that reads as concept-worthy for a real `/ingest` pass.
+Explicitly never touches `dead`/`shipped`/`complete` projects, never writes to a project's own
+repo, never auto-creates a pointer card for an unregistered project directory. Wired to a new
+scheduled task, `brainclaude-daily-project-sync`, running daily at 08:25 local (12 min after
+`/lint`'s 08:13, so lint's own provenance checks see any doc changes this task made) — see
+[[log]] entry timestamps going forward for its output.
+
+**Why mechanical-only, not full auto-ingest:** concept promotion is a judgment call by this
+vault's own rule (artifacts vs. knowledge, "when in doubt, do not promote") — automating it
+daily would risk exactly the kind of unreviewed, confidently-cited synthesis the provenance
+rule exists to prevent. A daily cron is fine for "did the docs change, update the facts about
+that"; it is not fine for "did the docs change, therefore write a concept page."
+
+Counts: 41 concepts, 130 source cards, 4 synthesis pages, 34 entities, 12 project pointer
+cards (committed graph).
