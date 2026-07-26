@@ -6,8 +6,8 @@ title: "DOCTRINE.md"
 raw_file: raw/repos/tradefabe/DOCTRINE.md
 source_kind: repos
 repo_url: https://github.com/dzheng1328/tradefabe.git
-commit: 1591b9b
-fetched: 2026-07-24
+commit: 6ab7c04
+fetched: 2026-07-25
 ---
 
 # DOCTRINE.md
@@ -23,6 +23,11 @@ not weeks (`T_required = max(2 years, (2/SR_bt)² years)`), including a caveat t
 formula breaks for low-noise regime-driven returns like the carry book's (daily Sharpe
 10.85) — hence the 2-year floor. v1.3 (2026-07-24) activates a Bonferroni multiple-testing
 correction on the noise floor, which retroactively flips 3 of 4 "piggyback" constructions
-from ALIVE to DEAD. See [[tradefabe]].
+from ALIVE to DEAD. **New: v1.4 (2026-07-25)** replaces Bonferroni as gate 1's active
+decision with the **Deflated Sharpe Ratio** (Bailey & López de Prado 2014) combined with
+**Combinatorial Purged Cross-Validation** (López de Prado 2017), motivated by the strategy
+factory's high-volume automated search making Bonferroni's flat correction both too strict
+and too crude. Re-running the full roster under v1.4 changed no verdicts (validated before
+merge). Bonferroni stays computed and logged, no longer deciding. See [[tradefabe]].
 
 Raw: `raw/repos/tradefabe/DOCTRINE.md`.

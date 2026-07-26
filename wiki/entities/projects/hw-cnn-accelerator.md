@@ -6,7 +6,7 @@ repo: https://github.com/dzheng1328/hw-cnn-accelerator
 path: /Users/dzheng/Documents/hw-cnn-accelerator
 stack: [Verilog, Python, iverilog, yosys]
 status: active
-last_commit: 2026-07-15
+last_commit: 2026-07-20
 ---
 
 # hw-cnn-accelerator
@@ -41,3 +41,15 @@ the [[ece-350-connect4]] FPGA project (different scope, has a partner). Upstream
 [[pipelining-and-hazards]], and the digital-logic material under [[350]].
 
 Latest work (2026-07): a `yosys` generic-synthesis path merged (PR #12).
+
+## Flagged for /ingest review
+
+- 2026-07-25 sync: `docs/decisions.md`/`docs/learnings.md` re-synced (commit `8827a96`, was
+  `abd00b2`) — Phase 2 NoC build (2D-mesh router, XY routing, round-robin arbitration,
+  registered link buffers, GO/RESULT flit packetization) plus a first real sky130 synthesis
+  pass. Candidate concepts: a general NoC-router design pattern (mesh/XY-routing/round-robin,
+  distinct from [[systolic-array-dataflow]]); the cocotb-Makefile-can't-override-Verilog-
+  parameters gotcha (ports vs parameters) — possibly generalizable alongside existing
+  verification-tooling learnings; non-blocking-assignment old-value semantics for reasoning
+  about shift-register pipeline delay. See ^[[sources/repos-hw-cnn-decisions]]
+  ^[[sources/repos-hw-cnn-learnings]].

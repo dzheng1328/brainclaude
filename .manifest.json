@@ -796,7 +796,7 @@
       "catalog_level": true
     },
     "raw/repos/hw-cnn-accelerator/decisions.md": {
-      "sha256": "73399ce97a08c184d44bca26101fa70abccb2983bd5ddb5fe075a9c8054b1723",
+      "sha256": "5a06a5c41636bb18b5dad2bdfd08ff829af613dc0637a28c7091c9423cb9ac45",
       "derived": [
         "sources/repos-hw-cnn-decisions",
         "concepts/systolic-array-dataflow",
@@ -804,7 +804,7 @@
       ]
     },
     "raw/repos/hw-cnn-accelerator/learnings.md": {
-      "sha256": "7d0ecb946c4a4a893b3674a0c1d1e3e053001b8a3dd9642d85c797d74ec8d07b",
+      "sha256": "7ab55c61d8269f02b25d3d9e27b031301fec47a378ef4458f7fa61d8a20e7bfe",
       "derived": [
         "sources/repos-hw-cnn-learnings"
       ]
@@ -852,25 +852,25 @@
       ]
     },
     "raw/repos/tradefabe/README.md": {
-      "sha256": "ca42311c98997e3819cf77c5598127c05552cba3f1068ef90df1c1027c7a3ec8",
+      "sha256": "18939df82ad4254625d906f533a50cfaf0f38758edd68c88ee832feb532e7414",
       "derived": [
         "sources/repos-tradefabe-readme"
       ]
     },
     "raw/repos/tradefabe/CLAUDE.md": {
-      "sha256": "9e159c4268b270e217e86d84b73a03ebf9a6f5774e33311eb89aef5e2af09efb",
+      "sha256": "c5a2a8ba6fd8b3ebdd0f53bf456233cf71e36e03fedf36479cff19a532eee38a",
       "derived": [
         "sources/repos-tradefabe-claude"
       ]
     },
     "raw/repos/tradefabe/DOCTRINE.md": {
-      "sha256": "9ff3839f49af756a9650be59c6c54177f0f4c06ed50aa4d9ed05e983851e19fc",
+      "sha256": "2e455d89460e50af59c349f3472083cdbe617855f2c386a043033e046d744be0",
       "derived": [
         "sources/repos-tradefabe-doctrine"
       ]
     },
     "raw/repos/tradefabe/STRATEGIES.md": {
-      "sha256": "c8254b8b56b9143348ac8dd4b0fa82b899b47cb74410b94fff05c526b2f87e83",
+      "sha256": "7be5b0e9a3ee40ca862475bf53de9da73995719a189526a7c6767d027d07f0ec",
       "derived": [
         "sources/repos-tradefabe-strategies"
       ]

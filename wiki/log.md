@@ -1018,6 +1018,58 @@ self-maintaining (scheduled re-sync + periodic `/lint`) — not further source-h
 
 ---
 
+## 2026-07-25 — /sync-projects run (scheduled, mechanical-only)
+
+Checked all 7 `status: active` project pointer cards (daily-tickers, synth, ev-firmware,
+gkweb, imgsic, hw-cnn-accelerator, tradefabe); all 7 `path:` targets exist on disk. Compared
+every previously-snapshotted `raw/repos/<project>/` doc against its live file (frontmatter
+stripped, or git commit sha where the repo is a git checkout).
+
+**Unchanged, skipped:** ev-firmware (AGENTS.md/README.md/canlibrary.md — live mtime predates
+its 2026-07-17 fetch, one stray trailing `#` in AGENTS.md is a pre-existing snapshot artifact,
+not a new edit), gkweb (README.md/CLAUDE.md, commit `99e0424` matches), synth (README.md,
+commit `303c44e` matches), imgsic (README.md/CLAUDE.md, commit `e5175b5` matches).
+daily-tickers has no `raw/repos/` snapshot to compare (never snapshotted) and its live commit
+(`35f2353`) already matches the pointer card's `last_commit` — nothing to do.
+
+**Re-synced (real content changes):**
+- **hw-cnn-accelerator** — `docs/decisions.md` and `docs/learnings.md` re-snapshotted at
+  commit `8827a96` (was `abd00b2`). New content: the entire Phase 2 NoC build (skew feeder
+  and sequencer FSM moved into RTL, a real operand-memory read/write port, a 2D-mesh router
+  with XY routing + round-robin arbitration, registered link buffers, a working 1x2 pair and
+  2x2 mesh, GO/RESULT flit packetization for compute kickoff and result readout) plus a first
+  real sky130 synthesis pass quantifying that the operand-memory flop array costs ~42.5% of a
+  tile's silicon area — almost as much as the 64-PE compute array itself. Two new
+  `learnings.md` entries: a Verilog-parameter-vs-cocotb-testbench divergence gotcha, and a
+  non-blocking-assignment reasoning note on shift-register pipeline delay. Source cards and
+  `.manifest.json` updated; pointer card `last_commit` → `2026-07-20`; flagged for `/ingest`
+  review (NoC router as a general design pattern, the cocotb-parameter gotcha, NBA-semantics
+  reasoning) — not promoted, per this workflow's mechanical-only rule.
+- **tradefabe** — all 4 docs (`README.md`, `CLAUDE.md`, `DOCTRINE.md`, `STRATEGIES.md`)
+  re-snapshotted at commit `6ab7c04` (was `1591b9b`, one day old but Dave is iterating daily
+  on this project). Headline finding grew from 12+ to 49+ tested strategies via a new
+  **strategy factory** (`factory.py`/`factory_run.py`) that generates and doctrine-gates
+  parametrized variants automatically, logging each to `generated_templates.csv` before its
+  verdict. `DOCTRINE.md` gained **v1.4**: replaces the v1.3 Bonferroni correction with the
+  Deflated Sharpe Ratio + Combinatorial Purged Cross-Validation as gate 1's active decision
+  rule (re-running the full roster under v1.4 changed no verdicts, validated before merge).
+  `CLAUDE.md` documents the paper engine moving off the Mac onto GitHub Actions (launchd
+  doesn't fire while asleep) and the Python 3.14 `.pth`-hidden bug being root-caused to
+  iCloud Desktop/Documents sync (fixed by relocating the venv outside the synced tree).
+  `STRATEGIES.md` grew from 8 to 11 strategy families (breakout/channel, ICT/Smart-Money-
+  Concepts, contribution-schedule overlays — all new candidates DEAD). Source cards and
+  `.manifest.json` updated; pointer card `last_commit` → `2026-07-25`; flagged for `/ingest`
+  review (DSR/CPCV as a general multiple-testing-correction concept, possibly superseding the
+  Bonferroni candidate already flagged 2026-07-24; the pre-register-the-search-range pattern
+  the factory uses) — not promoted.
+
+No unregistered project directories spotted under `~/Documents` (everything with a
+`CLAUDE.md`/`README.md` already has a pointer card; the rest — `job`, `cover letters`,
+`resume drafting`, etc. — are non-code personal/career docs, out of scope for this workflow).
+No non-active (`dead`/`shipped`/`complete`) pointer cards touched.
+
+---
+
 ## 2026-07-24 — new project: tradefabe, plus Goal B lands (daily project sync)
 
 Two things, prompted by the same conversation: Dave is actively building on a new project

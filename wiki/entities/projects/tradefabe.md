@@ -6,7 +6,7 @@ repo: https://github.com/dzheng1328/tradefabe.git
 path: /Users/dzheng/Documents/tradefabe
 stack: [Python, Streamlit, Plotly, pytest, Hyperliquid API]
 status: active
-last_commit: 2026-07-24
+last_commit: 2026-07-25
 ---
 
 # tradefabe
@@ -76,3 +76,18 @@ statistical noise-floor / Bonferroni-correction methodology here is a genuinely 
 idea (honest multiple-testing correction for a strategy search) — a candidate for a future
 `[[statistical-multiple-testing-correction]]`-type concept page if a `/query` or `/ingest`
 pass ever wants to generalize it beyond this project.
+
+## Flagged for /ingest review
+
+- 2026-07-25 sync: all four repo docs re-synced (commit `6ab7c04`, was `1591b9b`). Headline
+  finding grew from 12+ to 49+ tested strategies via a new automated **strategy factory**
+  (`factory.py`/`factory_run.py`) that generates parametrized variants and logs each one to
+  `generated_templates.csv` before its verdict is known. DOCTRINE.md gained **v1.4**,
+  replacing the v1.3 Bonferroni correction with the **Deflated Sharpe Ratio** (Bailey &
+  López de Prado 2014) + **Combinatorial Purged Cross-Validation** (López de Prado 2017) as
+  gate 1's active decision rule. Candidate concepts: DSR/CPCV as a general resampling-based
+  alternative to Bonferroni for high-volume multiple-testing correction (broader than the
+  existing flagged Bonferroni idea above — may supersede or extend it); the
+  pre-register-the-search-space-not-just-the-candidate pattern the factory's
+  `GENERATION_RANGES` uses to avoid meta-level p-hacking while still allowing live parameter
+  draws. See ^[[sources/repos-tradefabe-doctrine]] ^[[sources/repos-tradefabe-strategies]].
