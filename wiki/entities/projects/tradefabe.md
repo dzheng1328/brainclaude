@@ -6,7 +6,7 @@ repo: https://github.com/dzheng1328/tradefabe.git
 path: /Users/dzheng/Documents/tradefabe
 stack: [Python, Streamlit, Plotly, pytest, Hyperliquid API]
 status: active
-last_commit: 2026-07-25
+last_commit: 2026-07-27
 ---
 
 # tradefabe
@@ -91,3 +91,22 @@ pass ever wants to generalize it beyond this project.
   pre-register-the-search-space-not-just-the-candidate pattern the factory's
   `GENERATION_RANGES` uses to avoid meta-level p-hacking while still allowing live parameter
   draws. See ^[[sources/repos-tradefabe-doctrine]] ^[[sources/repos-tradefabe-strategies]].
+- 2026-07-27 sync: `CLAUDE.md`/`DOCTRINE.md`/`STRATEGIES.md` re-synced (commit `6b1a843`, was
+  `6ab7c04`); `README.md` unchanged. **Note (not a concept, operational only): the repo's real
+  location moved from `~/Documents/tradefabe` to `~/tradefabe` on 2026-07-26** — iCloud sync
+  in `~/Documents` was corrupting the venv and writing conflict copies of tracked files, the
+  same failure mode that motivated moving this vault itself out of iCloud sync. A
+  compatibility symlink remains at the old path (this card's `path:` still resolves), but new
+  tooling should prefer the real path — worth a manual `path:` update if a human wants the
+  card to reflect it directly. Candidate concepts from this sync: DOCTRINE v1.5's
+  **origin-segregated multiple-testing correction** (correcting an automated-search
+  candidate only against other search-origin trials, not against the full all-time roster,
+  because a draw nobody would act on isn't the same statistical event as a hand-picked
+  hypothesis — extends rather than replaces the existing DSR/CPCV flag above) and the
+  **duty-cycle-matched noise floor as the default gate**, not opt-in (an unmatched random
+  null under-trades a real signal and pays no turnover cost for it, making the gate lenient
+  by construction). Also a general git/GitHub gotcha, reusable outside this repo: **never
+  chain a branch delete after a merge in the same command** — a silently-failed `gh pr merge`
+  still lets a chained delete run, closing an unmerged PR whose branch is now gone (cost three
+  recoveries here, #65/#80/#92). See ^[[sources/repos-tradefabe-claude]]
+  ^[[sources/repos-tradefabe-doctrine]] ^[[sources/repos-tradefabe-strategies]].

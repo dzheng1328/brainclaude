@@ -21,3 +21,9 @@ wiki/personal/
 
 # machine-local permission grants, not shared project config
 .claude/settings.local.json
+
+# graphify's extraction cache/output — regenerable tool state, not vault content
+# (same treatment as raw/: large, derived, no reason to duplicate into git history).
+# The published outputs worth keeping (GRAPH_REPORT.md, graph.html) can be committed
+# individually if/when they're wanted, but not the intermediate chunk/cache JSON.
+wiki/graphify-out/

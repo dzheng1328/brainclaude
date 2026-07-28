@@ -1117,3 +1117,56 @@ that"; it is not fine for "did the docs change, therefore write a concept page."
 
 Counts: 41 concepts, 130 source cards, 4 synthesis pages, 34 entities, 12 project pointer
 cards (committed graph).
+
+---
+
+## 2026-07-27 — /sync-projects run (scheduled, mechanical-only)
+
+Checked all 7 `status: active` project pointer cards (daily-tickers, synth, ev-firmware,
+gkweb, imgsic, hw-cnn-accelerator, tradefabe); all 7 `path:` targets still exist on disk.
+Compared every previously-snapshotted `raw/repos/<project>/` doc against its live file
+(frontmatter stripped, or git commit sha where the repo is a git checkout).
+
+**Unchanged, skipped:** ev-firmware (AGENTS.md/README.md/canlibrary.md, still commit
+`c056be5`), hw-cnn-accelerator (docs/decisions.md, docs/learnings.md, still commit
+`8827a96` — no change since the 2026-07-25 sync), gkweb (README.md/CLAUDE.md, commit
+`99e0424` matches), imgsic (README.md/CLAUDE.md, commit `e5175b5` matches), synth
+(README.md, commit `303c44e` matches), tradefabe/`README.md` (content identical despite
+the repo advancing — only the other three docs changed). daily-tickers still has no
+`raw/repos/` snapshot to compare (never snapshotted, out of scope for this mechanical
+workflow — an initial snapshot is a judgment call, same bar as first-time `/ingest`) and
+its live commit (`35f2353`) still matches the pointer card's `last_commit` — nothing to do
+either way.
+
+**Re-synced (real content changes):**
+- **tradefabe** — `CLAUDE.md`, `DOCTRINE.md`, `STRATEGIES.md` re-snapshotted at commit
+  `6b1a843` (was `6ab7c04`, two days old — Dave is iterating daily on this project);
+  `README.md` unchanged. **Operational note, not a doc change:** the repo's real location
+  moved from `~/Documents/tradefabe` to `~/tradefabe` on 2026-07-26 (iCloud sync in
+  `~/Documents` was corrupting the venv and writing conflict copies of tracked files — the
+  same failure mode that already forced this vault itself out of iCloud sync). A
+  compatibility symlink remains at the old path, so the pointer card's `path:` still
+  resolves and was left untouched (not one of this workflow's mechanical fields); a human
+  may want to repoint it to the real path directly. Content changes: `CLAUDE.md` documents
+  the new repo location and a standing git-workflow rule — never chain a branch delete
+  after a merge in the same command, since a silently-failed `gh pr merge` still lets a
+  chained delete run and closes an unmerged PR whose branch is now gone (cost three
+  recoveries, #65/#80/#92). `DOCTRINE.md` gained **v1.5** (pre-registered 2026-07-28, no
+  verdict computed under it yet): the multiple-testing family is now segregated by
+  candidate origin (factory-generated vs. hand-picked, 121 vs. 15 of 139 all-time rows,
+  recorded before any verdict), and the duty-cycle-matched noise floor becomes the default
+  gate rather than opt-in. `STRATEGIES.md` gained family L (intraday/hourly, #86,
+  pre-registered before any run) — all three hourly strategies DEAD, and the family's
+  2023+-only data means an ALIVE verdict there would carry less weight than elsewhere in
+  the roster, a limitation Dave chose to accept rather than bend doctrine to fit. Source
+  cards and `.manifest.json` updated; pointer card `last_commit` → `2026-07-27`; flagged
+  for `/ingest` review — origin-segregated multiple-testing correction (extends the
+  existing DSR/CPCV flag, doesn't replace it), duty-cycle-matched noise floor as a default
+  gate, and the branch-delete-after-merge git gotcha (generalizable beyond this repo) — not
+  promoted, per this workflow's mechanical-only rule.
+
+No unregistered project directories spotted under `~/Documents` (everything with a
+`CLAUDE.md`/`README.md` already has a pointer card; the rest — `job`, `cover letters`,
+`resume drafting`, app-data folders like `Adobe`/`Image-Line`/`KiCad`, etc. — are non-code
+personal/app-data folders, out of scope for this workflow). No non-active
+(`dead`/`shipped`/`complete`/`unknown`) pointer cards touched.

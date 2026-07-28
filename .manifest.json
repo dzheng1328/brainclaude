@@ -858,19 +858,19 @@
       ]
     },
     "raw/repos/tradefabe/CLAUDE.md": {
-      "sha256": "c5a2a8ba6fd8b3ebdd0f53bf456233cf71e36e03fedf36479cff19a532eee38a",
+      "sha256": "b7d39a9aa1e241d6b4cd9cd377695407ae9b1c2a21c2691fe3e51a9d8a56357a",
       "derived": [
         "sources/repos-tradefabe-claude"
       ]
     },
     "raw/repos/tradefabe/DOCTRINE.md": {
-      "sha256": "2e455d89460e50af59c349f3472083cdbe617855f2c386a043033e046d744be0",
+      "sha256": "5ef1ea0d78c5688a34ecdd881903339fcb609ae12e073aef933e1c0f1cc4b4a4",
       "derived": [
         "sources/repos-tradefabe-doctrine"
       ]
     },
     "raw/repos/tradefabe/STRATEGIES.md": {
-      "sha256": "7be5b0e9a3ee40ca862475bf53de9da73995719a189526a7c6767d027d07f0ec",
+      "sha256": "e400cffc42e2ae3eb6399ede48cbefb67b84d6e870054c0fa3b573d8c062eed2",
       "derived": [
         "sources/repos-tradefabe-strategies"
       ]

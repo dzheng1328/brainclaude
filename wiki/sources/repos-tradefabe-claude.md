@@ -6,8 +6,8 @@ title: "CLAUDE.md"
 raw_file: raw/repos/tradefabe/CLAUDE.md
 source_kind: repos
 repo_url: https://github.com/dzheng1328/tradefabe.git
-commit: 6ab7c04
-fetched: 2026-07-25
+commit: 6b1a843
+fetched: 2026-07-27
 ---
 
 # CLAUDE.md
@@ -15,16 +15,17 @@ fetched: 2026-07-25
 tradefabe repo doc "CLAUDE.md" — agent orientation. States the hard rule (never execute a
 real trade, connect real credentials, or give personalized investment advice, without Dave
 explicitly saying so in chat) and the git workflow (branch + PR, not direct pushes to
-`main` — course-corrected 2026-07-23 after earlier work was pushed straight to main).
-Substantially expanded since the 2026-07-24 snapshot: the paper engine moved off the Mac
-entirely onto GitHub Actions (`.github/workflows/paper-engine.yml`, since launchd doesn't
-fire while the machine sleeps — the local plists are retired to `*.plist.disabled`), the
-Python 3.14 `.pth`-hidden bug was root-caused to iCloud Desktop/Documents sync flagging
-files `hidden` (fixed by moving the venv to `~/.venvs/tradefabe`, outside the synced tree —
-`chflags`/`PYTHONPATH` workarounds are now belt-and-braces, not load-bearing), and a new
-"Strategy factory (#28/#28b)" section documents the automated candidate generator (live
-parameter ranges logged to `generated_templates.csv` before verdicts are known, best-DSR
-candidate promoted each cycle regardless of verdict). Roadmap now tracked entirely on the
-GitHub Projects board rather than enumerated in this file. See [[tradefabe]].
+`main`). Since the 2026-07-25 snapshot: **the repo moved from `~/Documents/tradefabe` to
+`~/tradefabe`** (2026-07-26) — iCloud sync in `~/Documents` was corrupting the venv and
+writing conflict copies of tracked files, the same class of problem that motivated moving
+this vault itself out of iCloud sync; a compatibility symlink remains at the old path, but
+new config should use the real path. New standing rule: **never chain a branch delete after
+a merge in the same command** — `gh pr merge` can fail silently on a bad flag, and anything
+chained after it (`;`/`&&`) still runs, deleting the branch and closing the still-unmerged
+PR (has cost three recoveries, #65/#80/#92, each needing a reflog dig and a fresh PR); merge,
+verify `state=MERGED` as its own step, only then delete. This file also now states it is
+"loaded into every session and re-injected after every compaction" and should stay short —
+a fixed-and-guarded bug is a one-line rule plus its enforcing test, not a post-mortem. See
+[[tradefabe]].
 
 Raw: `raw/repos/tradefabe/CLAUDE.md`.
