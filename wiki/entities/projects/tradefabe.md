@@ -6,7 +6,7 @@ repo: https://github.com/dzheng1328/tradefabe.git
 path: /Users/dzheng/Documents/tradefabe
 stack: [Python, Streamlit, Plotly, pytest, Hyperliquid API]
 status: active
-last_commit: 2026-07-27
+last_commit: 2026-07-31
 ---
 
 # tradefabe
@@ -110,3 +110,20 @@ pass ever wants to generalize it beyond this project.
   still lets a chained delete run, closing an unmerged PR whose branch is now gone (cost three
   recoveries here, #65/#80/#92). See ^[[sources/repos-tradefabe-claude]]
   ^[[sources/repos-tradefabe-doctrine]] ^[[sources/repos-tradefabe-strategies]].
+- 2026-07-31 sync: all four repo docs re-synced (commit `36050ce`, was `6b1a843`/`6ab7c04`).
+  DOCTRINE advanced through **v1.6, v1.7, and v1.8** (all 2026-07-29) since the last sync;
+  Family M (Kronos strategies) went live, and Alpaca paper-trading broker connectivity was
+  added. Candidate concepts from this batch: **advisory-only kill criteria** (v1.6 — a
+  book's retirement stopped being an automatic action on hitting the kill rule and became a
+  logged recommendation a human still has to execute, because an automated kill compounds
+  the same multiple-testing risk the doctrine already corrects for on entry but not on
+  exit); **aligning the benchmark window to the candidate's own out-of-sample start** (v1.7
+  — a general backtesting-evaluation gotcha: a candidate and its benchmark sliced from a
+  flat start date silently miscompare whenever the candidate's own data begins later,
+  understating or overstating its edge depending on which regime the extra benchmark window
+  covers); **requiring the candidate's own OOS Sharpe be positive as an explicit gate-1
+  floor** (v1.8 — a genuinely reusable DSR gotcha: the Deflated Sharpe Ratio alone has no
+  such floor and can saturate near 1.0 next to a candidate that is still net losing, since
+  DSR measures "beats what n_tested random draws would produce," not "is profitable"). See
+  ^[[sources/repos-tradefabe-claude]] ^[[sources/repos-tradefabe-doctrine]]
+  ^[[sources/repos-tradefabe-readme]] ^[[sources/repos-tradefabe-strategies]].

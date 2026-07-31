@@ -74,6 +74,15 @@ echo "fixture b" > "$fixtures/b.md"
 MANIFEST_FILE="$tmp/manifest.json" ./scripts/manifest-update.sh "$fixtures/b.md" '["sources/fixture-b"]'
 check "$(jq -r --arg p "$fixtures/a.md" '.sources[$p].derived[0]' "$tmp/manifest.json")" "sources/fixture-a" "unrelated existing entry survives a second update"
 
+# a re-sync (real usage) must merge into an entry, not replace it -- extra
+# fields set by other tooling (e.g. catalog_level) must survive an update.
+jq --arg p "$fixtures/a.md" '.sources[$p].catalog_level = true' "$tmp/manifest.json" > "$tmp/manifest2.json"
+mv "$tmp/manifest2.json" "$tmp/manifest.json"
+echo "fixture v3" > "$fixtures/a.md"
+MANIFEST_FILE="$tmp/manifest.json" ./scripts/manifest-update.sh "$fixtures/a.md" '["sources/fixture-a"]'
+check "$(jq -r --arg p "$fixtures/a.md" '.sources[$p].catalog_level' "$tmp/manifest.json")" "true" "re-sync merges into an entry, preserving unrelated existing fields (catalog_level)"
+check "$(jq -r --arg p "$fixtures/a.md" '.sources[$p].sha256' "$tmp/manifest.json")" "$(shasum -a 256 "$fixtures/a.md" | awk '{print $1}')" "sha256 still updates correctly on a merge update"
+
 echo
 echo "== manifest-diff.sh: real (read-only) dry run against the actual vault backlog =="
 real_new=$(./scripts/manifest-diff.sh | grep -c '^NEW ' || true)

@@ -1172,3 +1172,103 @@ No unregistered project directories spotted under `~/Documents` (everything with
 `resume drafting`, app-data folders like `Adobe`/`Image-Line`/`KiCad`, etc. — are non-code
 personal/app-data folders, out of scope for this workflow). No non-active
 (`dead`/`shipped`/`complete`/`unknown`) pointer cards touched.
+
+---
+
+## 2026-07-29 — /sync-projects run (scheduled, mechanical-only)
+
+Checked all 7 `status: active` pointer cards; all `path:` targets exist on disk. No project
+doc changes since last sync (2026-07-27) — every previously-snapshotted `raw/repos/<project>/`
+doc still matches its live source, and every `last_commit` already agrees with the repo.
+
+One nuance worth recording: `~/Documents/tradefabe` (a symlink to the relocated
+`~/tradefabe`) is currently checked out on `kronos-study`, an in-progress feature branch with
+uncommitted edits to `STRATEGIES.md` — comparing the raw snapshot against that dirty working
+tree would have falsely flagged `CLAUDE.md`/`DOCTRINE.md`/`STRATEGIES.md` as changed (the
+feature branch predates `main`'s v1.5-doctrine-removal commit and diverges further with
+Dave's uncommitted Kronos-study work). Compared against `main` (`6b1a843`, same commit the
+existing snapshot was fetched at) instead, which matches exactly — no real drift. Future runs
+of this workflow should prefer the repo's default branch over its checked-out `HEAD` when
+they differ, since a dirty feature branch isn't the vault's snapshot target.
+
+No unregistered project directories spotted under `~/Documents`. No non-active
+(`dead`/`shipped`/`complete`/`unknown`) pointer cards touched. `.manifest.json` unchanged (no
+re-snapshots).
+
+---
+
+## 2026-07-31 — /lint incremental run
+
+Manually triggered (not the scheduled 08:13 run) to exercise the new `scripts/log-append.sh`
+after merging #2 (token-cost fixes + monthly log rotation). Ran with working directory
+`/Users/dzheng/brainclaude`.
+
+**Mechanical, full-vault (cheap regardless of scope):**
+- Stale snapshots: 0. Checked 95 `raw/notion/` files with `fetched:` frontmatter — all
+  within 90 days (vault is 16 days old).
+- Broken provenance: 0. Every manifest entry's `raw/` file exists; every manifest
+  `derived` entry's wiki page exists on disk.
+- Orphans: **8** source cards with no inbound `[[links]]` — `sources/repos-ev-agents`,
+  `sources/repos-ev-canlibrary`, `sources/repos-ev-readme`, `sources/repos-imgsic-readme`,
+  `sources/notion-misc-c-index`, `sources/notion-misc-c-janet`,
+  `sources/notion-misc-c-technical-interview`, `sources/notion-misc-roudy-notes`. All are
+  legitimately-manifest-tracked source cards for raw material that was never promoted to a
+  concept page — consistent with "when in doubt, do not promote" (career-context Notion
+  notes and project docs that may just be artifact-only, not necessarily wrong). Not
+  auto-fixed; Dave decides whether any of these merit a concept page.
+
+**Judgment checks (scoped to pages changed since last_incremental_check 2026-07-28):**
+0 `wiki/` content pages (concepts/entities/sources/synthesis) changed since the last
+check — only `wiki/log.md` itself and non-wiki tooling files (`CLAUDE.md`,
+`.claude/commands/*.md`, `scripts/*`) changed via #2's merge. Contradictions, uncited
+claims, and missing cross-refs checks had nothing new to run against; not manufacturing
+findings against unchanged pages.
+
+Clean otherwise. `.lint-state.json` `last_incremental_check` bumped to
+2026-07-31T05:53:16Z; `last_full_sweep` unchanged (this was not a `--full` run).
+
+---
+
+## 2026-07-31 — /sync-projects run
+
+Manually triggered (not the scheduled 08:25 run) right after merging #2, to exercise
+`scripts/manifest-update.sh` and `scripts/log-append.sh` on real project docs. Checked all 7
+`status: active` pointer cards (daily-tickers, ev-firmware, gkweb, hw-cnn-accelerator, imgsic,
+synth, tradefabe); all `path:` targets exist on disk.
+
+**Real doc changes, re-synced:**
+- **tradefabe**: `CLAUDE.md`, `DOCTRINE.md`, `README.md`, `STRATEGIES.md` all genuinely
+  changed (commit `36050ce`, was `6b1a843`/`6ab7c04`) — DOCTRINE advanced through v1.6, v1.7,
+  v1.8 (2026-07-29), Family M (Kronos) went live, Alpaca paper-broker connectivity added.
+  Three candidate concepts flagged on the pointer card (advisory-only kill criteria,
+  benchmark-window alignment to candidate OOS start, DSR needs an explicit positive-Sharpe
+  floor). `last_commit` bumped to 2026-07-31.
+- **ev-firmware/AGENTS.md**: re-synced, but **not a live change** — confirmed via `git log`/
+  `git diff` that the file hasn't changed since commit `c056be5` (2026-02-28) and the working
+  tree is clean. The 2026-07-17 snapshot was simply missing the file's trailing two lines (a
+  completeness gap in the original capture). Corrected; `commit:` stays `c056be5`. Noted on
+  the pointer card under a new "Flagged for /ingest review" section (operational, not a
+  concept). `README.md` and `canlibrary.md` confirmed unchanged.
+
+**Unchanged, skipped silently:** gkweb (`CLAUDE.md`/`README.md`), hw-cnn-accelerator
+(`docs/decisions.md`/`docs/learnings.md`), imgsic (`CLAUDE.md`/`README.md`), synth
+(`README.md`).
+
+**Flagged, not acted on (mechanical scope only):**
+- `daily-tickers` has a live `CLAUDE.md` that has never been snapshotted into
+  `raw/repos/daily-tickers/` — no baseline exists to compare against. Out of scope for this
+  mechanical run (first-time snapshotting is an `/ingest`/manual-session judgment call per
+  `CLAUDE.md`'s Projects section); flagging for a human or a future `/ingest` pass.
+- `gkweb`'s live repo now has an `AGENTS.md` that was never snapshotted (only
+  `CLAUDE.md`/`README.md` are tracked). Same reasoning — flagged, not auto-added.
+
+No unregistered project directories spotted under `~/Documents` (cross-checked every
+top-level dir with a `CLAUDE.md`/`README.md` against existing pointer cards — all already
+have one). No non-active (`dead`/`shipped`/`complete`/`unknown`) pointer cards touched.
+
+**Also fixed** (found while doing the tradefabe/ev-firmware manifest updates above):
+`scripts/manifest-update.sh` was doing a full replace of a manifest entry rather than a
+merge, which would silently drop the `catalog_level` flag present on 42 entries (hit in
+practice on `raw/repos/ev-firmware/AGENTS.md`). Fixed to merge; added a regression test.
+Filed as #4 for the record rather than a full branch/PR cycle, since it was small, already
+covered by `scripts/test.sh`, and blocking this run. 26/26 tests passing.

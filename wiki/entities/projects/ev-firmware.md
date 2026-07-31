@@ -40,3 +40,14 @@ its knowledge could vanish if Dave loses access, so the team-authored docs were 
 The **CANbus shared-state architecture** (one global vehicle struct, each board writes only its
 own fields on a periodic timer) is a genuinely reusable embedded pattern — a candidate concept
 page if `/ingest` promotes it.
+
+## Flagged for /ingest review
+
+- 2026-07-31 sync: `README.md` and `docs/canlibrary.md` unchanged (repo `HEAD` still `c056be5`,
+  same as the 2026-07-17 snapshot). `AGENTS.md` re-synced — **not a live change**: `git log`/
+  `git diff` on the DEV-2025-26-Firmware repo confirm `AGENTS.md` hasn't been touched since
+  commit `a381eee` (2026-02-28) and the working tree is clean, but the original 2026-07-17
+  snapshot was missing the file's trailing two lines (a blank line + an empty `# ` heading
+  marker). Re-synced to correct that completeness gap; `commit:` stays `c056be5` on both the
+  raw snapshot and its source card since nothing upstream actually changed. Not a concept —
+  operational/provenance only.

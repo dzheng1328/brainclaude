@@ -33,6 +33,6 @@ sha=$(shasum -a 256 "$path" | awk '{print $1}')
 
 tmp=$(mktemp)
 jq --arg p "$path" --arg h "$sha" --argjson d "$derived" \
-  '.sources[$p] = {sha256: $h, derived: $d}' \
+  '.sources[$p] = ((.sources[$p] // {}) + {sha256: $h, derived: $d})' \
   "$manifest" > "$tmp"
 mv "$tmp" "$manifest"

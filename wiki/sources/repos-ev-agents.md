@@ -6,7 +6,7 @@ title: "AGENTS"
 raw_file: raw/repos/ev-firmware/AGENTS.md
 source_kind: repos
 repo_url: https://github.com/dukeelectricvehicles-25-26/DEV-2025-26-Firmware
-fetched: 2026-07-17
+fetched: 2026-07-31
 catalog_level: true
 ---
 
