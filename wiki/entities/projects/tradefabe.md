@@ -132,3 +132,12 @@ pass ever wants to generalize it beyond this project.
   tests, ~8s" → "worksteal, ~3-4s") from a test-suite speed-up (#160/#162). Not a concept,
   not even worth a candidate flag — purely a doc-comment correction. `DOCTRINE.md`/
   `STRATEGIES.md` unchanged.
+- **Action item for next /ingest, not just a candidate concept**: `/lint`'s 2026-07-31 run
+  found `sources/repos-tradefabe-claude`, `-readme`, `-doctrine`, and `-strategies` all have
+  stale body summaries — the 2026-07-31 re-sync (v1.6-v1.8, Family M/Kronos live, Alpaca
+  broker connectivity) landed in `raw/repos/tradefabe/` correctly, but only this pointer
+  card's "Flagged" bullets were updated, not the source cards' own summary text. **A plain
+  `/ingest` diff will silently skip these** — `.manifest.json`'s hashes were already updated
+  during the re-sync, so they read as "unchanged." Rewrite the four source-card bodies to
+  match current raw content (`raw/repos/tradefabe/DOCTRINE.md:45+`, `STRATEGIES.md:369+`,
+  `CLAUDE.md:124,223`) as an explicit step, not by waiting on the normal diff worklist.

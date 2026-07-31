@@ -1307,3 +1307,57 @@ edits but its only tracked doc is untouched).
 No unregistered project directories spotted under `~/Documents` (every top-level dir with a
 `CLAUDE.md`/`README.md` already has a pointer card). No non-active (`dead`/`shipped`/
 `complete`/`unknown`) pointer cards touched.
+
+---
+
+## 2026-07-31 — /lint incremental run (2)
+
+Incremental mode. 7 pages changed since the last check (2026-07-31T05:53:16Z): `tradefabe.md`,
+`ev-firmware.md`, and source cards `repos-tradefabe-claude`, `repos-tradefabe-readme`,
+`repos-tradefabe-doctrine`, `repos-tradefabe-strategies`, `repos-ev-agents`. Judgment checks
+(contradictions, uncited claims, cross-refs) ran only against these; mechanical checks ran
+full-vault as always.
+
+**Uncited / mismatched claims (highest severity) — 3 found:**
+1. `tradefabe.md:113-129` (the "2026-07-31 sync, commit `36050ce`" bullet) asserts DOCTRINE
+   v1.6/v1.7/v1.8 content, Family M/Kronos going live, and Alpaca paper-broker connectivity,
+   citing all four `repos-tradefabe-*` source cards — but none of those four cards actually
+   contain this material. `sources/repos-tradefabe-doctrine.md` stops at v1.5;
+   `sources/repos-tradefabe-strategies.md` only covers through family L; neither
+   `repos-tradefabe-claude.md` nor `repos-tradefabe-readme.md` mention Alpaca. Verified this
+   isn't a hallucination — the raw files themselves (`raw/repos/tradefabe/DOCTRINE.md:45+`,
+   `STRATEGIES.md:369+`, `CLAUDE.md:124,223`) do contain v1.6-v1.8/Kronos/Alpaca — so the raw
+   re-sync landed correctly but the source-card summaries were never rewritten to match. Fix:
+   refresh the doctrine/strategies/claude/readme source-card bodies against current raw content.
+2. `tradefabe.md:130-134` (final "2026-07-31 scheduled sync" bullet) has no citation at all,
+   unlike the three preceding sync bullets which each end "See ^[[sources/...]]".
+3. `ev-firmware.md:46-53` ("2026-07-31 sync" bullet on the AGENTS.md re-sync) has no citation,
+   unlike the page's own established per-file `^[[repos/ev-firmware/X.md]]` citation style.
+
+**Broken provenance:**
+- The `uni/` local archive (Dave's ~2,900-file academic archive, cited since 2026-07-17 via
+  `^[[uni/]]` in 20+ course entity pages, plus exact file paths in two source cards) **does not
+  exist on disk** — confirmed absent at `/Users/dzheng/brainclaude/uni/` (no such directory;
+  direct file reads for both cited PDFs fail). Concretely breaks `sources/uni-flood-modeling.md`
+  and `sources/uni-350-cheat-sheets.md`. Not caught by prior runs because those only checked
+  manifest-tracked (`raw_file`) entries, not `source_path`-style local-archive cards. Needs
+  Dave to confirm where `uni/` currently lives (moved? disconnected drive?) — not auto-fixed.
+
+**Contradictions:** none among the 7 in-scope pages or against the rest of the vault.
+
+**Stale snapshots:** 0. All 130 source cards' `fetched:` dates checked full-vault (95 at
+2026-07-16, 20 at 07-17, 8 at 07-18, 2 at 07-25, 5 at 07-31) — all within 90 days.
+
+**Orphans:** 8, unchanged from the prior run (`repos-ev-agents`, `repos-ev-canlibrary`,
+`repos-ev-readme`, `repos-imgsic-readme`, `notion-misc-c-index`, `notion-misc-c-janet`,
+`notion-misc-c-technical-interview`, `notion-misc-roudy-notes`) — legitimate per project-doc
+citation convention (project pages cite raw paths directly, not the `sources/` card).
+
+**Missing/broken cross-refs:** `wiki/personal/china-trip-2019.md:15` and
+`wiki/personal/taiwan-seoul-trip.md:16` cite `^[[sources/drive-personal-china-2019]]` /
+`^[[sources/drive-personal-taiwan-seoul-itinerary]]`, but those source cards actually live at
+`wiki/personal/drive-personal-*` (private-domain path rule), not under `sources/` — dangling
+link, local-only (both files are gitignored, no git-remote exposure).
+
+`.lint-state.json` `last_incremental_check` bumped to 2026-07-31T22:39:46Z; `last_full_sweep`
+unchanged (not a `--full` run).
