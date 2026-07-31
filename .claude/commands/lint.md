@@ -69,4 +69,6 @@ In incremental mode, say explicitly how many pages were in-scope for the judgmen
 this run (e.g. "3 pages changed since 2026-07-27, mechanical checks ran full-vault") so a
 reader isn't misled into thinking a full sweep just happened when it didn't.
 
-Append a dated summary to `wiki/log.md`.
+Append a dated summary to `wiki/log.md` by running `scripts/log-append.sh "<heading>"`
+with the entry body on stdin — don't Read the file first; the script appends without
+loading its existing content.

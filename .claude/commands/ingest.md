@@ -9,8 +9,11 @@ Scope: $ARGUMENTS (if empty, ingest everything new or changed)
 
 ## Procedure
 
-1. **Diff.** Compute sha256 for each file under `raw/`. Compare to `.manifest.json`.
-   Build the worklist: files absent from the manifest, or whose hash differs.
+1. **Diff.** Run `scripts/manifest-diff.sh` — it hashes every file under `raw/` and
+   compares against `.manifest.json` via `jq` in the shell, printing only the worklist
+   (`NEW <path>` / `CHANGED <path>`). Unchanged files never appear in the output and the
+   full manifest is never loaded into context — don't Read `.manifest.json` yourself for
+   this step.
    **Report the worklist and its size before doing any synthesis.** If it's large,
    say so and propose a batch size rather than silently burning the context window.
 
@@ -27,10 +30,21 @@ Scope: $ARGUMENTS (if empty, ingest everything new or changed)
    - If new content conflicts with existing wiki content, **do not overwrite** — append
      to `wiki/contradictions.md` and keep both. Check the real-conflict vs. supersession
      vs. overlap distinction first; most "conflicts" are overlap.
-   - Update `.manifest.json`: hash + list of wiki pages derived from this source.
+   - Update `.manifest.json` by running `scripts/manifest-update.sh <raw-path>
+     '["wiki/page/one","wiki/page/two"]'` (JSON array of derived wiki pages, relative to
+     `wiki/`, no `.md` extension — matches the existing `derived` field). The script
+     recomputes the sha256 itself and patches only that entry via `jq`. Don't Read+Edit the
+     full manifest for a one-entry change.
 
-4. **Finalize.** Update `wiki/_index.md`. Append to `wiki/log.md` (append-only — never
-   rewrite prior entries).
+4. **Finalize.** Update `wiki/_index.md`. Run `scripts/log-rotate.sh` first — it archives
+   any `wiki/log.md` entries from completed past months into `wiki/log-archive/YYYY-MM.md`
+   (verbatim, never reworded) and leaves the live file holding only the current month. Most
+   runs are a no-op (everything's already in the current month); it only actually moves
+   data on the first `/ingest` run after a new month starts, which keeps the live log
+   bounded without a separate scheduled task. Then append to `wiki/log.md` by running
+   `scripts/log-append.sh "<heading>"` with the entry body piped in on stdin — append-only
+   (never rewrite prior entries), and don't Read the file first; the script appends without
+   loading existing content.
 
 5. **Report**: files ingested, concepts created vs. updated, contradictions filed,
    promotions declined and why.

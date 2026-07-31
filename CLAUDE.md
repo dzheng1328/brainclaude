@@ -35,7 +35,10 @@ raw/              immutable sources. Dave owns this.
   assets/         PDFs, images, binaries
 wiki/             you own this entirely
   _index.md       catalog of every page, grouped by kind
-  log.md          append-only audit trail. Never rewrite history here.
+  log.md          append-only audit trail for the current month. Never rewrite history
+                   here — /ingest's finalize step rotates completed past months out to
+                   log-archive/ (see scripts/log-rotate.sh), it never edits an entry.
+  log-archive/    YYYY-MM.md per completed month, rotated out of log.md verbatim.
   contradictions.md  the ledger. Surfaced, never silently resolved.
   sources/        one card per raw file. The provenance anchor.
   concepts/       ideas. THIS IS THE GRAPH.
@@ -43,6 +46,10 @@ wiki/             you own this entirely
     projects/     one pointer card per external repo/project (see Projects)
   synthesis/      cross-cutting notes. Earned, not auto-generated.
 output/           only artifacts that LEAVE the vault (decks, reports to send)
+scripts/          mechanical helpers the commands below call out to (diffing/appending/
+                   rotating log.md and .manifest.json without loading full files into
+                   context). Read-only from a schema standpoint — they implement rules
+                   defined here, they don't change them.
 .manifest.json    sha256 per raw file -> derived wiki pages. Makes ingest incremental.
 ```
 
