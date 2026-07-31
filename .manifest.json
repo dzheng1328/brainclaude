@@ -852,13 +852,13 @@
       ]
     },
     "raw/repos/tradefabe/README.md": {
-      "sha256": "be036b82277d81614bb9f65e4d95bcfabe65831eefedf50939bb0508ac37e93a",
+      "sha256": "34a7af276b613550b3b164cbc319294cde8491866b2aa0c6bb968d0024700045",
       "derived": [
         "sources/repos-tradefabe-readme"
       ]
     },
     "raw/repos/tradefabe/CLAUDE.md": {
-      "sha256": "c32d4630c2db58334b5da7f0000d138b4e8a40ae1a04c6345381f9c69834cf35",
+      "sha256": "a85115b0afd88d17b0a71dab75345352c52e383d5718acbf5a536d6481232a34",
       "derived": [
         "sources/repos-tradefabe-claude"
       ]

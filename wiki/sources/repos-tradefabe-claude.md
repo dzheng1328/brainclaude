@@ -6,7 +6,7 @@ title: "CLAUDE.md"
 raw_file: raw/repos/tradefabe/CLAUDE.md
 source_kind: repos
 repo_url: https://github.com/dzheng1328/tradefabe.git
-commit: 36050ce
+commit: 5de0ecc
 fetched: 2026-07-31
 ---
 
@@ -25,7 +25,9 @@ chained after it (`;`/`&&`) still runs, deleting the branch and closing the stil
 PR (has cost three recoveries, #65/#80/#92, each needing a reflog dig and a fresh PR); merge,
 verify `state=MERGED` as its own step, only then delete. This file also now states it is
 "loaded into every session and re-injected after every compaction" and should stay short —
-a fixed-and-guarded bug is a one-line rule plus its enforcing test, not a post-mortem. See
-[[tradefabe]].
+a fixed-and-guarded bug is a one-line rule plus its enforcing test, not a post-mortem. Since
+the 2026-07-31 (morning) snapshot: the pytest command comment changed from a hardcoded "433
+tests, ~8s" to "worksteal, ~3-4s" — a test-suite speed-up (#160/#162), not a count worth
+citing. See [[tradefabe]].
 
 Raw: `raw/repos/tradefabe/CLAUDE.md`.

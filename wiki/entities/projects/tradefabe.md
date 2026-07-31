@@ -6,7 +6,7 @@ repo: https://github.com/dzheng1328/tradefabe.git
 path: /Users/dzheng/Documents/tradefabe
 stack: [Python, Streamlit, Plotly, pytest, Hyperliquid API]
 status: active
-last_commit: 2026-07-31
+last_commit: 2026-07-30
 ---
 
 # tradefabe
@@ -127,3 +127,8 @@ pass ever wants to generalize it beyond this project.
   DSR measures "beats what n_tested random draws would produce," not "is profitable"). See
   ^[[sources/repos-tradefabe-claude]] ^[[sources/repos-tradefabe-doctrine]]
   ^[[sources/repos-tradefabe-readme]] ^[[sources/repos-tradefabe-strategies]].
+- 2026-07-31 (scheduled) sync: `CLAUDE.md`/`README.md` re-synced (commit `5de0ecc`, was
+  `36050ce`) — both changes are a stale-count fix in the `pytest` command comment ("433
+  tests, ~8s" → "worksteal, ~3-4s") from a test-suite speed-up (#160/#162). Not a concept,
+  not even worth a candidate flag — purely a doc-comment correction. `DOCTRINE.md`/
+  `STRATEGIES.md` unchanged.

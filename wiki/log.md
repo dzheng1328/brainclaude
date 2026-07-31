@@ -1272,3 +1272,38 @@ merge, which would silently drop the `catalog_level` flag present on 42 entries 
 practice on `raw/repos/ev-firmware/AGENTS.md`). Fixed to merge; added a regression test.
 Filed as #4 for the record rather than a full branch/PR cycle, since it was small, already
 covered by `scripts/test.sh`, and blocking this run. 26/26 tests passing.
+
+---
+
+## 2026-07-31 — /sync-projects run (scheduled, mechanical-only)
+
+Checked all 7 `status: active` pointer cards (daily-tickers, ev-firmware, gkweb,
+hw-cnn-accelerator, imgsic, synth, tradefabe); all `path:` targets exist on disk. Ran 12
+minutes after the scheduled `/lint` run per the task's ordering.
+
+**Real doc change, re-synced:**
+- **tradefabe**: `CLAUDE.md` and `README.md` re-synced (commit `5de0ecc`, was `36050ce` from
+  this morning's manual run). Both changes are the same stale-count fix in the `pytest`
+  command comment ("433 tests, ~8s" → "worksteal, ~3-4s"), from a test-suite speed-up
+  (#160/#162). Not concept-worthy — a doc-comment correction, not flagged. `DOCTRINE.md` and
+  `STRATEGIES.md` unchanged. Pointer card `last_commit` updated to 2026-07-30 (the commit's
+  own authored date, matching this vault's established convention — the prior value of
+  2026-07-31 recorded this morning was off by a day).
+
+**Unchanged, skipped silently:** ev-firmware (`README.md`/`AGENTS.md`/`docs/canlibrary.md`,
+repo HEAD still `c056be5`), gkweb (`CLAUDE.md`/`README.md` — the repo's git HEAD is stale at
+`99e0424` with an uncommitted local edit to `CLAUDE.md`, but that uncommitted content is
+byte-identical to what's already snapshotted, so no re-sync needed), hw-cnn-accelerator
+(`docs/decisions.md`/`docs/learnings.md`, repo HEAD still `8827a96`), imgsic (`README.md`/
+`CLAUDE.md`, repo clean at `e5175b5`), synth (`README.md`; repo has uncommitted C-source
+edits but its only tracked doc is untouched).
+
+**Flagged, not acted on (mechanical scope only, both already flagged in prior runs):**
+- `daily-tickers` still has a live `CLAUDE.md` never snapshotted into
+  `raw/repos/daily-tickers/` — no baseline to diff against.
+- `gkweb` still has a live `AGENTS.md` never snapshotted (only `CLAUDE.md`/`README.md`
+  tracked).
+
+No unregistered project directories spotted under `~/Documents` (every top-level dir with a
+`CLAUDE.md`/`README.md` already has a pointer card). No non-active (`dead`/`shipped`/
+`complete`/`unknown`) pointer cards touched.
