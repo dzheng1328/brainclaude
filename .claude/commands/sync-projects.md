@@ -22,7 +22,9 @@ Scope: $ARGUMENTS (if empty, sync every project pointer card with `status: activ
    - **Unchanged: skip silently.**
    - **Changed:** re-snapshot verbatim (overwrite `raw/repos/<project>/<doc>` — this is a
      living-source re-sync per `CLAUDE.md`'s Snapshots rule, not a `raw/` immutability
-     violation), update its source card, update `.manifest.json`.
+     violation), update its source card, update `.manifest.json` via `scripts/manifest-update.sh
+     <raw-path> '<derived-json-array>'` (recomputes the hash itself — don't Read+Edit the
+     full manifest for a one-entry patch).
    - Update only the **mechanical frontmatter fields** on the pointer card: `status`,
      `last_commit`/`last_modified`, `stack` (only if the repo's own docs state a stack
      change). Never touch the pointer card's prose body.
@@ -35,7 +37,8 @@ Scope: $ARGUMENTS (if empty, sync every project pointer card with `status: activ
      card is a judgment call (what it is, in one honest sentence — not mechanical), same
      bar as any first-time `/ingest`.
 
-3. **Finalize.** Append one `wiki/log.md` entry summarizing the run: projects checked,
+3. **Finalize.** Append one `wiki/log.md` entry via `scripts/log-append.sh "<heading>"`
+   (body on stdin — don't Read the file first) summarizing the run: projects checked,
    which had doc changes (with what changed), which were flagged for concept review, and
    any new unregistered project directories spotted. If nothing changed anywhere, write
    one line: "No project doc changes since last sync." Don't pad a no-op entry.
