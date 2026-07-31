@@ -81,5 +81,66 @@ echo "  NEW files reported against the real raw/ + .manifest.json: $real_new"
 check "$( [[ $real_new -ge 100 ]] && echo yes)" "yes" "matches the known ~124-file pending /ingest backlog (>=100)"
 
 echo
+echo "== log-rotate.sh: archives past months, keeps current month + unparseable =="
+current_month="$(date +%Y-%m)"
+rot_log="$tmp/rotate-log.md"
+rot_archive="$tmp/archive"
+cat > "$rot_log" <<EOF
+# Log
+
+Append-only. Never rewrite prior entries.
+
+## 2020-01-05 — old entry
+
+old body text, line one.
+old body text, line two.
+
+---
+
+## no-date-here — weird heading, no leading date
+
+should be kept (unparseable, safety default).
+
+---
+
+## ${current_month}-15 — current entry
+
+current body text.
+EOF
+
+LOG_FILE="$rot_log" ARCHIVE_DIR="$rot_archive" ./scripts/log-rotate.sh > "$tmp/rotate-out-1.txt"
+check "$(cat "$tmp/rotate-out-1.txt" | grep -c '^archived 1 entry')" "1" "reports archiving exactly 1 entry"
+check "$(test -f "$rot_archive/2020-01.md" && echo yes)" "yes" "archive file for 2020-01 created"
+check "$(grep -c '^## 2020-01-05 — old entry$' "$rot_archive/2020-01.md")" "1" "archived entry heading present in archive file"
+check "$(grep -c 'old body text, line two.' "$rot_archive/2020-01.md")" "1" "archived entry body preserved"
+check "$(grep -c '^## 2020-01-05 — old entry$' "$rot_log")" "0" "archived entry removed from live log"
+check "$(grep -c '^## no-date-here' "$rot_log")" "1" "unparseable entry stays in live log (safety default)"
+check "$(grep -c "^## ${current_month}-15 — current entry\$" "$rot_log")" "1" "current-month entry stays in live log"
+
+echo
+echo "== log-rotate.sh: idempotent (second run with nothing new to archive) =="
+before_hash="$(shasum -a 256 "$rot_log" | awk '{print $1}')"
+out2="$(LOG_FILE="$rot_log" ARCHIVE_DIR="$rot_archive" ./scripts/log-rotate.sh)"
+after_hash="$(shasum -a 256 "$rot_log" | awk '{print $1}')"
+check "$out2" "nothing to archive (all entries are in the current month)" "second run reports nothing to archive"
+check "$after_hash" "$before_hash" "live log byte-identical after no-op run"
+
+echo
+echo "== log-rotate.sh: appends to an already-existing archive file for the same month =="
+cat >> "$rot_log" <<'EOF'
+
+---
+
+## 2020-01-20 — second old entry
+
+a second entry landing in the same already-archived month.
+EOF
+LOG_FILE="$rot_log" ARCHIVE_DIR="$rot_archive" ./scripts/log-rotate.sh > "$tmp/rotate-out-3.txt"
+check "$(grep -c '^# Log archive — 2020-01$' "$rot_archive/2020-01.md")" "1" "archive file header written only once, not duplicated"
+check "$(grep -c '^## 2020-01-05 — old entry$' "$rot_archive/2020-01.md")" "1" "first archived entry still present"
+check "$(grep -c '^## 2020-01-20 — second old entry$' "$rot_archive/2020-01.md")" "1" "second archived entry appended"
+check "$(grep -c "^## ${current_month}-15 — current entry\$" "$rot_log")" "1" "current-month entry still untouched after second rotation"
+
+echo
 echo "$pass passed, $fail failed"
 [[ $fail -eq 0 ]]

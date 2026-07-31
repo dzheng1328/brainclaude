@@ -36,7 +36,12 @@ Scope: $ARGUMENTS (if empty, ingest everything new or changed)
      recomputes the sha256 itself and patches only that entry via `jq`. Don't Read+Edit the
      full manifest for a one-entry change.
 
-4. **Finalize.** Update `wiki/_index.md`. Append to `wiki/log.md` by running
+4. **Finalize.** Update `wiki/_index.md`. Run `scripts/log-rotate.sh` first — it archives
+   any `wiki/log.md` entries from completed past months into `wiki/log-archive/YYYY-MM.md`
+   (verbatim, never reworded) and leaves the live file holding only the current month. Most
+   runs are a no-op (everything's already in the current month); it only actually moves
+   data on the first `/ingest` run after a new month starts, which keeps the live log
+   bounded without a separate scheduled task. Then append to `wiki/log.md` by running
    `scripts/log-append.sh "<heading>"` with the entry body piped in on stdin — append-only
    (never rewrite prior entries), and don't Read the file first; the script appends without
    loading existing content.

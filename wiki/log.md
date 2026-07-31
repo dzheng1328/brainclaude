@@ -1,6 +1,8 @@
 # Log
 
-Append-only. Never rewrite prior entries.
+Append-only. Never rewrite prior entries. Holds the current month only — completed past
+months are rotated out verbatim to `wiki/log-archive/YYYY-MM.md` by `scripts/log-rotate.sh`
+(run automatically from `/ingest`'s finalize step).
 
 ## 2026-07-15 — vault initialized
 
