@@ -6,6 +6,14 @@ Sync active project repos into the vault. **Mechanical only — do not promote c
 not rewrite prose.** Concept promotion stays a judgment call for `/ingest` or a manual
 session.
 
+**Scratch-file hygiene:** if this check needs intermediate files (body diffs, hash
+comparisons), put them under a `mktemp -d` temp directory, never in the vault repo root.
+Delete that temp directory before finishing, success or failure. Several days of
+`.tmp_*`/`.diff_*` scratch files were left littering the repo root because `rm` sometimes
+needs interactive approval this session doesn't have — `mktemp -d` avoids that class of
+problem entirely, since the whole directory can be removed in one shot and nothing written
+there needs its own approval to clean up.
+
 Scope: $ARGUMENTS (if empty, sync every project pointer card with `status: active`)
 
 ## Procedure

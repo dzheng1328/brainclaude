@@ -789,7 +789,7 @@
       "catalog_level": true
     },
     "raw/repos/ev-firmware/canlibrary.md": {
-      "sha256": "6bbf0efefe57ecf104b0f9edbca68f5b3dac6ec4a75c73c41a14e70ae1ae8d97",
+      "sha256": "893e751e7698893da9739ac1e9d11f8a4fbe74497a82d2f5761703ee54759c7b",
       "derived": [
         "sources/repos-ev-canlibrary"
       ],
@@ -852,25 +852,25 @@
       ]
     },
     "raw/repos/tradefabe/README.md": {
-      "sha256": "34a7af276b613550b3b164cbc319294cde8491866b2aa0c6bb968d0024700045",
+      "sha256": "b5410cfdf3f4e7f145226e743aac685bf345642524a5bf68834fe3327bfc76e7",
       "derived": [
         "sources/repos-tradefabe-readme"
       ]
     },
     "raw/repos/tradefabe/CLAUDE.md": {
-      "sha256": "a85115b0afd88d17b0a71dab75345352c52e383d5718acbf5a536d6481232a34",
+      "sha256": "5856cb3e799803dc83859b0fbd9b368c343b0b76c7b332ccec167fcd963fb4ef",
       "derived": [
         "sources/repos-tradefabe-claude"
       ]
     },
     "raw/repos/tradefabe/DOCTRINE.md": {
-      "sha256": "9efd1d5d73e938f435b26fd769aa82a5cf1cb8a355a9e86473a7157bca0a3287",
+      "sha256": "2ed7c703e13aa4424ea6384521e4285d0330cab47b7947acad3db45dba8dd183",
       "derived": [
         "sources/repos-tradefabe-doctrine"
       ]
     },
     "raw/repos/tradefabe/STRATEGIES.md": {
-      "sha256": "f86bb9218287c96a2ab876be23a70a348a1efed22f253c343fe4f0797ab35c02",
+      "sha256": "24195d04bcd4a78c98b5328333245b095762cc4029620eff591bbada7d0ba4c8",
       "derived": [
         "sources/repos-tradefabe-strategies"
       ]

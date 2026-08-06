@@ -1361,3 +1361,575 @@ link, local-only (both files are gitignored, no git-remote exposure).
 
 `.lint-state.json` `last_incremental_check` bumped to 2026-07-31T22:39:46Z; `last_full_sweep`
 unchanged (not a `--full` run).
+
+---
+
+## 2026-07-31 — /sync-projects run (2, scheduled + follow-up)
+
+Checked all 7 `status: active` pointer cards (daily-tickers, ev-firmware, gkweb,
+hw-cnn-accelerator, imgsic, synth, tradefabe); all `path:` targets exist on disk. This run
+found new upstream changes beyond the prior 2026-07-31 scheduled sync (commit `5de0ecc`) —
+the tradefabe repo had advanced further since that snapshot.
+
+**Real doc change, re-synced:**
+- **tradefabe**: `CLAUDE.md`, `README.md`, `STRATEGIES.md` re-synced (commit `634efbf`, was
+  `5de0ecc`); `DOCTRINE.md` unchanged (byte-identical body). `CLAUDE.md`/`README.md` both
+  document the `run` cron moving from 22:07 UTC to ~02:00 UTC (#158) and the `factory` cron
+  resuming daily at 21:06 UTC (#163). `STRATEGIES.md` gained a pre-registered amendment
+  (#156): `equity_tsmom_1h` swaps its data source from yfinance to Alpaca, re-run as a new
+  graveyard row — still DEAD, more decisively. One candidate concept flagged on the pointer
+  card (pre-registering a data-source/depth swap as a forward-only amendment, distinct from
+  the existing methodology-amendment flag). Source cards `repos-tradefabe-claude`, `-readme`,
+  `-strategies` had their body summaries refreshed to match; `-doctrine` untouched (no
+  change). Pointer card `last_commit` bumped to 2026-07-31 (the commit's own authored date).
+
+**Unchanged, skipped silently:** ev-firmware (`README.md`/`AGENTS.md`/`docs/canlibrary.md`,
+repo HEAD still `c056be5`, clean), gkweb (`CLAUDE.md`/`README.md` — repo HEAD still `99e0424`
+with the same uncommitted `CLAUDE.md` edit as before, confirmed still byte-identical to the
+snapshot body), hw-cnn-accelerator (`docs/decisions.md`/`docs/learnings.md`, repo HEAD still
+`8827a96`; untracked `sim/` and a stray shell-log file don't touch tracked docs), imgsic
+(`README.md`/`CLAUDE.md`, repo clean at `e5175b5`), synth (`README.md` untouched; repo has
+uncommitted C-source/CMake edits but no doc changes).
+
+**Flagged, not acted on (mechanical scope only, already flagged in prior runs):**
+- `daily-tickers` still has a live `CLAUDE.md` never snapshotted into
+  `raw/repos/daily-tickers/` — no baseline to diff against.
+- `gkweb` still has a live `AGENTS.md` never snapshotted (only `CLAUDE.md`/`README.md`
+  tracked).
+
+No unregistered project directories spotted under `~/Documents` (every top-level dir without
+an existing pointer card — Adobe, Image-Line, KiCad, League of Legends, MATLAB, SYNTHS,
+Universal Audio, WP, Zoom, cover letters, job, resume drafting — has no `CLAUDE.md`,
+`README.md`, or `.git`, so none reads as a code project). No non-active (`dead`/`shipped`/
+`complete`/`unknown`) pointer cards touched.
+
+---
+
+## 2026-08-01 — /lint incremental run
+
+Incremental mode. 4 pages in scope for judgment checks (contradictions/uncited-claims/cross-refs)
+— changed since 2026-07-31T22:39:46Z: `entities/projects/tradefabe.md`,
+`sources/repos-tradefabe-claude.md`, `-readme.md`, `-strategies.md`. Mechanical checks
+(staleness, orphans, broken provenance) ran full-vault as always.
+
+**Highest-severity finding — citation/content gap, tradefabe (all 4 source cards).**
+`entities/projects/tradefabe.md` asserts DOCTRINE v1.6-v1.8, Family M (Kronos strategies), and
+Alpaca broker connectivity, citing `sources/repos-tradefabe-{claude,readme,doctrine,strategies}`.
+None of the four source-card bodies actually contain that content, even though
+`repos-tradefabe-claude/-readme/-strategies` were rewritten in this same session (for a *later*
+sync's cron/pytest/#156 changes) and `repos-tradefabe-doctrine`'s manifest hash already matches
+raw content that includes v1.6-v1.8 (`raw/repos/tradefabe/DOCTRINE.md:35+`). Worst gap:
+`repos-tradefabe-strategies.md` is silent on the entire Family M / Kronos section
+(`raw/repos/tradefabe/STRATEGIES.md:408-556`, ~150 lines). This is the same gap tradefabe.md's own
+"Flagged for /ingest review" section already named as an open action item — confirmed still open,
+and confirmed to span all four cards, not just doctrine. Not auto-fixed per /lint's own rule.
+
+**Orphans (mechanical, full-vault): 8.** `sources/repos-ev-{agents,canlibrary,readme}.md` and
+`sources/repos-imgsic-readme.md` are cited from their pointer cards (`ev-firmware.md`, `imgsic.md`)
+using raw-path-style links (e.g. `[[repos/ev-firmware/README.md]]`, `[[imgsic/README.md]]`) instead
+of the actual page names (`[[sources/repos-ev-readme]]`, `[[sources/repos-imgsic-readme]]`) —
+likely a broken/dangling citation, not an intentional orphan; tradefabe.md and
+`repos-imgsic-claude` already use the correct `sources/...` form. The other 4 —
+`sources/notion-misc-{c-index,c-janet,c-technical-interview,roudy-notes}` — are catalog-level
+stub cards that link out to `[[professional-profile]]` but aren't linked back; `professional-profile.md`
+doesn't cite them. Likely expected (lightweight-cataloging pass, not yet promoted) but flagged for
+Dave to confirm.
+
+**Stale snapshots: none.** All `raw/notion/` and `raw/drive/` `fetched:` dates are 2026-07-16/17/18
+— well under the 90-day threshold.
+
+**Broken provenance: none.** Every source card's `raw_file` resolves; every manifest `derived` entry
+resolves to an existing wiki page; every manifest raw-file key exists on disk. (3 source cards —
+`uni-flood-modeling`, `uni-350-cheat-sheets`, `drive-jb-tracker` — have no `raw_file` field by design,
+using `source_type: local_archive`/`source_path` or `snapshotted: false` instead; not a defect.)
+
+**Contradictions: none found** in the 4 in-scope pages, against each other or the rest of the vault
+(only `_index.md` and `log.md` reference tradefabe elsewhere — no other content page).
+
+**Missing cross-refs: none found** in the 4 in-scope pages — tradefabe's finance/ML content
+(Kronos, DSR/CPCV, etc.) doesn't overlap any existing concept page; the page already self-flags
+its own deferred concept promotions.
+
+No auto-fixes applied — findings reported to Dave per /lint's own rule.
+
+**Same-day re-run, squashed here:** a second incremental lint ran later the same day (forced to retry from scratch by the sync/lint interdependency bug fixed 2026-08-05 alongside the watchdog token-usage fix) and found 0 pages changed, mechanical checks unchanged, the citation gap above still open. No new information.
+
+---
+
+## 2026-08-01 — /sync-projects (scheduled, 08:25 local)
+
+Checked all `status: active` pointer cards with a real `path:`: daily-tickers, ev-firmware,
+gkweb, hw-cnn-accelerator, imgsic, synth, tradefabe. Skipped by guardrail (not active):
+dave-zheng-pcb (`status: unknown`), ece-350-connect4 (complete), gohelpme/hacknc (shipped),
+itm (dead).
+
+**No doc content changes found** for the 5 projects with existing `raw/repos/<project>/`
+snapshots — ev-firmware, gkweb, hw-cnn-accelerator, imgsic, synth. Byte-diffed each
+snapshotted body (frontmatter stripped) against the live file at `path:`; every body matched
+verbatim except `ev-firmware/docs/canlibrary.md`, which differs only in a missing trailing
+newline on the live file (no content change). No re-snapshots, source-card edits, or
+`.manifest.json` updates were needed. daily-tickers has no `raw/repos/` snapshot to diff
+(its card cites the live path directly); its `CLAUDE.md` mtime (2026-06-18) matches the
+card's `last_commit`, so nothing to update there either.
+
+**tradefabe could not be checked this run.** Its `path:` (`~/Documents/tradefabe`) is a
+symlink to the repo's real location (`~/tradefabe`, per the 2026-07-26 move already logged
+on the card); this session's sandbox hard-blocks file access outside `~/brainclaude` and a
+short allowlist of `~/Documents` project dirs, and does not resolve the symlink through to
+an allowed path. `ls`/`cat`/`git` all failed with a sandbox block, not a permission prompt,
+even with the sandbox-override flag. Not actioned — flagging for a human to either update
+the card's `path:` to the real location or adjust the session's allowed directories.
+
+**`git log`/`rev-parse` were blocked for every external repo this run** (gkweb,
+hw-cnn-accelerator, imgsic, synth, ev-firmware all returned "requires approval" with no
+prompt surfaced) — only plain filesystem ops (`ls`, `diff`, `stat`, `shasum`) worked. Used
+`stat` mtimes as a secondary check instead: all were on or before each card's existing
+`last_commit`/`last_modified`, consistent with "no change," but this doesn't confirm the
+true current HEAD. Left `last_commit`/`last_modified` untouched on every card rather than
+guess. gkweb's `CLAUDE.md` mtime (2026-06-25) postdates its card's `last_commit`
+(2026-05-23) despite identical body content — likely a checkout/touch, not a real edit, but
+worth a human spot-check next time git access is available.
+
+**Observation, not actioned:** the live gkweb repo now also has a top-level `AGENTS.md`
+that was never snapshotted into `raw/repos/gkweb/` (only `CLAUDE.md`/`README.md` are). Adding
+it to the snapshot set is a judgment call outside this mechanical run's scope — flagged for
+`/ingest` or a manual pass to decide whether it's worth capturing.
+
+**No new unregistered project directories.** Surveyed `~/Documents/`: every dir with
+project-shaped content already has a pointer card (daily tickers, dave_zheng, ev, gkweb,
+hackNC, hw-cnn-accelerator, imgsic, itm, synth, tradefabe, uni). The rest (Adobe,
+Image-Line, KiCad, League of Legends, MATLAB, SYNTHS, Universal Audio, WP, cover letters,
+job, resume drafting, Zoom) have no `CLAUDE.md`/`README.md` and aren't project-shaped.
+
+No concept pages promoted; no pointer-card prose touched.
+
+---
+
+## 2026-08-02 — /sync-projects (scheduled, 08:25 local)
+
+Checked all `status: active` pointer cards with a real `path:`: daily-tickers, ev-firmware,
+gkweb, hw-cnn-accelerator, imgsic, synth, tradefabe. Skipped by guardrail (not active):
+dave-zheng-pcb (`status: unknown`), ece-350-connect4 (complete), gohelpme/hacknc (shipped),
+itm (dead).
+
+**No doc content changes found** for the 5 projects with existing `raw/repos/<project>/`
+snapshots — ev-firmware, gkweb, hw-cnn-accelerator, imgsic, synth. Byte-diffed each
+snapshotted body (frontmatter and any snapshot-note HTML comment stripped) against the live
+file at `path:`; every body matched verbatim except `ev-firmware/docs/canlibrary.md`, which
+again differs only in a missing trailing newline on the live file (no content change, same
+as last run). No re-snapshots, source-card edits, or `.manifest.json` updates were needed.
+daily-tickers has no `raw/repos/` snapshot to diff (its card cites the live path directly);
+its `CLAUDE.md` mtime (2026-06-18) still matches the card's `last_commit`, so nothing to
+update there either.
+
+**tradefabe still could not be checked.** Same sandbox block as the 2026-08-01 run: `path:`
+(`~/Documents/tradefabe`) is a symlink to `~/tradefabe`, outside this session's allowed
+directories, and `ls`/`git` both hard-block rather than prompt. Not actioned again — still
+flagging for a human to either repoint the card's `path:` at the real location or widen the
+session's allowed directories. `git log`/`rev-parse` were also blocked for the other five
+repos (gkweb, hw-cnn-accelerator, imgsic, synth, ev-firmware) — content-diff against the live
+file was used instead of true HEAD comparison, which is sufficient to confirm "no doc
+change" but means `last_commit`/`last_modified` were left untouched on every card rather than
+guessed at, consistent with the prior run's approach.
+
+**Still open, not re-actioned:** gkweb's live repo still has a top-level `AGENTS.md` never
+added to `raw/repos/gkweb/` (flagged 2026-08-01; unchanged today, still out of this
+mechanical run's scope — a call for `/ingest` or a manual pass).
+
+**No new unregistered project directories.** Re-surveyed `~/Documents/` top level: same set
+as last run, no new project-shaped directory (with a `CLAUDE.md`/`README.md`) appeared.
+
+No concept pages promoted; no pointer-card prose touched; no frontmatter fields changed this
+run (nothing needed updating).
+
+---
+
+## 2026-08-02 — /lint incremental run
+
+Incremental mode. 0 content pages changed since the prior check (2026-08-01T08:13:25Z):
+only `wiki/log.md` itself is newer (from the 2026-08-02 `/sync-projects` entry appended
+after that lint run). The tradefabe pointer card and its three non-doctrine source cards
+show as modified in `git status`, but their mtimes (2026-07-31 ~20:19) predate the prior
+lint check and were already covered by it — not new this run. Judgment checks
+(contradictions, uncited claims, missing cross-refs) had nothing new to scope to, so none
+were re-run. Mechanical checks (staleness, orphans, broken provenance) ran full-vault as
+always, independently re-derived rather than assumed from the prior run's log entry.
+
+**Carried forward, unresolved — tradefabe source-card citation gap.** Not re-derived this
+run (no page in judgment scope), but still open per the last three lint entries:
+`entities/projects/tradefabe.md` cites all four `sources/repos-tradefabe-{claude,readme,
+doctrine,strategies}` cards for content the card bodies still don't contain, worst gap
+`repos-tradefabe-strategies.md` silent on `raw/repos/tradefabe/STRATEGIES.md:408-556`
+(Family M/Kronos, ~150 lines). Worth a `/ingest` pass to actually close it rather than
+carrying it forward again.
+
+**Orphans (mechanical, full-vault): 8, unchanged from the last two runs.**
+`sources/repos-ev-{agents,canlibrary,readme}.md` and `sources/repos-imgsic-readme.md` are
+cited from their pointer cards (`ev-firmware.md`, `imgsic.md`) using raw-path-style links
+(e.g. `^[[repos/ev-firmware/README.md]]`) instead of the real page names
+(`[[sources/repos-ev-readme]]`), so they read as unlinked. `sources/notion-misc-{c-index,
+c-janet,c-technical-interview,roudy-notes}` link out to `[[professional-profile]]` but
+aren't linked back from it — still presumed intentional lightweight cataloging, not
+re-confirmed with Dave this run either.
+
+**Stale snapshots: none.** All `raw/notion/`, `raw/drive/`, and `raw/repos/` `fetched:`
+dates fall between 2026-07-16 and 2026-07-31 (checked against today, 2026-08-02) — the
+oldest is 17 days old, well under the 90-day threshold.
+
+**Broken provenance: none.** Every source card's `raw_file` resolves on disk (127 with the
+field, checked individually; the 3 by-design exceptions — `uni-350-cheat-sheets`,
+`uni-flood-modeling`, `drive-jb-tracker` — confirmed to still lack the field on purpose, not
+by decay). Every `.manifest.json` raw-file key exists on disk; every manifest `derived`
+entry resolves to an existing wiki page.
+
+**Contradictions: none newly filed.** No judgment-scope pages this run to check.
+
+**Missing cross-refs: none newly identified.** No judgment-scope pages this run to check.
+
+No auto-fixes applied — findings reported to Dave per /lint's own rule.
+
+`.lint-state.json` `last_incremental_check` bumped to 2026-08-02T07:15:20Z; `last_full_sweep`
+unchanged (not a `--full` run — last full sweep remains 2026-07-28).
+
+---
+
+## 2026-08-03 — /sync-projects: no doc drift found, tradefabe blocked
+
+Mechanical doc-sync of `status: active` project pointer cards. Worklist: **daily-tickers**
+(no `raw/repos/` snapshot exists — pointer card cites the live path directly, nothing to
+re-sync), **ev-firmware**, **gkweb**, **hw-cnn-accelerator**, **imgsic**, **synth**,
+**tradefabe**.
+
+**ev-firmware, gkweb, hw-cnn-accelerator, imgsic, synth:** live HEAD commit matches the
+snapshot's recorded `commit:` exactly for every repo, and every tracked doc
+(`AGENTS.md`/`README.md`/`docs/canlibrary.md` for ev-firmware; `CLAUDE.md`/`README.md` for
+gkweb and imgsic; `docs/decisions.md`/`docs/learnings.md` for hw-cnn-accelerator;
+`README.md` for synth) is byte-identical to its `raw/repos/<project>/` snapshot. No
+re-snapshots, no source-card or pointer-card frontmatter updates needed. Nothing flagged for
+`/ingest`.
+
+**tradefabe: blocked, not silently skipped.** This session's sandbox only permits reads under
+`/Users/dzheng/brainclaude` and `/Users/dzheng/Documents/*`. tradefabe's real repo lives at
+`~/tradefabe` (moved 2026-07-26, per the pointer card's own flagged note) — outside
+`~/Documents` — and the compatibility symlink at the old `Documents/tradefabe` path resolves
+there too, so both the old and new paths were unreadable this run. Could not compare live
+docs against `raw/repos/tradefabe/`. Needs a session with broader path access, or the
+pointer card's `path:` updated to something reachable, before tradefabe can be synced again.
+
+**No unregistered project directories found** — every code-bearing folder under
+`~/Documents` (ev, gkweb, hackNC, hw-cnn-accelerator, imgsic, itm, synth, tradefabe, daily
+tickers, dave_zheng) already has a pointer card; the rest (Adobe, Image-Line, KiCad, League
+of Legends, MATLAB, SYNTHS, Universal Audio, WP, Zoom, cover letters, job, resume drafting,
+uni) aren't code projects.
+
+**Housekeeping note:** found `.lint_*.tmp`, `.tmp_ev_*`/`.tmp_gkweb_*`/`.tmp_hw_*`/
+`.tmp_imgsic_*`/`.tmp_synth_*`, `.sync_cmpdocs.sh`, and `.lint_manifest_check.py` — untracked
+scratch files left over from an interrupted prior `/lint`/`/sync-projects` run (dated Aug
+1-2). Not part of this run's output; `rm` required interactive approval unavailable in this
+autonomous session, so they were left in place rather than force-deleted. Safe for a future
+session (or Dave) to delete — they're untracked, pure scratch, and this run independently
+re-derived the same comparisons from scratch rather than trusting them.
+
+---
+
+## 2026-08-03 — /lint incremental run
+
+Incremental mode. 0 content pages changed since the prior check (2026-08-02T07:15:20Z).
+`git log --since` against `wiki/` returned no commits (uncommitted-work vault); checked
+working-tree state directly instead: the tradefabe pointer card and its three non-doctrine
+source cards (`repos-tradefabe-{claude,readme,strategies}`) still show as staged/modified in
+`git status`, but their mtimes (2026-07-31 ~20:18-20:19) predate the prior lint check and
+were already covered by the 2026-08-01 and 2026-08-02 runs — not new this run. No other wiki
+file has a newer mtime than the prior check except `log.md` itself (append-only, from the
+2026-08-02 /sync-projects and /lint entries). Judgment checks (contradictions, uncited
+claims, missing cross-refs) had nothing new to scope to, so none were re-run. Mechanical
+checks (staleness, orphans, broken provenance) ran full-vault as always, independently
+re-derived rather than assumed from the prior run's log entry.
+
+**Carried forward, unresolved — tradefabe source-card citation gap.** Not re-derived this
+run (no page in judgment scope), but still open per the last four lint entries:
+`entities/projects/tradefabe.md` cites all four `sources/repos-tradefabe-{claude,readme,
+doctrine,strategies}` cards for content the card bodies still don't contain, worst gap
+`repos-tradefabe-strategies.md` silent on `raw/repos/tradefabe/STRATEGIES.md:408-556`
+(Family M/Kronos, ~150 lines). Now four runs old — worth an actual `/ingest` pass rather
+than a fifth carry-forward.
+
+**Orphans (mechanical, full-vault): 8, unchanged from the last three runs.**
+`sources/repos-ev-{agents,canlibrary,readme}.md` and `sources/repos-imgsic-readme.md` are
+cited from their pointer cards (`ev-firmware.md`, `imgsic.md`) using raw-path-style links
+(e.g. `^[[repos/ev-firmware/README.md]]`, `^[[imgsic/README.md]]`) instead of the real page
+names (`[[sources/repos-ev-readme]]`, `[[sources/repos-imgsic-readme]]`), so they read as
+unlinked. `sources/notion-misc-{c-index,c-janet,c-technical-interview,roudy-notes}` link out
+to `[[professional-profile]]` but aren't linked back from it — still presumed intentional
+lightweight cataloging, not re-confirmed with Dave. (`_index.md` also shows 0 inbound links
+by construction — it's the catalog root, not a real orphan, excluded from the count.)
+
+**Stale snapshots: none.** All `raw/notion/`, `raw/drive/`, and `raw/repos/` `fetched:`
+dates fall between 2026-07-16 and 2026-07-31 (checked against today, 2026-08-03) — the
+oldest is 18 days old, well under the 90-day threshold.
+
+**Broken provenance: none.** Every source card's `raw_file` resolves on disk (the 3 by-design
+exceptions — `uni-350-cheat-sheets`, `uni-flood-modeling`, `drive-jb-tracker` — confirmed to
+still lack the field on purpose, not by decay). Every `.manifest.json` raw-file key exists on
+disk; every manifest `derived` entry resolves to an existing wiki page.
+
+**Contradictions: none newly filed.** No judgment-scope pages this run to check.
+
+**Missing cross-refs: none newly identified.** No judgment-scope pages this run to check.
+
+No auto-fixes applied — findings reported to Dave per /lint's own rule.
+
+**Housekeeping, not actioned:** the untracked scratch files flagged by the 2026-08-03
+`/sync-projects` entry above (`.lint_*.tmp`, `.tmp_ev_*`/`.tmp_gkweb_*`/`.tmp_hw_*`/
+`.tmp_imgsic_*`/`.tmp_synth_*`, `.sync_cmpdocs.sh`, `.lint_manifest_check.py`) are still
+present; this run added and then removed its own two scratch scripts
+(`.lint_orphans.py`, `.lint_check_sources.py`) but `rm` on the pre-existing set needed
+interactive approval not available here, so those remain — safe for Dave to delete, pure
+scratch, untracked.
+
+`.lint-state.json` `last_incremental_check` bumped to 2026-08-03; `last_full_sweep`
+unchanged (not a `--full` run — last full sweep remains 2026-07-28).
+
+---
+
+## 2026-08-04 — /sync-projects: tradefabe re-synced (git access partially restored), five others unchanged
+
+Mechanical doc-sync of `status: active` project pointer cards. Worklist (7, real `path:`):
+**daily-tickers**, **ev-firmware**, **gkweb**, **hw-cnn-accelerator**, **imgsic**, **synth**,
+**tradefabe**. Skipped by guardrail (not active): `dave-zheng-pcb` (`status: unknown`),
+`ece-350-connect4` (complete), `gohelpme`/`hacknc` (shipped), `itm` (dead).
+
+**No changes: daily-tickers, ev-firmware, gkweb, hw-cnn-accelerator, imgsic, synth.**
+daily-tickers has no `raw/repos/` snapshot (its card cites the live path directly); its
+`CLAUDE.md` mtime (2026-06-18) still matches the card's `last_commit`. The other five's
+tracked docs (`README.md`/`AGENTS.md`/`docs/canlibrary.md` for ev-firmware;
+`README.md`/`CLAUDE.md` for gkweb and imgsic; `docs/decisions.md`/`docs/learnings.md` for
+hw-cnn-accelerator; `README.md` for synth) were byte-identical to their `raw/repos/`
+snapshots (frontmatter and any HTML snapshot-note comment stripped before comparing). No
+re-snapshots, source-card edits, or manifest updates needed for these six.
+
+**tradefabe: re-synced — first successful sync since 2026-08-01.** Plain file reads
+(`shasum`, direct file open) through both the `~/Documents/tradefabe` symlink and the real
+`~/tradefabe` path worked this session, unlike the three prior runs' hard sandbox block — so
+the content-diff comparison is trustworthy. **However `git` itself (`git -C`, `git log`,
+`git rev-parse`, even a plain `Read` of `.git/HEAD`) still required approval and was not
+grantable in this non-interactive run** — a narrower restriction than file-content access,
+not the same block as before. `README.md` unchanged; `CLAUDE.md`, `DOCTRINE.md`, and
+`STRATEGIES.md` all differ from their snapshots and were re-synced verbatim into
+`raw/repos/tradefabe/`, with `.manifest.json` updated via `scripts/manifest-update.sh` and
+all three source cards (`sources/repos-tradefabe-{claude,doctrine,strategies}`) rewritten to
+match — closing the source-card staleness this vault's own lint runs had carried forward
+since 2026-07-31, as a byproduct of this sync rather than the `/ingest` pass it was
+originally flagged for.
+
+Because no real commit hash was obtainable, the three raw snapshots' `commit:` frontmatter
+now honestly reads `unknown (git access blocked this session; re-sync verified via content
+diff, not git log)` rather than a fabricated hash. `fetched:` and the pointer card's
+`last_commit:` were set to 2026-08-04 on internal evidence only — DOCTRINE.md's own new
+"Current state" section headers itself "as of v1.16, 2026-08-04" — and the pointer card's
+`last_commit` field notes this is content-derived, not git-confirmed.
+
+**Content changes:** DOCTRINE.md gained **v1.9 through v1.16** (calibration-only
+prelim-screen firewall for research-pipeline candidates; a third `n_tested` origin bucket;
+fully-automatic pre-registration on a prelim pass; the standard OOS gate extended to
+pipeline candidates under its own `MAX_PIPELINE_PROMOTED=10` cap; a fixed 10/day proposal
+rate; the corpus's first compositional primitive `asset_class_trend_hedge` with two
+mechanical guards; a retroactive pre-launch safety review; a follow-up review that found and
+fixed a missing `concurrency:` guard on `pipeline-daily.yml`). STRATEGIES.md gained **family
+N (pairs/cointegration, #172)** — DEAD, only `LQD`/`HYG` cleared the Engle-Granger
+cointegration filter, no edge found, two real sizing/entry bugs caught and fixed along the
+way — plus a new **primitive-vocabulary** section for the automated research pipeline.
+CLAUDE.md gained two automation-table entries (`cost-check.yml` weekly, `pipeline-daily.yml`
+daily).
+
+**Flagged for `/ingest` review** (recorded in `entities/projects/tradefabe.md`'s own
+Flagged section, not promoted here): the **Engle-Granger two-step cointegration test for
+pairs trading**, with economically-motivated pair selection performed *before* any
+cointegration test to avoid a p-hacked scan — a reusable quant-methodology idea distinct
+from every previously-flagged tradefabe concept; and the **missing-`concurrency:`-guard
+finding** itself — two scheduled workflows sharing an identical schedule +
+`workflow_dispatch` combination can silently double-run without an explicit `concurrency:`
+block, a general cron/CI lesson relevant to this vault's own scheduled `/lint`/
+`/sync-projects` runs and daily-tickers' cron, not just to GitHub Actions.
+
+**Still open, not re-actioned (mechanical scope only):** gkweb's live repo still has a
+top-level `AGENTS.md` never added to `raw/repos/gkweb/` (flagged since 2026-08-01,
+unchanged) — adding a new tracked doc is an `/ingest`/manual-pass decision, not a re-sync of
+an existing snapshot.
+
+**No new unregistered project directories.** `~/Documents/` top level unchanged from the
+2026-08-03 survey: every code-bearing folder (ev, gkweb, hackNC, hw-cnn-accelerator, imgsic,
+itm, synth, tradefabe, daily tickers, dave_zheng) already has a pointer card; the rest
+(Adobe, Image-Line, KiCad, League of Legends, MATLAB, SYNTHS, Universal Audio, WP, Zoom,
+cover letters, job, resume drafting, uni) aren't code projects.
+
+No concept pages promoted; no pointer-card prose body touched (only frontmatter and the
+append-only "Flagged for /ingest review" section, which is log-style by design, not prose).
+
+**Follow-up run same day (+~4h, 12 min after daily-lint), squashed here:** re-verified every claim above fresh via content-hash rather than trusting the uncommitted state, and found additional drift since the first run. `ev-firmware/docs/canlibrary.md`'s raw snapshot carried a stray trailing blank line from its original 2026-07-17 capture (substantive text unchanged) — re-synced, manifest/source-card/pointer-card updated. `tradefabe/CLAUDE.md` drifted again since the first run's re-sync, but this run's sandbox blocked every content-revealing read on that path (only `shasum` succeeded, proving drift without exposing it) — left un-synced, flagged for a session with real read access. One new unregistered project directory spotted: `~/Documents/CameraCalibration-memento` (C#/.NET camera-calibration tool) — not auto-carded, human call needed.
+
+---
+
+## 2026-08-04 — /lint incremental run (manual, on-demand)
+
+Incremental mode, run on-demand at Dave's request (not the scheduled trigger).
+
+**State-file integrity gap found before this run started.** `.lint-state.json`'s
+`last_incremental_check` was already sitting uncommitted at 2026-08-05T00:52:02Z (≈17:52
+local, 2026-08-04) — the "daily-lint" run the same day's second `/sync-projects` entry
+refers to as having run 12 minutes earlier. **No log.md entry exists for that run**: the
+state file was bumped but its findings were never appended. Rather than trust that
+checkpoint, judgment-scope was widened back to the last checkpoint with a matching log
+entry (2026-08-03), so the intervening period got a real check instead of being silently
+skipped. Flagging for Dave: something interrupted that run after the state bump but before
+the log append (or before the two ran atomically) — worth a look if it recurs, since the
+whole incremental-lint design depends on that pairing staying atomic.
+
+**Judgment scope this run: 6 pages** changed since 2026-08-03 (mtime-derived, since none of
+the intervening `/sync-projects`/`/lint` work has been committed to git — see housekeeping
+note below): `entities/projects/{ev-firmware,tradefabe}.md`,
+`sources/repos-ev-canlibrary.md`, `sources/repos-tradefabe-{claude,doctrine,strategies}.md`.
+Mechanical checks (staleness, orphans, broken provenance) ran full-vault as always.
+
+**Contradiction found — internal date inversion in `raw/repos/tradefabe/STRATEGIES.md`,
+family N (pairs/cointegration, #172).** Line 690 states the spec was "frozen 2026-08-01,
+before any of the six pairs was tested," but line 752 reports the result as "run
+2026-07-31" — i.e., the run predates its own pre-registration by a day, in a doctrine whose
+entire premise (stated repeatedly in the same file) is that verdicts are computed only
+after a frozen pre-registration. `sources/repos-tradefabe-strategies.md` faithfully carries
+the same inverted dates through into its summary. This is `raw/` content, so per schema
+it's not fixed at the source — surfacing here rather than silently resolving; recommend
+Dave file it in `contradictions.md` (or confirm one of the two dates is simply a typo
+upstream) since this run was told to report, not auto-fix.
+
+**Orphans (mechanical, full-vault): 8, unchanged from the 2026-08-03 run.**
+`sources/repos-ev-{agents,canlibrary,readme}.md` and `sources/repos-imgsic-readme.md` still
+read as unlinked because their pointer cards cite them via raw-path-style markers
+(`^[[repos/ev-firmware/README.md]]` etc.) instead of the real page slugs. The four
+`sources/notion-misc-{c-index,c-janet,c-technical-interview,roudy-notes}` pages still link
+out to `[[professional-profile]]` without a link back — same likely-intentional
+lightweight-cataloging state as every prior run, not treated as a defect.
+
+**Stale snapshots: none.** Oldest `fetched:` across `raw/notion|drive|repos/` is 19 days
+(2026-07-16); 90-day threshold not close.
+
+**Broken provenance: none.** Every source card's `raw_file` resolves; every
+`.manifest.json` entry's raw file and derived pages exist on disk.
+
+**Missing cross-refs: none new.** The statistical/quant-methodology ideas surfaced in this
+run's tradefabe pages (Engle-Granger cointegration, the `concurrency:`-guard lesson) are
+already explicitly flagged in `entities/projects/tradefabe.md` as `/ingest` candidates, not
+yet promoted to concept pages — nothing to cross-link to yet.
+
+**Housekeeping, not actioned (recurring across runs, still unresolved):** untracked scratch
+debris in the repo root (`.lint_*.tmp/.py`, `.tmp_*`, `.sync_cmpdocs.sh`) predates this run;
+this run added three more of its own (`.lint_stale.py`, `.lint_provenance.py`,
+`.lint_orphans3.py`) and attempted to `rm` all of them — blocked pending interactive
+approval, same as every prior attempt. All are safe for Dave to delete outright. Separately:
+none of the `/sync-projects`/`/lint` work from 2026-08-01 through 2026-08-04 has been
+committed to git yet — several days of legitimate, already-logged findings are sitting
+uncommitted in the working tree.
+
+No auto-fixes applied — findings reported to Dave per /lint's own rule.
+
+`.lint-state.json` `last_incremental_check` bumped to 2026-08-05T02:15:00Z; `last_full_sweep`
+unchanged (not a `--full` run — remains 2026-07-28).
+
+---
+
+## 2026-08-05 — /sync-projects (scheduled, 08:25 local)
+
+Checked all `status: active` pointer cards with a real `path:`: daily-tickers, ev-firmware,
+gkweb, hw-cnn-accelerator, imgsic, synth, tradefabe. Skipped by guardrail (not active):
+dave-zheng-pcb (`status: unknown`), ece-350-connect4 (complete), gohelpme/hacknc (shipped),
+itm (dead).
+
+**No doc content changes found anywhere.** For the 5 fully-checkable projects with existing
+`raw/repos/<project>/` snapshots — ev-firmware (README.md, AGENTS.md, canlibrary.md),
+gkweb (CLAUDE.md, README.md), hw-cnn-accelerator (docs/decisions.md, docs/learnings.md),
+imgsic (CLAUDE.md, README.md), synth (README.md) — every snapshotted body (frontmatter and
+any snapshot-note banner stripped) diffed byte-identical against the live file at `path:`.
+Note for whoever reviews this: a naive whole-file `sha256`/hash compare against these live
+paths will *always* show a mismatch, since every raw snapshot carries frontmatter (and some
+carry a leading HTML "Snapshot note" banner) that the live file doesn't — that's not a content
+change. Confirmed no re-snapshots, source-card edits, `.manifest.json` updates, or pointer-card
+frontmatter edits were needed for any of these 5. No new evidence found this run against last
+run's (2026-08-01, still uncommitted in the working tree) open question re: gkweb's `CLAUDE.md`
+mtime (2026-06-25) postdating its card's `last_commit` (2026-05-23) — now confirmed by direct
+content diff that the body is unchanged, so that mtime gap is a checkout/touch artifact, not a
+real edit worth chasing further.
+
+**tradefabe still could not be content-verified this run**, same root cause as last time: its
+`path:` (`~/Documents/tradefabe`) is a symlink to `~/tradefabe`, and this session's sandbox
+blocks `diff`/`Read`/`tail`/`stat`/`wc` against that resolved path (only `shasum` on the whole
+file is permitted, which is useless here since it can't strip frontmatter to isolate a real
+body diff). All 4 tracked docs (CLAUDE.md, DOCTRINE.md, README.md, STRATEGIES.md) were
+re-synced very recently by the prior run (fetched 2026-08-04/2026-08-04/2026-07-31/2026-08-04),
+so drift risk is low, but this is unverified, not confirmed-unchanged. Left untouched. Flagging
+again for a human to either fix the symlink (point `path:` straight at `~/tradefabe`) or extend
+the session's allowed directories so `diff`/`Read` reach the real target.
+
+**New unregistered project directory spotted:** `~/Documents/CameraCalibration-memento` — a git
+repo (`.git`, `.claude/`, `README.md`, `README-MEMENTO.md`) for a WinForms/.NET camera
+calibration/measurement tool built during a summer 2026 RTX internship, explicitly described in
+its own README as "a personal snapshot, not the working repository" (reconstructed from local
+files after the fact, with stubbed placeholders for missing pieces). No pointer card exists.
+Per guardrail, not auto-created — a human call on the one-sentence description and whether the
+memento framing changes how it should be catalogued. Rest of `~/Documents/` unchanged from the
+2026-08-01 survey (no other new project-shaped dirs).
+
+No concept pages promoted; no pointer-card prose touched; no mechanical frontmatter changed
+(nothing needed updating).
+
+---
+
+## 2026-08-05 — /lint (incremental)
+
+Incremental mode. `.lint-state.json` showed `last_incremental_check: 2026-08-05T02:15:00Z`.
+Checked `git log --since` and file mtimes against that timestamp: **0 wiki pages changed
+since then** (the uncommitted working-tree edits to `ev-firmware.md`, `tradefabe.md`, and the
+tradefabe/ev source cards all predate the last check by several hours; only `wiki/log.md`
+itself is newer, as expected for an append-only journal). So contradictions, uncited-claims,
+and missing-cross-ref checks had 0 pages in scope this run — not run, not "found nothing."
+Mechanical checks (staleness, orphans, broken provenance) ran full-vault (212 pages,
+excluding `wiki/personal/`) as always.
+
+**Stale snapshots:** none. All `raw/notion/` and `raw/drive/` `fetched:` dates are
+2026-07-16/17/18 (~19-20 days old), well under the 90-day threshold.
+
+**Broken provenance:** none. All 127 source cards with a `raw_file:` field resolve to an
+existing file. 3 source cards have no `raw_file:` field but are legitimately not raw/
+snapshots: `sources/uni-flood-modeling.md` and `sources/uni-350-cheat-sheets.md`
+(`source_type: local_archive`, pointing at PDFs outside the vault) and
+`sources/drive-jb-tracker.md` (`source_kind: drive`, `snapshotted: false` — a live Drive
+sheet intentionally not mirrored). Not violations. `.manifest.json` has 0 entries pointing
+at missing wiki pages.
+
+**Orphans:** 8 real orphans (`wiki/_index.md` also shows zero inbound links but is the
+catalog root — structurally expected to be unlinked, not counted).
+- `sources/notion-misc-c-index.md`, `sources/notion-misc-c-janet.md`,
+  `sources/notion-misc-c-technical-interview.md`, `sources/notion-misc-roudy-notes.md` —
+  four career-domain catalog-level stub source cards (bodies are just a heading, no content)
+  that were never promoted into or wired to any concept/entity page.
+- `sources/repos-ev-agents.md`, `sources/repos-ev-canlibrary.md`, `sources/repos-ev-readme.md`,
+  `sources/repos-imgsic-readme.md` — recurring known issue, already flagged in prior /lint
+  runs (see log entries throughout 2026-08-01 to 2026-08-04) and still unfixed: their citing
+  pointer cards use raw-file-path-style wikilinks instead of the `sources/<basename>` pattern
+  used correctly elsewhere in the same files, so the citations never resolve to these source
+  cards. Specifically: `entities/projects/ev-firmware.md:15,21` cite `^[[ev/DEV-2025-26-Firmware/README.md]]`
+  and `entities/projects/ev-firmware.md:32,34,38` cite `^[[repos/ev-firmware/README.md]]`,
+  `^[[repos/ev-firmware/AGENTS.md]]`, `^[[repos/ev-firmware/canlibrary.md]]` (should be
+  `^[[sources/repos-ev-readme]]`, `^[[sources/repos-ev-agents]]`, `^[[sources/repos-ev-canlibrary]]`);
+  `entities/projects/imgsic.md:15,19` cite `^[[imgsic/README.md]]` and `^[[imgsic/CLAUDE.md]]`
+  (should be `^[[sources/repos-imgsic-readme]]`; the `CLAUDE.md` one already correctly resolves
+  elsewhere in the same file via `^[[sources/repos-imgsic-claude]]`, so the fix pattern is
+  already proven in-file).
+
+**Uncited claims:** 0 pages in scope this run (see incremental-mode note above).
+
+**Contradictions:** 0 pages in scope this run (see incremental-mode note above).
+
+**Missing cross-refs:** 0 pages in scope this run (see incremental-mode note above).
+
+No auto-fixes applied. `.lint-state.json` `last_incremental_check` bumped to now;
+`last_full_sweep` unchanged (not a `--full` run).

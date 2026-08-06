@@ -4,6 +4,14 @@ description: Health check the wiki — contradictions, staleness, orphans, uncit
 
 Health check the vault. **Report findings; do not auto-fix.** Dave decides.
 
+**Scratch-file hygiene:** if this check needs intermediate files (diff output, comparison
+scripts, hash lists), put them under a `mktemp -d` temp directory, never in the vault repo
+root. Delete that temp directory before finishing, success or failure. Several days of
+`.lint_*.tmp`/`.lint_*.py` scratch files were left littering the repo root because `rm`
+sometimes needs interactive approval this session doesn't have — `mktemp -d` avoids that
+class of problem entirely, since the whole directory can be removed in one shot and nothing
+written there needs its own approval to clean up.
+
 Scope: $ARGUMENTS
 
 - `--full` — exhaustive sweep, all 6 checks, full reasoning over the entire vault. Expensive

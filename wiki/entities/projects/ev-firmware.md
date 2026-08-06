@@ -6,7 +6,7 @@ repo: https://github.com/dukeelectricvehicles-25-26/DEV-2025-26-Firmware
 path: /Users/dzheng/Documents/ev
 stack: [C/C++, PlatformIO, CANbus]
 status: active
-last_modified: 2026-03-28
+last_modified: 2026-08-04
 ---
 
 # ev — Duke Electric Vehicles firmware
@@ -50,4 +50,11 @@ page if `/ingest` promotes it.
   snapshot was missing the file's trailing two lines (a blank line + an empty `# ` heading
   marker). Re-synced to correct that completeness gap; `commit:` stays `c056be5` on both the
   raw snapshot and its source card since nothing upstream actually changed. Not a concept —
+  operational/provenance only.
+- 2026-08-04 sync: `README.md` and `AGENTS.md` unchanged. `docs/canlibrary.md` re-synced -
+  not a live change: the 2026-07-17 snapshot carried one stray trailing blank line the
+  live file doesn't have (a capture artifact, same class of issue as the `AGENTS.md` gap
+  above). `git log`/`git diff` on the repo were not grantable this session, so this is
+  verified by direct content comparison only (body text otherwise byte-identical);
+  `commit:` stays `c056be5` on both the raw snapshot and its source card. Not a concept -
   operational/provenance only.

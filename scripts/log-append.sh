@@ -23,4 +23,13 @@ fi
 heading="$1"
 body="$(cat)"
 
+# Cheap duplicate guard: warn (don't block) if a heading for today's date already
+# exists. This is what would have caught the Aug 1-5 same-day duplicate/contradictory
+# entries early instead of letting them silently pile up for days -- a loud stderr
+# warning here lands in watchdog.log where the next run (or a human) will actually see it.
+today_prefix="$(date '+%Y-%m-%d')"
+if [[ "$heading" == "$today_prefix"* ]] && grep -qF "## $today_prefix" "$log_file" 2>/dev/null; then
+  echo "WARNING: wiki/log.md already has a heading dated $today_prefix -- appending anyway (log.md is append-only), but check whether this is a genuine follow-up or a forced re-run that should be squashed later." >&2
+fi
+
 printf '\n---\n\n## %s\n\n%s\n' "$heading" "$body" >> "$log_file"

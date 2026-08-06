@@ -102,6 +102,7 @@ gitignored (local only), so its pages aren't part of the pushed repo.
 - [[ev-firmware]] — Duke Electric Vehicles club firmware (PlatformIO + CANbus, team-owned)
 - [[dave-zheng-pcb]] — KiCad PCB project, "331"-prefixed (course? unconfirmed)
 - [[tradefabe]] — doctrine-governed trading-strategy lab + autonomous paper-trading engine (paper only)
+- [[camera-calibration-memento]] — camera calibration tooling memento, RTX internship summer 2026 (shipped, not buildable)
 
 ### Courses (`entities/courses/` — academic spine, from `uni/`)
 

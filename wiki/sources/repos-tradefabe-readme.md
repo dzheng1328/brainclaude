@@ -6,7 +6,7 @@ title: "README.md"
 raw_file: raw/repos/tradefabe/README.md
 source_kind: repos
 repo_url: https://github.com/dzheng1328/tradefabe.git
-commit: 5de0ecc
+commit: 634efbf
 fetched: 2026-07-31
 ---
 
@@ -22,7 +22,10 @@ growing set of paper books (5 hand-picked plus a factory promotion accumulating 
 cycle), and three launchd agents (`tradefabe`, `.mark`, `.factory` — the factory runs daily at
 17:00, an hour ahead of the 18:00 rebalance so a same-evening promotion opens its book). Since
 the 2026-07-31 (morning) snapshot: the `tests/` layout line dropped its hardcoded "433 tests"
-count in favor of "parallel by default" (test-suite speed-up, #160/#162) — operational, not
-a content change. See [[tradefabe]].
+count in favor of "parallel by default" (test-suite speed-up, #160/#162). Since that snapshot:
+the automation table's `run` cron entry moved from "daily 22:07 UTC" to "daily ~02:00 UTC",
+and `factory` flipped from "paused since 2026-07-27" to "daily 21:06 UTC" — **resumed
+2026-07-31 (#163)** now that ledger segregation (DOCTRINE v1.5) and `MAX_FACTORY_PROMOTED`
+(#147) cap the factory-owned pool. See [[tradefabe]].
 
 Raw: `raw/repos/tradefabe/README.md`.
