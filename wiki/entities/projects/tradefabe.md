@@ -4,9 +4,9 @@ domain: projects
 title: tradefabe
 repo: https://github.com/dzheng1328/tradefabe.git
 path: /Users/dzheng/tradefabe
-stack: [Python, Streamlit, Plotly, pytest, Hyperliquid API]
+stack: [Python, Streamlit, Plotly, pytest, Hyperliquid API, FastAPI, React, TypeScript, Vite, Tailwind CSS]
 status: active
-last_commit: 2026-08-04 (content-derived — git access blocked this session, see Flagged section)
+last_commit: 2026-08-11 (content-derived — git access blocked this session, see Flagged section)
 ---
 
 # tradefabe
@@ -71,134 +71,26 @@ credentials, never give personalized investment advice — state the boundary in
 Applies to any assistant working in this repo, not just a per-task instruction.
 ^[[sources/repos-tradefabe-claude]]
 
-Not a concept promotion (project-scoped detail, not yet linked into the graph): the
-statistical noise-floor / Bonferroni-correction methodology here is a genuinely reusable
-idea (honest multiple-testing correction for a strategy search) — a candidate for a future
-`[[statistical-multiple-testing-correction]]`-type concept page if a `/query` or `/ingest`
-pass ever wants to generalize it beyond this project.
+The statistical noise-floor / multiple-testing-correction methodology here is promoted as
+[[pre-registered-multiple-testing-correction]] (2026-08-11 weekly /ingest) — see that page for
+the full DSR/CPCV, origin-segregation, and duty-cycle-matching detail. Also promoted from this
+project: [[backtest-evaluation-integrity-patterns]], [[hedge-effectiveness-guard]],
+[[engle-granger-cointegration-pairs-trading]], [[no-chained-branch-delete-after-merge]],
+[[github-actions-concurrency-guard]], [[pre-merge-review-gate-high-consequence-files]], and
+[[strangler-fig-ui-migration]].
 
 ## Flagged for /ingest review
 
-- 2026-07-25 sync: all four repo docs re-synced (commit `6ab7c04`, was `1591b9b`). Headline
-  finding grew from 12+ to 49+ tested strategies via a new automated **strategy factory**
-  (`factory.py`/`factory_run.py`) that generates parametrized variants and logs each one to
-  `generated_templates.csv` before its verdict is known. DOCTRINE.md gained **v1.4**,
-  replacing the v1.3 Bonferroni correction with the **Deflated Sharpe Ratio** (Bailey &
-  López de Prado 2014) + **Combinatorial Purged Cross-Validation** (López de Prado 2017) as
-  gate 1's active decision rule. Candidate concepts: DSR/CPCV as a general resampling-based
-  alternative to Bonferroni for high-volume multiple-testing correction (broader than the
-  existing flagged Bonferroni idea above — may supersede or extend it); the
-  pre-register-the-search-space-not-just-the-candidate pattern the factory's
-  `GENERATION_RANGES` uses to avoid meta-level p-hacking while still allowing live parameter
-  draws. See ^[[sources/repos-tradefabe-doctrine]] ^[[sources/repos-tradefabe-strategies]].
-- 2026-07-27 sync: `CLAUDE.md`/`DOCTRINE.md`/`STRATEGIES.md` re-synced (commit `6b1a843`, was
-  `6ab7c04`); `README.md` unchanged. **Note (not a concept, operational only): the repo's real
-  location moved from `~/Documents/tradefabe` to `~/tradefabe` on 2026-07-26** — iCloud sync
-  in `~/Documents` was corrupting the venv and writing conflict copies of tracked files, the
-  same failure mode that motivated moving this vault itself out of iCloud sync. A
-  compatibility symlink remains at the old path (this card's `path:` still resolves), but new
-  tooling should prefer the real path — worth a manual `path:` update if a human wants the
-  card to reflect it directly. Candidate concepts from this sync: DOCTRINE v1.5's
-  **origin-segregated multiple-testing correction** (correcting an automated-search
-  candidate only against other search-origin trials, not against the full all-time roster,
-  because a draw nobody would act on isn't the same statistical event as a hand-picked
-  hypothesis — extends rather than replaces the existing DSR/CPCV flag above) and the
-  **duty-cycle-matched noise floor as the default gate**, not opt-in (an unmatched random
-  null under-trades a real signal and pays no turnover cost for it, making the gate lenient
-  by construction). Also a general git/GitHub gotcha, reusable outside this repo: **never
-  chain a branch delete after a merge in the same command** — a silently-failed `gh pr merge`
-  still lets a chained delete run, closing an unmerged PR whose branch is now gone (cost three
-  recoveries here, #65/#80/#92). See ^[[sources/repos-tradefabe-claude]]
-  ^[[sources/repos-tradefabe-doctrine]] ^[[sources/repos-tradefabe-strategies]].
-- 2026-07-31 sync: all four repo docs re-synced (commit `36050ce`, was `6b1a843`/`6ab7c04`).
-  DOCTRINE advanced through **v1.6, v1.7, and v1.8** (all 2026-07-29) since the last sync;
-  Family M (Kronos strategies) went live, and Alpaca paper-trading broker connectivity was
-  added. Candidate concepts from this batch: **advisory-only kill criteria** (v1.6 — a
-  book's retirement stopped being an automatic action on hitting the kill rule and became a
-  logged recommendation a human still has to execute, because an automated kill compounds
-  the same multiple-testing risk the doctrine already corrects for on entry but not on
-  exit); **aligning the benchmark window to the candidate's own out-of-sample start** (v1.7
-  — a general backtesting-evaluation gotcha: a candidate and its benchmark sliced from a
-  flat start date silently miscompare whenever the candidate's own data begins later,
-  understating or overstating its edge depending on which regime the extra benchmark window
-  covers); **requiring the candidate's own OOS Sharpe be positive as an explicit gate-1
-  floor** (v1.8 — a genuinely reusable DSR gotcha: the Deflated Sharpe Ratio alone has no
-  such floor and can saturate near 1.0 next to a candidate that is still net losing, since
-  DSR measures "beats what n_tested random draws would produce," not "is profitable"). See
-  ^[[sources/repos-tradefabe-claude]] ^[[sources/repos-tradefabe-doctrine]]
-  ^[[sources/repos-tradefabe-readme]] ^[[sources/repos-tradefabe-strategies]].
-- 2026-07-31 (scheduled) sync: `CLAUDE.md`/`README.md` re-synced (commit `5de0ecc`, was
-  `36050ce`) — both changes are a stale-count fix in the `pytest` command comment ("433
-  tests, ~8s" → "worksteal, ~3-4s") from a test-suite speed-up (#160/#162). Not a concept,
-  not even worth a candidate flag — purely a doc-comment correction. `DOCTRINE.md`/
-  `STRATEGIES.md` unchanged.
-- **Action item for next /ingest, not just a candidate concept**: `/lint`'s 2026-07-31 run
-  found `sources/repos-tradefabe-claude`, `-readme`, `-doctrine`, and `-strategies` all have
-  stale body summaries — the 2026-07-31 re-sync (v1.6-v1.8, Family M/Kronos live, Alpaca
-  broker connectivity) landed in `raw/repos/tradefabe/` correctly, but only this pointer
-  card's "Flagged" bullets were updated, not the source cards' own summary text. **A plain
-  `/ingest` diff will silently skip these** — `.manifest.json`'s hashes were already updated
-  during the re-sync, so they read as "unchanged." Rewrite the four source-card bodies to
-  match current raw content (`raw/repos/tradefabe/DOCTRINE.md:45+`, `STRATEGIES.md:369+`,
-  `CLAUDE.md:124,223`) as an explicit step, not by waiting on the normal diff worklist.
-- 2026-07-31 sync (2): `CLAUDE.md`, `README.md`, `STRATEGIES.md` re-synced (commit `634efbf`,
-  was `5de0ecc`); `DOCTRINE.md` unchanged. `CLAUDE.md`/`README.md` both document the `run`
-  cron moving from 22:07 UTC to ~02:00 UTC (#158 — kronos's yfinance daily bar was a day
-  stale at 22:07, silently skipping `kronos_wick_agg`'s rebalance) and the `factory` cron
-  resuming daily at 21:06 UTC (#163) now that DOCTRINE v1.5 ledger segregation and
-  `MAX_FACTORY_PROMOTED` (#147) bound its growth. `STRATEGIES.md` gained a pre-registered
-  amendment (#156): `equity_tsmom_1h` swaps its data source from yfinance (730-day window) to
-  Alpaca (~2016+), re-run as a new graveyard row (not an edit to the frozen 2026-07-26
-  verdict) per DOCTRINE's forward-only rule — still DEAD, more decisively (Sharpe −3.64 vs.
-  −1.93, MaxDD −100.0% vs. −40.7%) once the longer window includes 2018's vol spike, COVID,
-  and the 2022 bear. Candidate concept from this batch: **pre-registering a data-source/depth
-  swap as a forward-only amendment that produces a new verdict row rather than editing the
-  original** — generalizes the existing methodology-amendment pattern above (v1.6-v1.8) to
-  data provenance changes specifically, distinct because the spec/gates/thresholds are
-  unchanged and only the input data's depth differs. `last_commit` bumped to 2026-07-31 (this
-  commit's own authored date). See ^[[sources/repos-tradefabe-claude]]
-  ^[[sources/repos-tradefabe-readme]] ^[[sources/repos-tradefabe-strategies]].
-- 2026-08-04 (scheduled) sync: `CLAUDE.md`/`DOCTRINE.md`/`STRATEGIES.md` re-synced;
-  `README.md` unchanged. **Git access (`git -C`, `git log`, even reading `.git/HEAD`) was
-  blocked in this session for every path outside the vault itself** — unlike the 2026-08-01
-  through 08-03 runs, plain file reads (`shasum`, direct file open) through the
-  `~/Documents/tradefabe` symlink worked fine this time, so the content-diff comparison
-  itself is trustworthy, but no real commit hash could be captured. The three raw snapshots'
-  `commit:` frontmatter now reads `unknown (git access blocked...)` instead of a hash;
-  `fetched`/`last_commit` were set to 2026-08-04 on internal evidence only (DOCTRINE.md's own
-  "Current state" section headers itself "as of v1.16, 2026-08-04") — **not git-confirmed,
-  flagging honestly rather than fabricating a hash.** DOCTRINE.md gained **v1.9 through
-  v1.16** (a calibration-only prelim-screen firewall; a third origin bucket for
-  research-pipeline `n_tested`; a fully-automatic pre-registration checkpoint; the same OOS
-  gate extended to pipeline candidates with a `MAX_PIPELINE_PROMOTED=10` pool; a fixed
-  10/day proposal rate; the corpus's first **compositional** primitive
-  (`asset_class_trend_hedge`) with two mechanical guards; a retroactive safety review; and a
-  follow-up review that found and fixed a missing `concurrency:` guard on
-  `pipeline-daily.yml`). STRATEGIES.md gained **family N (pairs/cointegration, #172)** — DEAD
-  — and a **primitive-vocabulary section** for the automated research pipeline. CLAUDE.md
-  gained two automation-table entries (`cost-check.yml` weekly, `pipeline-daily.yml` daily).
-  **Candidate concepts from this batch:** the **Engle-Granger two-step cointegration test for
-  pairs trading** (economically-motivated pair selection *before* testing, so the
-  cointegration check is a pass/fail filter rather than a p-hacked scan over all pair
-  combinations — a genuinely reusable quant-methodology idea, distinct from every prior
-  flagged concept here since it's about *pair* selection/testing rather than single-asset
-  signals or multiple-testing correction) — see family N above; and **the missing-
-  `concurrency:`-guard finding itself (v1.16)** — two GitHub Actions workflows sharing an
-  identical schedule + `workflow_dispatch` combination can silently run concurrently unless
-  a `concurrency:` block says otherwise, which matters for any cron-triggered automation, not
-  just trading (this vault's own scheduled `/lint`/`/sync-projects` runs and daily-tickers'
-  cron are the same shape). See ^[[sources/repos-tradefabe-claude]]
-  ^[[sources/repos-tradefabe-doctrine]] ^[[sources/repos-tradefabe-strategies]].
-- 2026-08-04 (second scheduled) sync: `README.md`, `DOCTRINE.md`, `STRATEGIES.md` confirmed
-  still matching the same-day sync above (byte-identical body diff). **`CLAUDE.md` has
-  drifted again since that sync ran, but this run could only prove the drift, not read it**:
-  `shasum` on the live file succeeded and disagrees with the raw snapshot's body hash, while
-  every content-revealing read on this repo's paths (`Read`, `cat`, `tail`, `diff`, `awk`,
-  `git log`/`git diff`) was sandbox-blocked this session — a narrower failure mode than the
-  entry above (that run could read content but not git metadata; this run can checksum but
-  not read content at all). Left `CLAUDE.md`'s raw snapshot and source card un-synced rather
-  than guess at the new content — re-sync deferred to a session where the file is actually
-  readable. Not a concept.
-- 2026-08-05: `path:` repointed straight at `/Users/dzheng/tradefabe`, resolving the
-  compatibility-symlink block that had left every sync since 2026-08-01 unable to fully
-  verify this project (flagged above on 2026-07-27, actioned now). Not a concept.
+(none — 2026-08-11 weekly /ingest reviewed the full backlog below and resolved it: promoted
+[[pre-registered-multiple-testing-correction]] (DSR/CPCV, origin-segregation, duty-cycle-matched
+noise floor, positive-OOS-Sharpe floor, search-space pre-registration — 2026-07-25/27/31/08-04
+entries), [[backtest-evaluation-integrity-patterns]] (advisory-only kill criteria, benchmark-window
+alignment, forward-only amendments), [[hedge-effectiveness-guard]] and
+[[engle-granger-cointegration-pairs-trading]] (2026-08-04/06), [[no-chained-branch-delete-after-merge]]
+and [[github-actions-concurrency-guard]] (2026-07-27/08-04), [[pre-merge-review-gate-high-consequence-files]]
+(2026-08-06), and [[strangler-fig-ui-migration]] (2026-08-07). Declined: entries the daily sync
+itself had already logged as "not a concept" (operational/provenance-only syncs, project-scoped
+strategy instances with no new pattern). See ^[[sources/repos-tradefabe-doctrine]] ^[[sources/repos-tradefabe-strategies]]
+^[[sources/repos-tradefabe-claude]] ^[[sources/repos-tradefabe-readme]] for the current source-card
+state; the full sync-by-sync history that justified each promotion is preserved in
+wiki/log-archive/ and this card's git history rather than kept live here.

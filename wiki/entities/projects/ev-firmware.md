@@ -43,18 +43,6 @@ page if `/ingest` promotes it.
 
 ## Flagged for /ingest review
 
-- 2026-07-31 sync: `README.md` and `docs/canlibrary.md` unchanged (repo `HEAD` still `c056be5`,
-  same as the 2026-07-17 snapshot). `AGENTS.md` re-synced — **not a live change**: `git log`/
-  `git diff` on the DEV-2025-26-Firmware repo confirm `AGENTS.md` hasn't been touched since
-  commit `a381eee` (2026-02-28) and the working tree is clean, but the original 2026-07-17
-  snapshot was missing the file's trailing two lines (a blank line + an empty `# ` heading
-  marker). Re-synced to correct that completeness gap; `commit:` stays `c056be5` on both the
-  raw snapshot and its source card since nothing upstream actually changed. Not a concept —
-  operational/provenance only.
-- 2026-08-04 sync: `README.md` and `AGENTS.md` unchanged. `docs/canlibrary.md` re-synced -
-  not a live change: the 2026-07-17 snapshot carried one stray trailing blank line the
-  live file doesn't have (a capture artifact, same class of issue as the `AGENTS.md` gap
-  above). `git log`/`git diff` on the repo were not grantable this session, so this is
-  verified by direct content comparison only (body text otherwise byte-identical);
-  `commit:` stays `c056be5` on both the raw snapshot and its source card. Not a concept -
-  operational/provenance only.
+(none — 2026-08-11 weekly /ingest reviewed both entries below and declined promotion for both,
+per their own stated reasons: the 2026-07-31 `AGENTS.md` re-sync and 2026-08-04 `docs/canlibrary.md`
+re-sync were both provenance-only capture-artifact corrections, not live upstream changes.)

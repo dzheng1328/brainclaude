@@ -82,7 +82,14 @@ gitignored (local only), so its pages aren't part of the pushed repo.
 - [[lti-systems-and-convolution]] · [[fourier-series-signals]] · [[fourier-transform-and-filtering]]
 
 *From [[hw-cnn-accelerator]]'s own repo docs (project knowledge, snapshotted):*
-- [[systolic-array-dataflow]] · [[neural-network-quantization]]
+- [[systolic-array-dataflow]] · [[neural-network-quantization]] · [[noc-router-design]]
+- [[cocotb-parameter-override-gotcha]] · [[verilog-nba-old-value-semantics]]
+
+*From [[tradefabe]]'s own repo docs (project knowledge, snapshotted):*
+- [[pre-registered-multiple-testing-correction]] · [[backtest-evaluation-integrity-patterns]]
+- [[hedge-effectiveness-guard]] · [[engle-granger-cointegration-pairs-trading]]
+- [[no-chained-branch-delete-after-merge]] · [[github-actions-concurrency-guard]]
+- [[pre-merge-review-gate-high-consequence-files]] · [[strangler-fig-ui-migration]]
 
 *All coursework now deep-ingested. New concepts arrive when new raw material is pulled.*
 

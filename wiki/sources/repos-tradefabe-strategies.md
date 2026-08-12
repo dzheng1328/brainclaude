@@ -7,7 +7,7 @@ raw_file: raw/repos/tradefabe/STRATEGIES.md
 source_kind: repos
 repo_url: https://github.com/dzheng1328/tradefabe.git
 commit: unknown (git access blocked this session; re-sync verified via content diff, not git log)
-fetched: 2026-08-04
+fetched: 2026-08-11
 ---
 
 # STRATEGIES.md
@@ -49,7 +49,26 @@ section (#174/#177)** documents the fixed vocabulary (`pair_zscore`, `cross_sect
 `single_asset_trend`, `static_spread_carry`, plus the new compositional
 `asset_class_trend_hedge`) the automated research routine picks from rather than writing its
 own code, and records the proposal pipeline moving from an in-process, budget-capped Haiku
-call to a scheduled Claude Code Routine writing up to 10 proposals/day directly. See
-[[tradefabe]].
+call to a scheduled Claude Code Routine writing up to 10 proposals/day directly. Since that
+snapshot (2026-08-06 re-sync): a new primitive, **`curve_carry`** (added 2026-08-05, Phase 2
+of the carry-generalization design) — a DV01-neutral TLT/IEF position that trend-follows the
+real FRED yield-curve slope (`DGS10 - DGS2`), fixed to TLT/IEF only, guarded by a
+calibration-window hedge-effectiveness check rather than divergence from another primitive.
+Also new: a **"Research pipeline — pre-registered candidates (#179)"** section, generated
+programmatically and pre-registered automatically (DOCTRINE v1.11, no human review before the
+OOS test) — three candidates frozen 2026-08-05: `rp_asset_class_trend_hedge_SPY_GLD_252_252`,
+`rp_static_spread_carry_GLD_UUP_a`, and `rp_asset_class_trend_hedge_TLT_DBC_252_60`. Since
+that snapshot (2026-08-11 re-sync): twelve more pre-registered candidates frozen 2026-08-08,
+same automatic-pre-registration pattern (#179) — `rp_single_asset_trend_GLD_126`,
+`rp_single_asset_trend_SLV_63`, `rp_cross_sectional_rank_momentum_126_2`,
+`rp_single_asset_trend_VNQ_126`, `rp_asset_class_trend_hedge_SPY_IEF_252_63`,
+`rp_curve_carry_126`, `rp_cross_sectional_rank_low_vol_63_3`,
+`rp_asset_class_trend_hedge_VNQ_DBC_189_63`, `rp_cross_sectional_rank_momentum_252_4`,
+`rp_curve_carry_252`, `rp_single_asset_trend_EEM_189`, `rp_cross_sectional_rank_momentum_63_3`
+— each carries its own structural-conditions rationale and citations, no new primitive or
+process pattern beyond what the 2026-08-06 snapshot already documents. See [[tradefabe]].
+
+Promotes: [[engle-granger-cointegration-pairs-trading]], [[hedge-effectiveness-guard]],
+[[pre-registered-multiple-testing-correction]], [[backtest-evaluation-integrity-patterns]].
 
 Raw: `raw/repos/tradefabe/STRATEGIES.md`.

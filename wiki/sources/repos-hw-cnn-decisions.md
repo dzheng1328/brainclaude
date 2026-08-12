@@ -25,5 +25,5 @@ result readout so the tile's whole life cycle rides the network. Also new: a fir
 standard-cell synthesis pass (Phase 3 kickoff) quantifying that `operand_mem`'s flop array costs
 almost as much silicon area as the entire 64-PE compute array (42.5% of a tile).
 
-Promotes: [[systolic-array-dataflow]], [[neural-network-quantization]]. Raw:
-`raw/repos/hw-cnn-accelerator/decisions.md`.
+Promotes: [[systolic-array-dataflow]], [[neural-network-quantization]], [[noc-router-design]],
+[[cocotb-parameter-override-gotcha]]. Raw: `raw/repos/hw-cnn-accelerator/decisions.md`.

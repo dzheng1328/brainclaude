@@ -852,13 +852,13 @@
       ]
     },
     "raw/repos/tradefabe/README.md": {
-      "sha256": "b5410cfdf3f4e7f145226e743aac685bf345642524a5bf68834fe3327bfc76e7",
+      "sha256": "b1238f79e4d5867e59fefc3619ebe9acfbdedcbea21d5bebeefd365bb6a493c2",
       "derived": [
         "sources/repos-tradefabe-readme"
       ]
     },
     "raw/repos/tradefabe/CLAUDE.md": {
-      "sha256": "5856cb3e799803dc83859b0fbd9b368c343b0b76c7b332ccec167fcd963fb4ef",
+      "sha256": "e041ea8b36aabb1373e31a3e03a747c895a77520e56b05f186cf0a116896eb83",
       "derived": [
         "sources/repos-tradefabe-claude"
       ]
@@ -870,9 +870,881 @@
       ]
     },
     "raw/repos/tradefabe/STRATEGIES.md": {
-      "sha256": "24195d04bcd4a78c98b5328333245b095762cc4029620eff591bbada7d0ba4c8",
+      "sha256": "b212fbac5aea8d34c46e0f76946baae2a7a650bfabe079b0bbc66a393bdc6288",
       "derived": [
         "sources/repos-tradefabe-strategies"
+      ]
+    },
+    "raw/assets/353/matrices-eigenvalues-two-point-6.png": {
+      "sha256": "52524c4c0cf4513b58e6bdb535e456ef0c64089fe55d97e6b964270f41d992f7",
+      "derived": [
+        "sources/notion-353-course-matrices-eigenvalues-two-point",
+        "concepts/linear-systems-eigenvalue-method"
+      ]
+    },
+    "raw/assets/353/matrices-eigenvalues-two-point-7.png": {
+      "sha256": "c2ab61976433061eb5c0ab5b5f7fadf8c28fd8dd7c8987d3fd835c5537d7c8fa",
+      "derived": [
+        "sources/notion-353-course-matrices-eigenvalues-two-point",
+        "concepts/linear-systems-eigenvalue-method"
+      ]
+    },
+    "raw/assets/353/matrices-eigenvalues-two-point-5.png": {
+      "sha256": "49b57bf4f900c921a28d5f7d019926379074ab01104d1e098104c5235aae6f6f",
+      "derived": [
+        "sources/notion-353-course-matrices-eigenvalues-two-point",
+        "concepts/linear-systems-eigenvalue-method"
+      ]
+    },
+    "raw/assets/353/mid-1-9.png": {
+      "sha256": "69811469f5e93bbf457b548faf2b91b317c853ec8c1c7bb8fda0f846bd9cc2d5",
+      "derived": [
+        "sources/notion-353-mid-1-exam"
+      ]
+    },
+    "raw/assets/353/mid-1-8.png": {
+      "sha256": "885aed97c262cdf8687866dc41c2aeadcd0eeb80de82ce53722adb954acd4997",
+      "derived": [
+        "sources/notion-353-mid-1-exam"
+      ]
+    },
+    "raw/assets/353/matrices-eigenvalues-two-point-4.png": {
+      "sha256": "5dbcc99f16c6bf805f6139c812f0d8020c7b6fe7fe52f7dacbb0a0de042735c0",
+      "derived": [
+        "sources/notion-353-course-matrices-eigenvalues-two-point",
+        "concepts/linear-systems-eigenvalue-method"
+      ]
+    },
+    "raw/assets/353/periodic-functions-trigonometric-series-fourier-series-1.png": {
+      "sha256": "e7f9435d5724567aa2bdd249e81eb572ee20e331b793b5829b375e490233d35b",
+      "derived": [
+        "sources/notion-353-course-periodic-functions-trigonometric-series-fourier-series",
+        "concepts/fourier-series"
+      ]
+    },
+    "raw/assets/353/matrices-eigenvalues-two-point-1.png": {
+      "sha256": "5d0c0971b7145c62af7ef83f31ed1ff716ef87760cda3fa8dada62adea50321f",
+      "derived": [
+        "sources/notion-353-course-matrices-eigenvalues-two-point",
+        "concepts/linear-systems-eigenvalue-method"
+      ]
+    },
+    "raw/assets/353/matrices-eigenvalues-two-point-3.png": {
+      "sha256": "71f6914bce289d69f8865504e5a296c74ca2f063aae28b8cd9a8093b49e46ba3",
+      "derived": [
+        "sources/notion-353-course-matrices-eigenvalues-two-point",
+        "concepts/linear-systems-eigenvalue-method"
+      ]
+    },
+    "raw/assets/353/periodic-functions-trigonometric-series-fourier-series-3.png": {
+      "sha256": "df386141c782d3cfa6e645c6ff6b756c2926fd933e88748ecb560d8b40795fdc",
+      "derived": [
+        "sources/notion-353-course-periodic-functions-trigonometric-series-fourier-series",
+        "concepts/fourier-series"
+      ]
+    },
+    "raw/assets/353/periodic-functions-trigonometric-series-fourier-series-2.png": {
+      "sha256": "a11eafa7f76098dad95cb4dc12713ce5c7312c64c504f05a4ad41f27cb9f4640",
+      "derived": [
+        "sources/notion-353-course-periodic-functions-trigonometric-series-fourier-series",
+        "concepts/fourier-series"
+      ]
+    },
+    "raw/assets/353/matrices-eigenvalues-two-point-2.png": {
+      "sha256": "5ea6fe73da0d82078263fd523462a7d52e7e754b444c3cabe8b9c909b4540546",
+      "derived": [
+        "sources/notion-353-course-matrices-eigenvalues-two-point",
+        "concepts/linear-systems-eigenvalue-method"
+      ]
+    },
+    "raw/assets/353/mid-1-13.png": {
+      "sha256": "b427a050397862e49ad8264a8b61f624a7b79b3508d19f9230259f63d965f576",
+      "derived": [
+        "sources/notion-353-mid-1-exam"
+      ]
+    },
+    "raw/assets/353/improper-integral-laplace-transform-6.png": {
+      "sha256": "b9bd964a8cc65f46992e91f8f12f3da0d94b0255e29cef436a30ac938da9b381",
+      "derived": [
+        "sources/notion-353-course-improper-integral-laplace-transform",
+        "concepts/laplace-transform"
+      ]
+    },
+    "raw/assets/353/mid-1-12.png": {
+      "sha256": "8c81a2ac3465327cb59091dd8e794b57dea5609219309c777b25eab203b12dd8",
+      "derived": [
+        "sources/notion-353-mid-1-exam"
+      ]
+    },
+    "raw/assets/353/mid-1-10.png": {
+      "sha256": "ac172c58584ab6fb2ec8ef5fa0b84546c9c843af493b4e1f4b21d3c704035377",
+      "derived": [
+        "sources/notion-353-mid-1-exam"
+      ]
+    },
+    "raw/assets/353/improper-integral-laplace-transform-4.png": {
+      "sha256": "c7374eb010d644d637f0132fafee3a3b9bb9e38541641a004870e5d49246ecff",
+      "derived": [
+        "sources/notion-353-course-improper-integral-laplace-transform",
+        "concepts/laplace-transform"
+      ]
+    },
+    "raw/assets/353/improper-integral-laplace-transform-5.png": {
+      "sha256": "dfc9f132dfd42f4179210b0a28d853b5a5bee3b7271ad5449a130463be256894",
+      "derived": [
+        "sources/notion-353-course-improper-integral-laplace-transform",
+        "concepts/laplace-transform"
+      ]
+    },
+    "raw/assets/353/mid-1-11.png": {
+      "sha256": "0e52b478fa4113759a7865014f929ae87a9979eab0f34a46e8f72c5a7e406c5a",
+      "derived": [
+        "sources/notion-353-mid-1-exam"
+      ]
+    },
+    "raw/assets/353/mid-1-15.png": {
+      "sha256": "df788a05b1882814037875ba3e528beb8a13d3a7355ff6abfdf5aa761d05153b",
+      "derived": [
+        "sources/notion-353-mid-1-exam"
+      ]
+    },
+    "raw/assets/353/improper-integral-laplace-transform-1.png": {
+      "sha256": "e392024c5da7c5c8d9b2acb4e826ed70eabfb41fd3f0f9ae40f7f4f8ea174866",
+      "derived": [
+        "sources/notion-353-course-improper-integral-laplace-transform",
+        "concepts/laplace-transform"
+      ]
+    },
+    "raw/assets/353/mid-1-14.png": {
+      "sha256": "1ccc8df105001c4202cc73fb33ba4a5a67b73165ae92428327243b323b4a437a",
+      "derived": [
+        "sources/notion-353-mid-1-exam"
+      ]
+    },
+    "raw/assets/353/mid-1-16.png": {
+      "sha256": "023c3617009f1b618fe71f8d38b2c7175aa0693d10246c8f16239974b6d256c6",
+      "derived": [
+        "sources/notion-353-mid-1-exam"
+      ]
+    },
+    "raw/assets/353/improper-integral-laplace-transform-2.png": {
+      "sha256": "66a56032cd61d5e0722a182d7363dd64c6968507b3831cbd133057a114ff2f93",
+      "derived": [
+        "sources/notion-353-course-improper-integral-laplace-transform",
+        "concepts/laplace-transform"
+      ]
+    },
+    "raw/assets/353/improper-integral-laplace-transform-3.png": {
+      "sha256": "9e4a9b6c15f6e505346d00786dd6b0817cedce184c80ec6c33d26099daea2e1e",
+      "derived": [
+        "sources/notion-353-course-improper-integral-laplace-transform",
+        "concepts/laplace-transform"
+      ]
+    },
+    "raw/assets/353/mid-1-17.png": {
+      "sha256": "537a4e6488fdb2475de7c616176fb91c166f0db0cf1d40ba75e778927dd2b3c8",
+      "derived": [
+        "sources/notion-353-mid-1-exam"
+      ]
+    },
+    "raw/assets/353/mid-1-3.png": {
+      "sha256": "1d12bc8e2d9de5b179c687e132cfee4e5fdc66bab33bd306040a01e695261679",
+      "derived": [
+        "sources/notion-353-mid-1-exam"
+      ]
+    },
+    "raw/assets/353/matrices-eigenvalues-two-point-11.png": {
+      "sha256": "a8388ab826eb6a26d808ee7ad14cb0531a8cef3df76e1767ad6f07d6a17f8dee",
+      "derived": [
+        "sources/notion-353-course-matrices-eigenvalues-two-point",
+        "concepts/linear-systems-eigenvalue-method"
+      ]
+    },
+    "raw/assets/353/matrices-eigenvalues-two-point-10.png": {
+      "sha256": "08dfecf1c7003185f9ee7fd6d5e7d29e19df20e0fedb0bbbb096abe1bcf09f16",
+      "derived": [
+        "sources/notion-353-course-matrices-eigenvalues-two-point",
+        "concepts/linear-systems-eigenvalue-method"
+      ]
+    },
+    "raw/assets/353/mid-1-2.png": {
+      "sha256": "38c77279e0b67c8e087d03c787e1d64be8d1761960b58f04dc74ecf31ea0e3f5",
+      "derived": [
+        "sources/notion-353-mid-1-exam"
+      ]
+    },
+    "raw/assets/353/mid-1-1.png": {
+      "sha256": "b099f0d16b314f83368073f573e57611a57ffef66b1dadc465a6d6e5a61376cf",
+      "derived": [
+        "sources/notion-353-mid-1-exam"
+      ]
+    },
+    "raw/assets/353/matrices-eigenvalues-two-point-9.png": {
+      "sha256": "8dd531dc68994b62d32c07d130d48317ca94101099358139ec3d86657a314b4a",
+      "derived": [
+        "sources/notion-353-course-matrices-eigenvalues-two-point",
+        "concepts/linear-systems-eigenvalue-method"
+      ]
+    },
+    "raw/assets/353/mid-1-5.png": {
+      "sha256": "f01002d40ff30fa6a55da98dc95d558c0dace628fc72b3ebc684ef8ce081a0d2",
+      "derived": [
+        "sources/notion-353-mid-1-exam"
+      ]
+    },
+    "raw/assets/353/mid-1-4.png": {
+      "sha256": "7608b1b1b7eed8742324c192ad61960e5df66a41a92a2c449acaa105d8a724e3",
+      "derived": [
+        "sources/notion-353-mid-1-exam"
+      ]
+    },
+    "raw/assets/353/matrices-eigenvalues-two-point-8.png": {
+      "sha256": "75920b2d806e01c04ae63d3be49b8eab7a11a3863673ec66cf0e5ac4f3804b94",
+      "derived": [
+        "sources/notion-353-course-matrices-eigenvalues-two-point",
+        "concepts/linear-systems-eigenvalue-method"
+      ]
+    },
+    "raw/assets/353/mid-1-6.png": {
+      "sha256": "dd676e74f297611b97d9225057326dd634f69ab7ad1b15e3f16d1e491322f03e",
+      "derived": [
+        "sources/notion-353-mid-1-exam"
+      ]
+    },
+    "raw/assets/353/mid-1-7.png": {
+      "sha256": "6fd505efc69dc813645831d0adfebcb0677ffb99c097ee94a209d044b7b8c857",
+      "derived": [
+        "sources/notion-353-mid-1-exam"
+      ]
+    },
+    "raw/assets/230-probability/mid-1-9.png": {
+      "sha256": "76f6388df0a3b36df221051488d4cb9af66f30879c00996b58a629fc06e08c66",
+      "derived": [
+        "sources/notion-230-probability-mid-1-exam"
+      ]
+    },
+    "raw/assets/230-probability/mid-1-8.png": {
+      "sha256": "76bf171bcb7b161479a8d1387ccbab07c360540b00b7a4aa246f87c2560dcc4c",
+      "derived": [
+        "sources/notion-230-probability-mid-1-exam"
+      ]
+    },
+    "raw/assets/230-probability/confidence-intervals-1.png": {
+      "sha256": "8df69a25e5ed422028150ace5e222d0660ee6bd4d6bd202e0d82f29fd83a6765",
+      "derived": [
+        "sources/notion-230-probability-mid-2-confidence-intervals",
+        "concepts/confidence-intervals"
+      ]
+    },
+    "raw/assets/230-probability/expected-value-normal-distributions-1.png": {
+      "sha256": "af70d22d4130dd47b5dddf72259c79ad7869a7003c5270d6e390aa03b8e0714c",
+      "derived": [
+        "sources/notion-230-probability-mid-2-expected-value-normal-distributions",
+        "concepts/expectation-and-variance",
+        "concepts/normal-distribution"
+      ]
+    },
+    "raw/assets/230-probability/confidence-intervals-2.png": {
+      "sha256": "a0cdbbb917510a277ba7db9f9492111f5d1ccd3d307a8aeed2c2c9edd25c0dac",
+      "derived": [
+        "sources/notion-230-probability-mid-2-confidence-intervals",
+        "concepts/confidence-intervals"
+      ]
+    },
+    "raw/assets/230-probability/expected-value-normal-distributions-2.png": {
+      "sha256": "4fae3cb0137da3e9ea8898db89b57025fc12c34cdd8a0e55afcbb9f622b0172e",
+      "derived": [
+        "sources/notion-230-probability-mid-2-expected-value-normal-distributions",
+        "concepts/expectation-and-variance",
+        "concepts/normal-distribution"
+      ]
+    },
+    "raw/assets/230-probability/discrete-distributions-1.png": {
+      "sha256": "1f524062e23f881e41203d66a1b6a5c9d7834b8ac702c14034aef9ad86ce88f4",
+      "derived": [
+        "sources/notion-230-probability-mid-2-discrete-distributions",
+        "concepts/common-discrete-distributions"
+      ]
+    },
+    "raw/assets/230-probability/mid-1-3.png": {
+      "sha256": "1369c90a5ee99d54761c894294b78202db4b58f31ff8749f68b559e9f755e3ba",
+      "derived": [
+        "sources/notion-230-probability-mid-1-exam"
+      ]
+    },
+    "raw/assets/230-probability/mid-1-2.png": {
+      "sha256": "bc55767a51872fd25a3abdf6d673256dbfd32eb8b7a30154665b6b16071cbb0c",
+      "derived": [
+        "sources/notion-230-probability-mid-1-exam"
+      ]
+    },
+    "raw/assets/230-probability/mid-1-1.png": {
+      "sha256": "e4e7110b8a25f4a3bd5a42acbdb8dbfeed5e25f2aaca4dc10cc7633a4e7b8d14",
+      "derived": [
+        "sources/notion-230-probability-mid-1-exam"
+      ]
+    },
+    "raw/assets/230-probability/mid-1-5.png": {
+      "sha256": "7dd37af92dfbbaf44cd268c29886ee81826fc17b22ecf43fb6222afaed677b75",
+      "derived": [
+        "sources/notion-230-probability-mid-1-exam"
+      ]
+    },
+    "raw/assets/230-probability/mid-1-4.png": {
+      "sha256": "9ef8aee5d69eee7a6c17453b90af1d8f816dd91eba355f65edbd9be1a47983e0",
+      "derived": [
+        "sources/notion-230-probability-mid-1-exam"
+      ]
+    },
+    "raw/assets/230-probability/mid-1-6.png": {
+      "sha256": "71f46661fb50e09aea83bf11280e62a91e4579c49caccac9d4d9d2e4fd1c812e",
+      "derived": [
+        "sources/notion-230-probability-mid-1-exam"
+      ]
+    },
+    "raw/assets/230-probability/mid-1-7.png": {
+      "sha256": "bb85fc352f084b8475ff2846304ccccb167a18c536c44800d0b49cd0a13110d6",
+      "derived": [
+        "sources/notion-230-probability-mid-1-exam"
+      ]
+    },
+    "raw/assets/280/time-to-freq-domain-and-back-graphically-1.png": {
+      "sha256": "3fd010e26fbdf67941eb9faa4b438ed016b4b34fc99747d906558e71aaaf97fe",
+      "derived": [
+        "sources/notion-280-course-time-to-freq-domain-and-back-graphically",
+        "concepts/fourier-transform-and-filtering"
+      ]
+    },
+    "raw/assets/280/time-to-freq-domain-and-back-graphically-2.png": {
+      "sha256": "fd2e6756a48377c0b78906ace7dde4bdafd5a9efa4b0eb0cb4f01e6bf05a6eed",
+      "derived": [
+        "sources/notion-280-course-time-to-freq-domain-and-back-graphically",
+        "concepts/fourier-transform-and-filtering"
+      ]
+    },
+    "raw/assets/230-semiconductors/pn-junction-in-equilibrium-1.png": {
+      "sha256": "7f04186c014bd7d9ea6e77260dc68dcb6f5ea70ac0b53d834118bf2e362d1c0f",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-2-pn-junction-in-equilibrium",
+        "concepts/pn-junction"
+      ]
+    },
+    "raw/assets/230-semiconductors/pn-junction-in-equilibrium-2.png": {
+      "sha256": "54d7366b9a00b57de30202b1604fe5720f519aa1b3ff6e76118ae5a12f197c26",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-2-pn-junction-in-equilibrium",
+        "concepts/pn-junction"
+      ]
+    },
+    "raw/assets/230-semiconductors/pn-junction-under-bias-1.png": {
+      "sha256": "139e5942c00dffb2ffe4d92c08d0a6a4bac063802f0ac11fb3333b015e263fbe",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-2-pn-junction-under-bias",
+        "concepts/pn-junction"
+      ]
+    },
+    "raw/assets/230-semiconductors/mos-capacitor-cv-curves-math-1.png": {
+      "sha256": "6ae1181bc06c0eca3b44a5cd9d962157effdd65020e3b6eccafac922ee1ca322",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-2-mos-capacitor-cv-curves-math",
+        "concepts/mos-capacitor"
+      ]
+    },
+    "raw/assets/230-semiconductors/mos-capacitor-core-concepts-2.png": {
+      "sha256": "5b57e0d3d098e4520b519098bf3647ed413aa03733e63547bc7ff1918886cc64",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-2-mos-capacitor-core-concepts",
+        "concepts/mos-capacitor"
+      ]
+    },
+    "raw/assets/230-semiconductors/mos-capacitor-core-concepts-1.png": {
+      "sha256": "756efa933247e801a613abe3f1b8131a23aaa7f8d1e4834b3d6601be09247185",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-2-mos-capacitor-core-concepts",
+        "concepts/mos-capacitor"
+      ]
+    },
+    "raw/assets/230-semiconductors/mosfet-fundamentals-structure-1.png": {
+      "sha256": "7a531abf7a8c387d5667dfa56d92c04880cbc0599bfecc139d71e460ef3e1441",
+      "derived": [
+        "sources/notion-230-semiconductors-mid-2-mosfet-fundamentals-structure",
+        "concepts/mosfet-structure-and-energy-band-diagrams"
+      ]
+    },
+    "raw/assets/350/mux-demux-de-en-coders-9.png": {
+      "sha256": "c17f8790d9de98a51374f0d18a95fcb28390a667a6866fe096fa6d4a98c684c7",
+      "derived": [
+        "sources/notion-350-mid-1-mux-demux-de-en-coders"
+      ]
+    },
+    "raw/assets/350/mux-demux-de-en-coders-8.png": {
+      "sha256": "b8144c0dbe647d0341eec5dae5e7d09c5b1fd8bb5b8ebef492159ab27fc44402",
+      "derived": [
+        "sources/notion-350-mid-1-mux-demux-de-en-coders"
+      ]
+    },
+    "raw/assets/350/fsm-analysis-1.png": {
+      "sha256": "5f7179bc0642b8a70848ac0c38d100e380b0bb0dfbdd703da7923b38c594d785",
+      "derived": [
+        "sources/notion-350-mid-2-fsm-analysis",
+        "concepts/finite-state-machines"
+      ]
+    },
+    "raw/assets/350/truth-tables-the-works-2.png": {
+      "sha256": "2fc38acb6c4ed0267d0b1b3158b00d6dadf760ea8ceaaa1b53f4a4c7850cffd3",
+      "derived": [
+        "sources/notion-350-mid-1-truth-tables-the-works",
+        "concepts/boolean-algebra"
+      ]
+    },
+    "raw/assets/350/on-verilog-3.png": {
+      "sha256": "6cc769f39c5bafc4e477e5ef6aa1d425194977d345fd70fa43877f2fb234bff8",
+      "derived": [
+        "sources/notion-350-mid-1-on-verilog"
+      ]
+    },
+    "raw/assets/350/on-verilog-2.png": {
+      "sha256": "c94a65f119cc3af526282897974aa3575a14367ebb3497c76e39c138cc459013",
+      "derived": [
+        "sources/notion-350-mid-1-on-verilog"
+      ]
+    },
+    "raw/assets/350/truth-tables-the-works-3.png": {
+      "sha256": "3677e6d34d21adb43b60987c5fce268101741cc041fd7a515e0e634e87ac7cbf",
+      "derived": [
+        "sources/notion-350-mid-1-truth-tables-the-works",
+        "concepts/boolean-algebra"
+      ]
+    },
+    "raw/assets/350/truth-tables-the-works-1.png": {
+      "sha256": "7ab5d67165788a832f3118b5a622e93e60f6586b5e0358d183a7518b319a4588",
+      "derived": [
+        "sources/notion-350-mid-1-truth-tables-the-works",
+        "concepts/boolean-algebra"
+      ]
+    },
+    "raw/assets/350/mux-demux-de-en-coders-14.png": {
+      "sha256": "3dd26711df55b7fb10d9283f3cc53a855fd90e6b98ad6fbc6b66a01a65a96519",
+      "derived": [
+        "sources/notion-350-mid-1-mux-demux-de-en-coders"
+      ]
+    },
+    "raw/assets/350/on-verilog-1.png": {
+      "sha256": "d0980cb82bac3ac7fabc4f229cb708f4779b17e966a517b466ac1393d7c66c84",
+      "derived": [
+        "sources/notion-350-mid-1-on-verilog"
+      ]
+    },
+    "raw/assets/350/truth-tables-the-works-4.png": {
+      "sha256": "5dc209279e451839ddbd7356067cae5fa9093e60978c683b93fcd72f89e47a89",
+      "derived": [
+        "sources/notion-350-mid-1-truth-tables-the-works",
+        "concepts/boolean-algebra"
+      ]
+    },
+    "raw/assets/350/on-verilog-5.png": {
+      "sha256": "b0bb857e1984de38533c27d4774216efc60182ccfd026f8e10a60859ee1cb170",
+      "derived": [
+        "sources/notion-350-mid-1-on-verilog"
+      ]
+    },
+    "raw/assets/350/mux-demux-de-en-coders-11.png": {
+      "sha256": "a6a1f580eba4d108ef8302a1c3b24ba34e5b055ab2cec404c4a3e903f40724ea",
+      "derived": [
+        "sources/notion-350-mid-1-mux-demux-de-en-coders"
+      ]
+    },
+    "raw/assets/350/mux-demux-de-en-coders-10.png": {
+      "sha256": "1cb02161318905a5587de7d60bde09982798d32bb13638b19a5f781f29598320",
+      "derived": [
+        "sources/notion-350-mid-1-mux-demux-de-en-coders"
+      ]
+    },
+    "raw/assets/350/on-verilog-4.png": {
+      "sha256": "7359de9b7b09ea685d8522137cb08d280d7cf1d54d34c79e860651b82c3a999d",
+      "derived": [
+        "sources/notion-350-mid-1-on-verilog"
+      ]
+    },
+    "raw/assets/350/truth-tables-the-works-5.png": {
+      "sha256": "99ed4ef4d88b4107c2c38f392460656ba105fc28f3211c654a79a494375c45d1",
+      "derived": [
+        "sources/notion-350-mid-1-truth-tables-the-works",
+        "concepts/boolean-algebra"
+      ]
+    },
+    "raw/assets/350/truth-tables-the-works-7.png": {
+      "sha256": "0209fb85766521a23e8735c59563d86280654328ec0d7b85141bb189cf9d596a",
+      "derived": [
+        "sources/notion-350-mid-1-truth-tables-the-works",
+        "concepts/boolean-algebra"
+      ]
+    },
+    "raw/assets/350/on-verilog-6.png": {
+      "sha256": "c646172173f6463fdbcee0159976eb18bc8aa00b17327c42c7bf45ee56ddb94c",
+      "derived": [
+        "sources/notion-350-mid-1-on-verilog"
+      ]
+    },
+    "raw/assets/350/mux-demux-de-en-coders-12.png": {
+      "sha256": "f866ff9ab46732f57f0ef0b0566400d04a3001ecc9d4678507dd9928af49c40c",
+      "derived": [
+        "sources/notion-350-mid-1-mux-demux-de-en-coders"
+      ]
+    },
+    "raw/assets/350/mux-demux-de-en-coders-13.png": {
+      "sha256": "32364ea425622ede3db116d294e8fbaae16a9f5411b23f5f27b8bd20cd0ee53b",
+      "derived": [
+        "sources/notion-350-mid-1-mux-demux-de-en-coders"
+      ]
+    },
+    "raw/assets/350/arithmetic-1.png": {
+      "sha256": "6fc2eaeb4230b5d6ed3dfffcc2f700617e2144fb2747b7977af34ee52e99044e",
+      "derived": [
+        "sources/notion-350-mid-1-arithmetic",
+        "concepts/twos-complement-arithmetic"
+      ]
+    },
+    "raw/assets/350/truth-tables-the-works-6.png": {
+      "sha256": "5dc209279e451839ddbd7356067cae5fa9093e60978c683b93fcd72f89e47a89",
+      "derived": [
+        "sources/notion-350-mid-1-truth-tables-the-works",
+        "concepts/boolean-algebra"
+      ]
+    },
+    "raw/assets/350/mux-demux-de-en-coders-5.png": {
+      "sha256": "2d8602cccc3449f0adcde84bff56add502b6b3d28fb5dcf78c9885b950c2a130",
+      "derived": [
+        "sources/notion-350-mid-1-mux-demux-de-en-coders"
+      ]
+    },
+    "raw/assets/350/mux-demux-de-en-coders-4.png": {
+      "sha256": "ac595f4c29dc4d849c1eeddfa2db47e7ce484e8bd42e9c7ac92f80a3f2a13ce7",
+      "derived": [
+        "sources/notion-350-mid-1-mux-demux-de-en-coders"
+      ]
+    },
+    "raw/assets/350/mux-demux-de-en-coders-6.png": {
+      "sha256": "1836a9bc9fa9259bae66ee686898f94f3645fde01e7ec1db3de2c4924535455b",
+      "derived": [
+        "sources/notion-350-mid-1-mux-demux-de-en-coders"
+      ]
+    },
+    "raw/assets/350/mux-demux-de-en-coders-7.png": {
+      "sha256": "0f60e0cfdaee6f8451fc4bc9a8e61ae71dc43082e468fbb53d70d5e59d9455b1",
+      "derived": [
+        "sources/notion-350-mid-1-mux-demux-de-en-coders"
+      ]
+    },
+    "raw/assets/350/mux-demux-de-en-coders-3.png": {
+      "sha256": "9da370e7f4a175003b05cc460546b4dd5898f637acd2d28ed605c5ace94d39e4",
+      "derived": [
+        "sources/notion-350-mid-1-mux-demux-de-en-coders"
+      ]
+    },
+    "raw/assets/350/mux-demux-de-en-coders-2.png": {
+      "sha256": "94ddc2f245f146e608bbaab9037cb489ab5a36fed8d5ebc33335ae182a21c416",
+      "derived": [
+        "sources/notion-350-mid-1-mux-demux-de-en-coders"
+      ]
+    },
+    "raw/assets/350/mux-demux-de-en-coders-1.png": {
+      "sha256": "ba117b0641ca70598fbd2f93bf2242e1053cfb2c76fa70dd9306ffdb948ed2ae",
+      "derived": [
+        "sources/notion-350-mid-1-mux-demux-de-en-coders"
+      ]
+    },
+    "raw/assets/270/oblique-incidence-antennas-1.png": {
+      "sha256": "7e2cad40f5602c4dc330c829296b61b0bdf856da7bb84be9c13228ae5d08db7f",
+      "derived": [
+        "sources/notion-270-mid-2-oblique-incidence-antennas",
+        "concepts/oblique-incidence-and-antennas"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-8.png": {
+      "sha256": "80bb79ceb934aed8ee9b369a9151b2edbaa657d804537310a9838ff2168fee61",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-9.png": {
+      "sha256": "8dcc912e3d5fcfa2050b00ef4ea03218bdd1d9579d0ac14e1b779f1444d382ad",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-13.png": {
+      "sha256": "5ccdb9c7648e188ce7f4b4dc76b0252445856eaed1ddf6441fe84cc2d4c02440",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-12.png": {
+      "sha256": "6e9b1901cad17b1d101e0065b380511c0981aaffef4eb017a3aceacd69a12a5b",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-10.png": {
+      "sha256": "539308c958809a9262b87e38de6b4e5efdc14b235586b82e8d80dd46162769c6",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-11.png": {
+      "sha256": "0e9e74093a544643607b680ed9197dd5c570c381a1b8013351ecdda0c01147d0",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-15.png": {
+      "sha256": "a189dc333e26a6a8d59e1747098405788fdf2995e31670aa9e3d7307e86cd92f",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-model-and-algebra-1.png": {
+      "sha256": "6f9e60d45baf2f8e16942135ff72f10ae6b340f2d22db9a67a28892c0904c41c",
+      "derived": [
+        "sources/notion-316-relational-model-algebra",
+        "concepts/relational-algebra"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-14.png": {
+      "sha256": "c4d2e30e5d4214953eb5200744517c0acdef7662519828e6b13c1c1d5efb6826",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-16.png": {
+      "sha256": "311a7928a16dfba0770aeba37aaac1aefdde129146b6f76d8b80f95e1f051721",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-model-and-algebra-3.png": {
+      "sha256": "d78c5f9280cc7839a5230ad9c3020751285466ea70505601ce2cc711008ecc36",
+      "derived": [
+        "sources/notion-316-relational-model-algebra",
+        "concepts/relational-algebra"
+      ]
+    },
+    "raw/assets/316/relational-model-and-algebra-2.png": {
+      "sha256": "512ffc2c9bb62ec8f1f130b629dcc2deccfdcd5449cde074ebbe1936feeb6988",
+      "derived": [
+        "sources/notion-316-relational-model-algebra",
+        "concepts/relational-algebra"
+      ]
+    },
+    "raw/assets/316/sql-constraints-1.png": {
+      "sha256": "c31c0a2efec02865c8ef2af4d1956bcb3f132e965bc9c5be2b42ce5c2fce02b4",
+      "derived": [
+        "sources/notion-316-sql-constraints",
+        "concepts/sql"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-17.png": {
+      "sha256": "044c6310cfd807e44b5db918cfed3b1f3d1da36df2c4694c1bfce9bac227af58",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/sql-querying-2.png": {
+      "sha256": "c22e14979e970568f4097e243b6acc7365fbb43a3a59082bc85786c3d0ad8541",
+      "derived": [
+        "sources/notion-316-sql-querying",
+        "concepts/sql"
+      ]
+    },
+    "raw/assets/316/sql-recursion-1.png": {
+      "sha256": "4773b0bf91e2908f87934337facb071a50be746fd22359e2670a623682b2d875",
+      "derived": [
+        "sources/notion-316-sql-recursion",
+        "concepts/sql"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-19.png": {
+      "sha256": "18769c7950099c33bb0356d19bd43009b0d429ba1de6fce771d9ac81a511c300",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-25.png": {
+      "sha256": "1bf59e11aba5b9add6ac66e32eed7ada8b01e0daf2328bde9525ad56e7c1a99f",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/sql-querying-1.png": {
+      "sha256": "a5a4cd2a9ca2fe746d0f3c219ae1ab7edb1ef7c0a50b3c40b1b20d23ffebf4ef",
+      "derived": [
+        "sources/notion-316-sql-querying",
+        "concepts/sql"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-24.png": {
+      "sha256": "3091452d36019a153a782381a7844ef7f0d79b3b37f485c22d694ba89634276e",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-18.png": {
+      "sha256": "2466736617a356bf8c23c96da0fecd4f2063c4e2f207ccfbddc773826a2f1ae2",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-20.png": {
+      "sha256": "f0cc28ab3632b40366b6e4bf22284857c30918c3ff0caf1b22626f1dc3901458",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/xml-dtd-2.png": {
+      "sha256": "8a3d1bc2785e457ddf731a4be503eac84090bbcb9c4d7edfd7cc73648faf790e",
+      "derived": [
+        "sources/notion-316-xml-dtd"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-21.png": {
+      "sha256": "70f62d59dd034e65d30d5be56aa1abdd83f59e7e9a86ebb07956a58592792dda",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-23.png": {
+      "sha256": "666158bf9d4e48aa0aad6c596286c8cfeb8d4967fc21cbb70de3a225643bca23",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/xml-dtd-1.png": {
+      "sha256": "10cb0fb1a971d52ece694f82f8131816ce59423a19e0728f1371b746ebb82e74",
+      "derived": [
+        "sources/notion-316-xml-dtd"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-22.png": {
+      "sha256": "c8fb04fd450dc170613f2dd2b883f82b7da07187c9f329e765c3bec98f0f9dc6",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-2.png": {
+      "sha256": "23b59aac3bd5048d1ee83f24769159378d4e136b24ca777043fbebcb199036ce",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-3.png": {
+      "sha256": "a6ab2234e148ed3a0fa12e8debb4d5c1230bdd1cbaa2c11839bf5346898bc432",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-1.png": {
+      "sha256": "f1c1f8951f49f5580348d4079e9c802f2d44e9421c06a6aac3b169cdbfd64e3d",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-4.png": {
+      "sha256": "fd3a7d1e8c3c48b1624e6608de1b460f558ec0645379b7b285d103f1999b1d55",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-5.png": {
+      "sha256": "9b6aff12f96c4d0f91cd9ba1c44034852e99632dcc713bad3a423b4956bdf464",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-7.png": {
+      "sha256": "b4a4c0f97af39a840ee0c3e29e52fdd873f23c499b4bfd68872e94cda54c9731",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
+      ]
+    },
+    "raw/assets/316/relational-database-design-e-r-6.png": {
+      "sha256": "a54c1b7985df21ff2d8142b129ed480806b65133514a76d85101701485344e4e",
+      "derived": [
+        "sources/notion-316-er-design",
+        "concepts/entity-relationship-model",
+        "concepts/functional-dependencies",
+        "concepts/database-normalization"
       ]
     }
   }

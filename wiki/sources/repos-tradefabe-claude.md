@@ -7,7 +7,7 @@ raw_file: raw/repos/tradefabe/CLAUDE.md
 source_kind: repos
 repo_url: https://github.com/dzheng1328/tradefabe.git
 commit: unknown (git access blocked this session; re-sync verified via content diff, not git log)
-fetched: 2026-08-04
+fetched: 2026-08-11
 ---
 
 # CLAUDE.md
@@ -38,7 +38,23 @@ gates as a local run — and **pipeline daily** (`pipeline-daily.yml`, #177-181)
 ~10:42am ET, screening (#175) then auto-pre-registering on a pass (#179) then OOS-testing
 pending candidates, promoting ALIVE ones capped at 10 (#180, its own pool, separate from
 `MAX_FACTORY_PROMOTED`); proposal itself isn't in this workflow — a scheduled Claude Code
-Routine writes candidate rows directly, up to 10/day fixed, under Dave's Pro plan. See
-[[tradefabe]].
+Routine writes candidate rows directly, up to 10/day fixed, under Dave's Pro plan. Since that
+snapshot (2026-08-06 re-sync): two new standing rules. **Two skills are
+`disable-model-invocation: true`** — `.claude/skills/ship` (`/ship`) and
+`.claude/skills/new-strategy` (`/new-strategy`) — an agent can't discover or invoke either any
+other way, so Dave should be asked to run the matching one instead of hand-running the
+branch/PR/CI/merge sequence or the pre-register-before-results sequence. **The
+`doctrine-auditor` subagent must run before merging any PR touching `STRATEGIES.md`/
+`graveyard.csv`** — added after it was skipped once already (#195, 2026-08-04), letting a new
+primitive merge with no doctrine review, caught only in retrospect. Since that snapshot
+(2026-08-11 re-sync): the Layout section gained a note on the dashboard rebuild (#203/#204
+merged 2026-08-06) — moving off Streamlit to React/FastAPI, `app.py` still the only live UI,
+`src/tradefabe/dashboard.py` the shared Streamlit-free data/chart layer, `src/tradefabe/api/`
+a thin FastAPI read layer over it, `frontend/` one placeholder screen so far — and the
+Commands block gained an optional dashboard-rebuild section (`pip install -e
+".[dev,desktop,api]"`, `tradefabe-api` on localhost:8000, `npm run dev` on localhost:5173).
+See [[tradefabe]].
+
+Promotes: [[no-chained-branch-delete-after-merge]], [[pre-merge-review-gate-high-consequence-files]].
 
 Raw: `raw/repos/tradefabe/CLAUDE.md`.

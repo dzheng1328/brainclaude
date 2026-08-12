@@ -53,4 +53,7 @@ times it had run; v1.16 records a follow-up council review that found and fixed 
 combination `paper-engine.yml` already guarded against double-running, without the guard
 itself. See [[tradefabe]].
 
+Promotes: [[pre-registered-multiple-testing-correction]], [[backtest-evaluation-integrity-patterns]],
+[[github-actions-concurrency-guard]].
+
 Raw: `raw/repos/tradefabe/DOCTRINE.md`.

@@ -30,6 +30,9 @@ back-to-back with no reset and resetting between independent N-blocks. ^[[source
 
 - [[systolic-array-dataflow]] — output-stationary vs. weight-stationary, skewed dataflow, K/N tiling with the non-contamination proof
 - [[neural-network-quantization]] — hardware-forced symmetric int8, requantization, argmax invariance
+- [[noc-router-design]] — 2D mesh, XY routing, round-robin arbitration, from the Phase 2 NoC build
+- [[cocotb-parameter-override-gotcha]] — Verilog `parameter`s silently diverging from cocotb testbench assumptions
+- [[verilog-nba-old-value-semantics]] — non-blocking-assignment old-value semantics for pipeline delay and simulation-read timing
 
 The repo's decision log and learnings are snapshotted at commit `abd00b2`:
 ^[[sources/repos-hw-cnn-decisions]] ^[[sources/repos-hw-cnn-learnings]]. See also the coursework map
@@ -44,12 +47,5 @@ Latest work (2026-07): a `yosys` generic-synthesis path merged (PR #12).
 
 ## Flagged for /ingest review
 
-- 2026-07-25 sync: `docs/decisions.md`/`docs/learnings.md` re-synced (commit `8827a96`, was
-  `abd00b2`) — Phase 2 NoC build (2D-mesh router, XY routing, round-robin arbitration,
-  registered link buffers, GO/RESULT flit packetization) plus a first real sky130 synthesis
-  pass. Candidate concepts: a general NoC-router design pattern (mesh/XY-routing/round-robin,
-  distinct from [[systolic-array-dataflow]]); the cocotb-Makefile-can't-override-Verilog-
-  parameters gotcha (ports vs parameters) — possibly generalizable alongside existing
-  verification-tooling learnings; non-blocking-assignment old-value semantics for reasoning
-  about shift-register pipeline delay. See ^[[sources/repos-hw-cnn-decisions]]
-  ^[[sources/repos-hw-cnn-learnings]].
+(none — 2026-08-11 weekly /ingest promoted all three 2026-07-25 candidates: [[noc-router-design]],
+[[cocotb-parameter-override-gotcha]], [[verilog-nba-old-value-semantics]].)

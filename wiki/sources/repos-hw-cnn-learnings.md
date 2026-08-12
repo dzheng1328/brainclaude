@@ -21,4 +21,5 @@ testbench assumed because the Makefile flow can't cleanly override parameters (f
 ports instead) — compounded by a second, separate payload-width (`PW`) mismatch between RTL default
 and testbench constant; and a skew shift-register's delay lined up exactly right "for free" once
 reasoned through via Verilog non-blocking-assignment (`<=`) old-value semantics, no off-by-one fight
-needed. Tooling-specific, not promoted to concepts. Raw: `raw/repos/hw-cnn-accelerator/learnings.md`.
+needed. Promotes: [[cocotb-parameter-override-gotcha]], [[verilog-nba-old-value-semantics]]. Raw:
+`raw/repos/hw-cnn-accelerator/learnings.md`.
