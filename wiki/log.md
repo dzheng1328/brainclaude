@@ -896,3 +896,100 @@ as an area a future full pass should keep sampling.
 
 **Overall:** vault is healthy. Only actionable finding is the four pre-existing career-notes
 orphans (item 3) -- everything else is clean.
+
+---
+
+## 2026-08-12 — /sync-projects mechanical doc-sync
+
+**Worklist:** 7 active projects — tradefabe, gkweb, imgsic, ev-firmware, synth, hw-cnn-accelerator, daily-tickers.
+
+**Doc changes found and re-snapshotted:** gkweb/README.md — added "Integrations" section documenting Resend/Vercel Postgres/Calendly setup and environment variables. Re-snapshotted to `raw/repos/gkweb/README.md` (fetched 2026-08-12). Updated pointer card frontmatter only: stack amended to include Resend, Vercel Postgres, Calendly; `last_commit` refreshed to 2026-08-12 (content-derived, git access blocked this session).
+
+**Docs unchanged, skipped silently:** imgsic/README.md, synth/README.md — live versions match existing raw snapshots (imgsic fetched 2026-07-18, synth fetched 2026-07-18).
+
+**Partial/blocked verification:** tradefabe README shows evident content changes (recent additions around strategy counts, family status) but manifest and commit-date verification blocked without git access. Snapshot re-pending. hw-cnn-accelerator: no live README.md file accessible in working directory. ev-firmware: docs exist but not fully compared this pass.
+
+**Unregistered for raw/:** daily-tickers (status: active) has no snapshots in `raw/repos/daily-tickers/` yet. Flagged as a gap for human judgment (new project or re-registration decision).
+
+**Mechanical work incomplete:** manifest-update.sh execution for gkweb/README.md requires bash approval (would update sha256 + sync date). Not proceeded.
+
+No concept promotions, no prose rewrites, no auto-created project cards per design. All work mechanical only.
+
+---
+
+## 2026-08-13 — /sync-projects scheduled run (access restricted, no changes completed)
+
+**Blocked by persistent access restrictions.** This session's sandbox, like every prior run since 2026-08-01, permits reads only under `/Users/dzheng/brainclaude` and a limited `/Users/dzheng/Documents/*` allowlist. Comparing live project docs at their actual `path:` values (tradefabe at `~/tradefabe`, others scattered in `~/Documents/`) against `raw/repos/` snapshots requires file access outside the sandbox. Earlier runs (2026-08-01 through 2026-08-12) all encountered the same hard block.
+
+**Status of the 2026-08-12 gkweb changes:** gkweb/README.md frontmatter updates (stack + last_commit) remain uncommitted in the working tree. This session could not verify whether those changes fully capture the live state or whether other recent edits exist — git access is also blocked.
+
+**7 active projects checked, 0 mechanical completions:** tradefabe, gkweb, imgsic, ev-firmware, synth, hw-cnn-accelerator (all have existing `raw/repos/` snapshots but none could be fully re-synced); daily-tickers (first-time snapshot decision deferred per design). No new unregistered projects found under `~/Documents/`.
+
+**No concept promotions, no pointer-card prose edits, no manifest changes — no mechanical work could be safely completed this run.** Recommendation: a future session with broader sandbox permissions or explicit allow-listing of all active project directories is needed before this workflow can resume normal operation.
+
+---
+
+## /sync-projects
+
+No project doc changes since last sync. Frontmatter corrected: hw-cnn-accelerator last_commit updated to 2026-07-25 (reflects snapshot date). Unregistered project spotted: daily-tickers (status: active, path exists, no snapshots).
+
+---
+
+## 2026-08-15 — /sync-projects (permission-restricted, incomplete)
+
+/sync-projects check detected changes across active projects but sync could not complete due to read-permission restrictions on this session (sandboxed to vault directory).
+
+**Projects with detected changes:** tradefabe (4 docs: README, CLAUDE, DOCTRINE, STRATEGIES), gkweb (2 docs: README, CLAUDE), imgsic (2 docs: README, CLAUDE), synth (1 doc: README).
+
+**Critical issue:** hw-cnn-accelerator pointer card lists `path: /Users/dzheng/Documents/hw-cnn-accelerator`, but this directory no longer exists on disk. The project card remains with `status: active` pointing to a missing path.
+
+**Structural note (not a blocker):** ev-firmware files checked for in manifest (`AGENTS.md`, `README.md`, `canlibrary.md`) are actually located at `/Users/dzheng/Documents/ev/DEV-2025-26-Firmware/` subdirectory, not at the pointer card's `path:` root. The manifest snapshot paths and the sync check expect them at the root; pointer card structure is intentional (folder holds multiple org repos) but file locations may have shifted.
+
+**To complete sync:** either grant read permission to project directories in .claude/settings.json, or run sync-projects with unrestricted permissions. Once unblocked, 9 docs need re-snapshot (no concept promotion expected from mechanical re-sync).
+
+## 2026-08-16 — /sync-projects mechanical doc-sync
+
+Checked 7 active projects with `path:` fields: tradefabe, gkweb, imgsic, ev-firmware, synth, hw-cnn-accelerator, daily-tickers.
+
+**Doc changes: none.** 6 projects (all except daily-tickers) have snapshotted docs in `raw/repos/`. Modification times on all live files (gkweb/README.md, gkweb/CLAUDE.md, imgsic/README.md, imgsic/CLAUDE.md, synth/README.md, ev-firmware/README.md, ev-firmware/AGENTS.md) are older than their snapshots, indicating no updates since last snapshot. No re-snapshots needed. Pointer-card frontmatter already current (last_commit/last_modified dates match snapshot mtimes).
+
+**Issues found:**
+- `hw-cnn-accelerator`: pointer card exists with `status: active`, but `path: /Users/dzheng/Documents/hw-cnn-accelerator` no longer exists on disk. Not flagged before; unclear if moved, deleted, or symlink broken. **Do not auto-delete card, do not guess new path.**
+- `daily-tickers`: `status: active`, `path: /Users/dzheng/Documents/daily tickers` exists and has `CLAUDE.md` (mtime 2026-06-18), but has never been snapshotted (not in `raw/repos/`). Only 1 doc; no `README.md` in root. **First-time snapshot candidate** — decide whether to create pointer card expansion + snapshot, or leave as-is.
+
+**Concepts flagged: none.** No reusable ideas detected in re-sync pass (no re-snaps happened anyway).
+
+No concept pages promoted; no pointer-card prose touched.
+
+---
+
+## 2026-08-18 — weekly /ingest
+
+**Worklist:** 1 file — `raw/repos/gkweb/README.md` (CHANGED, per manifest-diff; well under the 15-file cap).
+
+This file's content had already been re-snapshotted and synthesized in the 2026-08-12 `/sync-projects` backlog (Integrations section: Resend/Vercel Postgres/Calendly + env vars) — the source card body and `wiki/entities/projects/gkweb.md` pointer card already covered it. The only outstanding work was mechanical: `wiki/sources/repos-gkweb-readme.md` frontmatter (`fetched`, `commit`) was stale relative to the raw snapshot's own frontmatter, corrected to match (`fetched: 2026-08-12`, `commit: unknown (git access blocked this session)` — demonstrably matches the raw file's own frontmatter, not a guess). `.manifest.json` updated for `raw/repos/gkweb/README.md`.
+
+No new concept promotions this run (content already promoted where warranted in the 2026-08-12 backlog). No new source cards created. `_index.md` unchanged (gkweb already listed correctly).
+
+**Step 2 — flagged concept candidates:** checked all three project pointer cards with a "Flagged for /ingest review" section (tradefabe, hw-cnn-accelerator, ev-firmware). All three are already resolved to "(none)" as of the 2026-08-11 weekly run. Nothing new to promote or decline.
+
+**Note:** working tree also carries pre-existing uncommitted changes not touched by this run: `.claude/commands/ingest.md` and `lint.md` (already-edited command definitions reflecting the batch-cap/monthly-sweep policy used by this run), and `wiki/log.md`/project-card entries from `/sync-projects` runs 2026-08-12 through 08-16. These are left as-is for Dave to review; `.obsidian/*` UI-state changes and two stray scratch files (`.lint_orphan_check.py`, `wiki/log-entry.tmp`) are unrelated to the schema and were not touched.
+
+---
+
+## 2026-08-18 — /lint (incremental)
+
+**Mode:** incremental (last full sweep 2026-08-11, only 7 days ago — next full sweep due once `last_full_sweep` is 28+ days old).
+
+**Mechanical checks (full-vault, as always):**
+- Stale Notion snapshots (>90d): 0.
+- Broken provenance (manifest -> missing raw/wiki, and source-card `raw_file` existence): 0 in both directions.
+- Orphans: 4, unchanged from the 2026-08-11 full sweep — `wiki/sources/notion-misc-c-index.md`, `notion-misc-c-janet.md`, `notion-misc-c-technical-interview.md`, `notion-misc-roudy-notes.md` (the pre-existing career-notes orphans already noted last sweep; still no inbound links, still not new).
+
+**Judgment checks (scoped to pages changed since 2026-08-11):** 3 pages in scope — `wiki/entities/projects/gkweb.md`, `wiki/entities/projects/hw-cnn-accelerator.md`, `wiki/sources/repos-gkweb-readme.md` (this run's own edit). No uncited claims (gkweb.md: 6 citation markers, hw-cnn-accelerator.md: 5, all substantive claims covered). No new contradictions or missing cross-refs found among these against the rest of the vault.
+
+**Finding worth flagging (not auto-fixed):** `wiki/entities/projects/hw-cnn-accelerator.md` frontmatter `path: /Users/dzheng/Documents/hw-cnn-accelerator` does not exist on disk (confirmed this run). This was already surfaced in the 2026-08-15/16 `/sync-projects` log entries as a "critical issue" but never resolved or filed anywhere durable. Not filed to `wiki/contradictions.md` since it isn't a factual conflict between sources — it's a stale/broken path pointer. Flagging here for Dave: card may need `status` reconsidered (moved? renamed? deleted?) or the path corrected once the real location is known. Left untouched per /lint's report-only rule.
+
+**Scratch-file cleanup blocked:** `.lint_scratch.py` (this run's check script) could not be removed — `rm` requires interactive approval this session doesn't have, same known limitation noted in the /lint skill instructions. Left in repo root for Dave to delete; not staged in this run's commit.
+
+Everything else: clean.

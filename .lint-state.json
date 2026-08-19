@@ -1,6 +1,6 @@
 {
   "version": 1,
   "note": "Tracks /lint's last-checked state so daily incremental runs only deep-reason about pages changed since the last check. Maintained by /lint; do not hand-edit.",
-  "last_incremental_check": "2026-08-11T00:00:00Z",
+  "last_incremental_check": "2026-08-18T00:00:00Z",
   "last_full_sweep": "2026-08-11T00:00:00Z"
 }

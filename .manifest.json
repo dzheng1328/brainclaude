@@ -822,9 +822,10 @@
       ]
     },
     "raw/repos/gkweb/README.md": {
-      "sha256": "c248281240bc06949a3909e90f73c85f094f15671511a9b26922608e5138da46",
+      "sha256": "f71c239a052f371065188a0a8fdba1587ba75948b95e3efb3763a6c1cc8d684b",
       "derived": [
-        "sources/repos-gkweb-readme"
+        "sources/repos-gkweb-readme",
+        "entities/projects/gkweb"
       ]
     },
     "raw/repos/gkweb/CLAUDE.md": {

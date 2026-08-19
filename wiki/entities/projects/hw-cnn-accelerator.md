@@ -6,7 +6,7 @@ repo: https://github.com/dzheng1328/hw-cnn-accelerator
 path: /Users/dzheng/Documents/hw-cnn-accelerator
 stack: [Verilog, Python, iverilog, yosys]
 status: active
-last_commit: 2026-07-20
+last_commit: 2026-07-25
 ---
 
 # hw-cnn-accelerator

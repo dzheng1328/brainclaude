@@ -4,9 +4,9 @@ domain: projects
 title: gkweb
 repo: https://github.com/dzheng1328/gkweb
 path: /Users/dzheng/Documents/gkweb
-stack: [Next.js 16, TypeScript, i18n]
+stack: [Next.js 16, TypeScript, i18n, Resend, Vercel Postgres, Calendly]
 status: active
-last_commit: 2026-05-23
+last_commit: 2026-08-12 (content-derived — git access blocked this session)
 ---
 
 # gkweb
